@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../../index.html">FSJ0050-1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close">
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../../../index.html">Inicio</a>
+                </li>
+                <!-- Código dropdown grupo 1 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Grupo 1
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="./carlosVenturelli.html">Carlos Venturelli</a></li>
+                    <li><a class="dropdown-item" href="./karina.html">Karina Riquelme</a></li>
+                    <li><a class="dropdown-item" href="./pamelaY.html">Pamela Yañez</a></li>
+                    <li><a class="dropdown-item" href="../grupo1/sfernandez.html">Soledad Fernández</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../profes/kenpo.html">Kenpo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contacto.html">Contacto</a>
+                </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+
+    <!-- Section de cards -->
+    <section class="container-fluid d-flex  gap-2 mt-3">
+        
+        <div class="row">
+            <h1 class="mb-3 mt-3 py-3 text-center">Grupo 1</h1>
+
+            <!-- Card 1 Pamela Yañez-->
+            <article class="col-md-6 mb-4">
+                <div class="card h-auto">
+                    <img src="../../img/grupo1/img_de_pame/gato programador.jpg" class="card-img-top img-fluid" style="height: 30vw; min-height: 200px; max-height: 360px; width: 100%; object-fit: cover; object-position: center;" alt="Imagen de la card 1">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Pamela Yáñez.</h4>
+                        <p class="card-text">Desarrolladora Full Stack JavaScript en transición desde el área de la salud, con formación en React, Node.js, Express, PostgreSQL y desarrollo de APIs, y actualmente estudiante de Desarrollo de Aplicaciones Full Stack Java Trainee. Combino pensamiento analítico, empatía y experiencia trabajando bajo presión para crear soluciones tecnológicas eficientes, escalables y centradas en el usuario.</p>
+                        <h5 class="card-title">Dato Freak</h5>
+                        <p class="card-text">Me sé la letra de muchas canciones aunque no recuerde sus nombres.</p>
+                        <a href="../grupo1/pamelaY.html" class="btn btn-success">Ver más</a>
+                    </div>
+                </div>
+            </article>
+
+    <!-- Card 2 -->
+            <!-- Card 2 CAVG-->
+            <article class="col-md-6 mb-4">
+                <div class="card h-auto">
+                    <img src="../../img/grupo1/NEBULOSA_DE_LA_HELICE.jpg" class="card-img-top img-fluid" style="height: 30vw; min-height: 200px; max-height: 360px; width: 100%; object-fit: cover; object-position: center;" alt="Imagen de la card 2">
+                    <div class="card-body">
+                        <h4 class="card-title">Carlos Alejandro Venturelli</h4>
+                        <p class="card-text">Técnico Químico | Ingeniero Industrial | Full Stack Java Developer en formación
+                            Sumando experiencia en HTML, CSS, JavaScript, Git.  </p>
+                        <h5 class="card-title">Dato Freak</h5>
+                        <p class="card-text">Me encanta la astronomía y colecciono libros sobre el cosmos.</p>
+                        <a href="../grupo1/carlosVenturelli.html" class="btn btn-success">Ver más</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 sfernandez-->
+            <article class="col-md-6 mb-4">
+                <div class="card h-auto">
+                    <img src="../../img/grupo1/img_de_sole/image_5e4a48c3.png" class="card-img-top img-fluid" style="height: 30vw; min-height: 200px; max-height: 360px; width: 100%; object-fit: cover; object-position: center;" alt="Imagen de presentacion de sole fernandez">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Sole Fernández</h4>
+                        <p class="card-text">Técnico en Gastronomía y cursando estudios en Desarrollador Full Stack Java Trainee, Mi principal objetivo es llevar todo mi conocimiento informático al área gastronómica para potenciar y mejorar el nivel de digitalizacion requerido por el mercado nacional</p>
+                        <h5 class="card-title">Dato Freak</h5>
+                        <p class="card-text">Me sé el himno de Israel y fui guía de kayak en el lago Tinquilco, PN. Huerquehue. Mi cumbre más alta alcanzada fue el Cerro Punta de Damas 3.149 m.s.n.m. en Santiago el año 2014</p>
+                        <a href="../grupo1/sfernandez.html" class="btn btn-success">Ver más</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 Karina Riquelme-->
+            <article class="col-md-6 mb-4">
+                <div class="card h-auto">
+                    <img src="../../img/grupo1/img_de_kari/gatocomputador.jpg" class="card-img-top img-fluid" style="height: 30vw; min-height: 200px; max-height: 360px; width: 100%; object-fit: cover; object-position: center;"alt="Imagen de la card 1">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Karina Riquelme Rodríguez</h4>
+                        <p class="card-text">Ingeniera en Ejecucion en Informatica  y cursando estudios en Desarrollador Full Stack Java Trainee. Con conocimientos en PythonJava, JavaScript, HTML, CSS  y Bootstrap.  Me interesa mantenerme actualizada en lenguajes y plataformas para poder ser una buena profesional y darle un plus a mi perfil para enfrentar el mercado laboral.</p>
+                        <h5 class="card-title">Dato Freak</h5>
+                        <p class="card-text">Soy muy buena viendo las cartas del Tarot, tanto asi que a mis amigas mas cercanas que les he hecho lecturas les han salido muy certeras en lo que preguntaban apodandome como La Bruja del Tarot </p>
+                        <a href="../grupo1/karina.html" class="btn btn-success">Ver más</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</main>
+        <footer class="bg-dark text-white text-center py-3">
+            <p class="mb-0">&copy; 2025 Grupo 1 FSJ 0050-1. Todos los derechos reservados.</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+</body>
+</html>

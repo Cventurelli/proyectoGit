@@ -32,7 +32,7 @@ h2,p,h1,h3,h4{
 }
 .contenedor-imagenes{
 	 display: flex; /* Activa Flexbox para alinear los elementos hijos en una línea */
-    justify-content: left; /* Opcional: Centra las imágenes dentro del contenedor */
+    justify-content: center; /* Opcional: Centra las imágenes dentro del contenedor */
     gap: 10px; /* Opcional: Añade espacio entre las imágenes */
 	width: 200px; /* Establece un ancho fijo para todas las imágenes */
     height: 150px; /* Establece un alto fijo para todas las imágenes */

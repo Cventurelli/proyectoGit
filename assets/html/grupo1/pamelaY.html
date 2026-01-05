@@ -9,44 +9,85 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../css/grupo1/pamelaYstyle.css" />
     <title>Mi Portafolio Digital</title>
   </head>
   <body>
-    <header id="myName" class="bg-success text-white text-center py-5">
-      <h1 class="fw-bold">¡Hola soy Pamela!</h1>
-      <p class="lead">Desarrolladora web Full Stack Java en formacion.</p>
-    </header>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-dark bg-dark fixed-top shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="pamelaY.html">Pamela Yañez</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Título Menú</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close">
-            </button>
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Menú
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../../../index.html">Inicio</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../../../index.html"
+                  >Inicio</a
+                >
               </li>
               <!-- Código dropdown grupo 1 -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Grupo 1
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="./carlosVenturelli.html">Carlos Venturelli</a></li>
-                  <li><a class="dropdown-item" href="./karina.html">Karina Riquelme</a></li>
-                  <li><a class="dropdown-item" href="./soledadf.html">Soledad Fernández</a></li>
                   <li>
-                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="./carlosVenturelli.html"
+                      >Carlos Venturelli</a
+                    >
                   </li>
-                  <li><a class="dropdown-item" href="#">Pamela Yañez</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./karina.html"
+                      >Karina Riquelme</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./sfernandez.html"
+                      >Soledad Fernández</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="../grupo1/resumenG1.html">Resumen Grupal</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -56,142 +97,208 @@
                 <a class="nav-link" href="../contacto.html">Contacto</a>
               </li>
             </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </div>
     </nav>
-    <!-- SOBRE MÍ -->
-
-    <div class="container my-5">
-      <section id="aboutMe" class="mb-5">
-        <h2 class="mb-3">Sobre mí</h2>
-        <div class="card p-4 shadow-sm border-0">
-          <p>
-            Soy enfermera de profesión, actualmente en un proceso de reinvención
-            hacia el área tecnológica. Realicé un curso de Desarrolladora Full
-            Stack JavaScript, donde trabajé con React, Node.js, Express,
-            PostgreSQL y desarrollo de APIs.
-          </p>
-          <p>
-            Autodidacta y orientada al detalle. Tengo experiencia en diseño e
-            implementación de APIs, autenticación con JWT y manejo de datos
-            complejos. Me adapto rápido, aprendo continuamente y disfruto
-            resolver desafíos técnicos.
-          </p>
-          <p>
-            Me motiva aplicar mi experiencia previa en salud —organización,
-            trabajo bajo presión, empatía y resolución de problemas— al mundo
-            TI, desarrollando soluciones prácticas, escalables y orientadas a
-            mejorar la experiencia del usuario.
-          </p>
-          <p>
-            En busqueda de oportunidades en el rubro para seguir creciendo como
-            desarrolladora y aportar desde una mirada multidisciplinaria.
+    <main class="container mb-0">
+      <!-- SOBRE MÍ -->
+      <header
+        id="myName"
+        class="hero text-white text-center d-flex align-items-center justify-content-center"
+      >
+        <div>
+          <h1 class="fw-bold display-4 mb-3">¡Hola, soy Pamela!</h1>
+          <p class="lead"><span id="typewriter" class="typewriter"></span>
           </p>
         </div>
-      </section>
+      </header>
+      <div class="container my-5">
+        <section id="aboutMe" class="mb-5">
+          <h2 class="mb-3 text-center">Sobre mí</h2>
+          <div class="card p-4 shadow-sm border-0">
+            <p>
+              Soy enfermera de profesión, actualmente en un proceso de
+              reinvención hacia el área tecnológica. Realicé un curso de
+              Desarrolladora Full Stack JavaScript, donde trabajé con React,
+              Node.js, Express, PostgreSQL y desarrollo de APIs.
+            </p>
+            <p>
+              Autodidacta y orientada al detalle. Tengo experiencia en diseño e
+              implementación de APIs, autenticación con JWT y manejo de datos
+              complejos. Me adapto rápido, aprendo continuamente y disfruto
+              resolver desafíos técnicos.
+            </p>
+            <p>
+              Me motiva aplicar mi experiencia previa en salud —organización,
+              trabajo bajo presión, empatía y resolución de problemas— al mundo
+              TI, desarrollando soluciones prácticas, escalables y orientadas a
+              mejorar la experiencia del usuario.
+            </p>
+            <p>
+              En busqueda de oportunidades en el rubro para seguir creciendo
+              como desarrolladora y aportar desde una mirada multidisciplinaria.
+            </p>
+          </div>
+        </section>
 
-      <!-- PROYECTOS -->
-      <section id="proyectos" class="mb-5">
-        <h2 class="mb-3">Proyectos</h2>
-        <div class="card p-4 shadow-sm border-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <strong>Proyecto:</strong> Bark & Purr – Marketplace para Mascotas
-            </li>
-            <li class="list-group-item">
-              <strong>Proyecto:</strong> proyecto2
-            </li>
-            <li class="list-group-item">
-              <strong>Proyecto:</strong> proyecto3
-            </li>
-          </ul>
-        </div>
-      </section>
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="mb-5">
+          <h2 class="mb-3 text-center">Proyectos</h2>
+          <p id="contadorProyectos" class="text-center fw-bold mt-3"></p>
+          <div class="card p-4 shadow-sm border-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Proyecto:</strong> Bark & Purr – Marketplace para
+                Mascotas
+              </li>
+              <li class="list-group-item">
+                <strong>Proyecto:</strong> Proyecto en desarrollo...
+              </li>
+              <li class="list-group-item">
+                <strong>Proyecto:</strong> proyecto3
+              </li>
+            </ul>
+          </div>
+        </section>
 
-      <!-- HABILIDADES Y EDUCACION -->
-      <section id="skills" class="mb-5">
-        <h2 class="mb-3">Competencias o conocimientos tecnicos</h2>
-        <div class="card p-4 shadow-sm border-0">
-          <ul class="row">
-            <li class="col-md-4">JavaScript</li>
-            <li class="col-md-4">HTML/CSS3</li>
-            <li class="col-md-4">Node.js y Express</li>
-            <li class="col-md-4">SQL</li>
-            <li class="col-md-4">React</li>
-            <li class="col-md-4">APIs REST</li>
-            <li class="col-md-4">JWT / autenticación y autorización</li>
-            <li class="col-md-4">Manejo de Git y GitHub</li>
-            <li class="col-md-4">Deploy con Render y Netlify</li>
-          </ul>
-        </div>
-      </section>
+        <!-- HABILIDADES Y EDUCACION -->
+        <section id="skills" class="mb-5">
+          <h2 class="mb-3 text-center">
+            Competencias o conocimientos técnicos
+          </h2>
+          <div class="card p-4 shadow-sm border-0">
+            <ul class="row">
+              <li class="col-md-4">JavaScript</li>
+              <li class="col-md-4">HTML/CSS3</li>
+              <li class="col-md-4">Node.js y Express</li>
+              <li class="col-md-4">SQL</li>
+              <li class="col-md-4">React</li>
+              <li class="col-md-4">APIs REST</li>
+              <li class="col-md-4">JWT / autenticación y autorización</li>
+              <li class="col-md-4">Manejo de Git y GitHub</li>
+              <li class="col-md-4">Deploy con Render y Netlify</li>
+            </ul>
+          </div>
+        </section>
 
-      <!-- EDUCACION Y CONTACTO -->
-      <section class="mb-5">
-        <h2 class="mb-3">Educacion</h2>
-        <div class="card p-4 shadow-sm border-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <strong>Titulo en Enfermeria</strong> - Universidad Santiago de
-              Chile (2012-2018)
-            </li>
-            <li class="list-group-item">
-              <strong>Sence Learning</strong> - Curso de Trabajo en Equipo
-              (2018)
-            </li>
-            <li class="list-group-item">
-              <strong>Sence Learning</strong> - Curso de Liderazgo (2018)
-            </li>
-            <li class="list-group-item">
-              <strong>Udemy</strong> - Curso de Inglés Básico (2019)
-            </li>
-            <li class="list-group-item">
-              <strong>Enfermera en Hemodialisis</strong> - Davita Chile (2020 -
-              2024)
-            </li>
-            <li class="list-group-item">
-              <strong
-                >Certificación en desarrollo web Full Stack JavaScript
-                440hrs</strong
-              >
-              - Desafio Latam (2024-2025)
-            </li>
-            <li class="list-group-item">
-              <strong
-                >Certificación en desarrollo web Full Stack Java 480hrs</strong
-              >
-              - Academia Kibernum / SENCE (2025-2026)
-            </li>
-          </ul>
-        </div>
-      </section>
+        <!-- EDUCACION Y CONTACTO -->
+        <section id="education" class="mb-5">
+          <h2 class="mb-3 text-center">Educación</h2>
+          <div class="card p-4 shadow-sm border-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Titulo en Enfermeria</strong> - Universidad Santiago de
+                Chile (2012-2018)
+              </li>
+              <li class="list-group-item">
+                <strong>Sence Learning</strong> - Curso de Trabajo en Equipo
+                (2018)
+              </li>
+              <li class="list-group-item">
+                <strong>Sence Learning</strong> - Curso de Liderazgo (2018)
+              </li>
+              <li class="list-group-item">
+                <strong>Udemy</strong> - Curso de Inglés Básico (2019)
+              </li>
+              <li class="list-group-item">
+                <strong>Enfermera en Hemodialisis</strong> - Davita Chile (2020
+                - 2024)
+              </li>
+              <li class="list-group-item">
+                <strong
+                  >Certificación en desarrollo web Full Stack JavaScript
+                  440hrs</strong
+                >
+                - Desafio Latam (2024-2025)
+              </li>
+              <li class="list-group-item">
+                <strong
+                  >Certificación en desarrollo web Full Stack Java
+                  480hrs</strong
+                >
+                - Academia Kibernum / SENCE (2025-2026)
+              </li>
+            </ul>
+          </div>
+        </section>
 
-      <!-- CONTACTO -->
+        <!-- CONTACTO -->
       <section class="container my-5">
-        <h2 class="mb-3">Contacto</h2>
+        <div class="contact-box position-relative overflow-hidden rounded shadow-lg">
 
-        <p>Dudas o consultas, manda un email a:</p>
+          <!-- Fondo animado -->
+          <div class="contact-bg"></div>
+          <div class="row align-items-center position-relative z-1">
 
-        <div class="d-flex justify-content-center">
-          <a
-            href="mailto:pamela.kyp@gmail.com"
-            class="btn btn-success text-white px-4 py-2 rounded"
-          >
-            Contacto
-          </a>
+            <!-- IZQUIERDA: Imagen -->
+            <div class="col-md-6 text-center mb-3 mb-md-0">
+              <img
+                src="../../img/grupo1/img_de_pame/email.svg"
+                alt="Email"
+                class="contact-image"
+              />
+            </div>
+
+            <!-- DERECHA: Contacto -->
+            <div class="col-md-6 text-center text-white">
+              <h2 class="mb-3">Contacto</h2>
+              <p>Dudas o consultas:</p>
+
+              <button id="enviarCorreo" class="btn btn-warning">
+                Escríbeme aquí
+              </button>
+
+            </div>
+
+          </div>
         </div>
       </section>
-    </div>
+    </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-      <p class="mb-0">Derechos reservados © 2025</p>
+    <button type="button" id="btnBackToTop" class="btn btn-success shadow-lg position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; width: 50px; height: 50px; z-index: 1000;">
+      <i class="bi bi-arrow-up-short" style="font-size: 1.5rem;"></i>
+    </button>
+
+    <footer class="footer-pro text-white">
+      <div class="container py-4">
+        <div class="row align-items-center">
+
+          <!-- Nombre / Marca -->
+          <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
+            <h5 class="fw-bold mb-1">Pamela Yañez</h5>
+            <small>Full Stack Java Developer</small>
+          </div>
+
+          <!-- Redes / Contacto -->
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <a href="https://github.com/RTDFSJ0050-1/proyectoGit" target="_blank" class="footer-icon">
+              🐙
+            </a>
+            <a href="https://www.linkedin.com/in/pamela-y%C3%A1%C3%B1ez-peredo-65959a120/" target="_blank" class="footer-icon">
+              💼
+            </a>
+          </div>
+
+          <!-- Copyright -->
+          <div class="col-md-4 text-md-end text-center">
+            <small>© 2025 · Todos los derechos reservados</small>
+          </div>
+
+        </div>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../js/grupo1/pamelaY.js"></script>
   </body>
 </html>

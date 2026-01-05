@@ -1,23 +1,90 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
   background-color: #036146;
   color: #ffffff;
 }
 nav,
-header,
 section {
   background: #a5d6a7;
-  padding: 20px;
-  margin: 20px 15px;
-  border: 10px;
+  padding: 10px;
+  margin: 10px 5px;
   border: 3px solid aquamarine;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+.navbar {
+    transition: all 0.4s ease;
+    background-color: rgba(33, 37, 41, 0.8);
+}
+
+.navbar-brand { 
+  font-weight: 700; letter-spacing: 1px; 
+}
+.navbar-nav .nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffc107;
+}
+.navbar-nav  .nav-link.active {
+  color: #ffc107;
+  font-weight: 600;
+}
+.offcanvas {
+  backdrop-filter: blur(8px);
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dropdown-menu {
+  animation: fadeDown 0.3s ease;
+}
+.dropdown-menu-dark .dropdown-item:hover {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+.dropdown-menu-dark .dropdown-item:active {
+  background-color: #ff9800 !important;
+  color: #212529 !important;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar a,
+.dropdown-menu a {
+  text-decoration: none;
+}
+.navbar a:hover,
+.dropdown-menu a:hover {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 32px;
-  color: #2e7d32 !important;
+  color: #ffffff !important;
   font-weight: bold;
 }
 
@@ -41,14 +108,34 @@ a:hover {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.card:hover::before {
+    left: 100%; /* Efecto de brillo pasando por la tarjeta */
+}
+
+.card:hover {
+    transform: scale(1.03); 
 }
 
 .btn-ajustada {
 	display: inline-block !important;
   width: 80% !important;
   padding: 14px !important;
-  background-color: #2e7d32 !important; /* verde */
-  color: #ffffff !important; /* texto blanco */
+  background-color: #2e7d32 !important; 
+  color: #ffffff !important; 
   border: none !important;
   border-radius: 6px;
   font-size: 14px;
@@ -59,21 +146,175 @@ a:hover {
 .btn-ajustada:hover {
   background-color: #4caf50 !important;
 }
+#btnBackToTop {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-footer {
-  text-align: center;
-  font-size: 14px;
-  color: #ffffff;
-  margin-top: 40px;
+#btnBackToTop:hover {
+    transform: scale(1.1); 
+    background-color: #146c43;
 }
-#myName {
-  text-align: center;
+
+.footer-pro {
+  background: linear-gradient(135deg, #212529, #1b5e20);
+  border-top: 4px solid #ffc107;
+}
+
+.footer-pro h5 {
+  color: #ffc107;
+  letter-spacing: 1px;
+}
+
+.footer-icon {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 22px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icon:hover {
+  transform: translateY(-4px);
+  color: #ffc107;
+}
+
+#myName.hero {
+  min-height: 60vh;
+  margin: 0;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(
+      rgba(25, 135, 84, 0.85),
+      rgba(32, 201, 151, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+  background-size: 120%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInHero 1.2s ease-in-out;
+}
+#myName h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#myName p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+header#myName h1 {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header#myName h1:hover {
+  color: #ffc107 !important;
+}
+.typewriter {
+  color: #ffffff;
   font-weight: bold;
-  color: #ffffff;
-  font-size: 18px;
-  background-color: #2e7d32;
-  border-radius: 8px;
+  border-right: 3px solid #ffc107;
+  padding-right: 5px;
+  animation: blinkCursor 0.8s infinite;
 }
-#myName:hover {
-  background-color: #4caf50;
+
+@keyframes blinkCursor {
+  0%, 50%, 100% { border-color: transparent; }
+  25%, 75% { border-color: #ffc107; }
+}
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#myName.hero:hover {
+  transform: scale(1.01);
+  transition: transform 0.4s ease;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#skills li,
+#proyectos li,
+#education li {
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+#skills li:hover,
+#proyectos li:hover,
+#education li:hover {
+  background-color: #d1e7dd;
+  transform: scale(1.05);
+}
+#skills li,
+#proyectos li,
+#education li {
+  padding: 10px;
+  border-radius: 8px;
+  list-style: none;
+  padding-left: 0;
+}
+.contact-box {
+  min-height: 320px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Fondo animado */
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(25, 135, 84, 0.25),
+      rgba(32, 201, 151, 0.25)
+    ),
+    url("../../img/grupo1/img_de_pame/mac.jpg");
+  background-size: 120%;
+  background-position: center;
+  filter: blur(6px);
+  animation: moveBgDiagonal 25s linear infinite;
+  z-index: 0;
+}
+.contact-box:hover .contact-bg {
+  filter: blur(4px);
+}
+.contact-box h2,
+.contact-box p {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Movimiento diagonal suave */
+@keyframes moveBgDiagonal {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.contact-image {
+  width: 220px; 
+  max-width: 100%;
+  height: 300px;
 }

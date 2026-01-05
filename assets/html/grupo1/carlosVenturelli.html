@@ -1,33 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carlosV</title>
-    <!-- CSS de Bootstrap desde CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <!-- CSS personalizado de Carlos -->
+  <link rel="stylesheet" href="../../css/grupo1/carlos-style.css" />
+  <title>El Portafolio de Carlos Alejandro Venturelli</title>
 </head>
-<body class="bg-light">
+<body>
+  <!-- Encabezado -->
+  <header id="myName" class="bg-primary text-white text-center py-5">
+    <h1 class="fw-bold">¡Bienvenido a mi portafolio!</h1>
+    <p class="lead">Técnico Químico | Ingeniero Industrial | Full Stack Java Developer en formación</p>
+  </header>
 
-    <!-- Encabezado -->
-    <header class="bg-primary text-white text-center py-4"></header>
-        <h1>Portafolio de Carlos Venturelli</h1>
-        <p>Ingeniero Industrial | Full Stack Java Developer</p>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="carlosVenturelli.html">Carlos Alejandro Venturelli</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú Grupo 1</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../../../index.html">Inicio</a>
+            </li>
+            <!-- Dropdown Grupo 1 -->
+            <li class="nav-item dropdown"></li>
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Grupo 1
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="./carlosVenturelli.html">Carlos Venturelli</a></li>
+                <li><a class="dropdown-item" href="./karina.html">Karina Riquelme</a></li>
+                <li><a class="dropdown-item" href="./soledadf.html">Soledad Fernández</a></li>
+                <li><a class="dropdown-item" href="./pamelaY.html">Pamela Yañez</a></li>
+                <li><a class="dropdown-item" href="./resumenG1.html">Página Grupal</a></li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="../profes/kenpo.html">Kenpo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contacto.html">Contacto</a>
+            </li>
+          </ul>
+            <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>          
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Sección de proyectos -->
-    <section class="container my-5">
-        <h2 class="text-secondary mb-4">Proyectos</h2>
-        <ul class="list-group">
-            <li class="list-group-item">Simulación de portafolio</li>
-            <li class="list-group-item">Aplicación web</li>
-            <li class="list-group-item">Portafolio digital en HTML/CSS</li>
-        </ul>
-    </section>
+<!-- Contenedor principal con dos columnas -->
+<div class="container my-5">
+  <div class="row">
+    <!-- Columna izquierda: contenido principal -->
+    <div class="col-md-10">
+      <!-- SOBRE MÍ -->
+      <section id="aboutMe" class="mb-5">
+        <h2 class="mb-3">Sobre mí</h2>
+        <div class="card p-4 shadow-sm border-0">
+          <p>
+            Soy Técnico Químico, Ingeniero Industrial y actualmente estudiante en el bootcamp Talento Digital Full Stack Java. 
+            Me apasiona el desarrollo web, la ciencia de datos y la creación de soluciones digitales robustas.
+          </p>
+          <p>
+            Tengo experiencia en HTML, CSS, JavaScript, GitHub. 
+            Me motiva integrar creatividad con rigor técnico y trabajar en equipo para lograr proyectos de calidad.
+          </p>
+        </div>
+      </section>
 
-    <!-- JS de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- PROYECTOS -->
+      <section id="proyectos" class="mb-5">
+        <h2 class="mb-3">Proyectos</h2>
+        <div class="card p-4 shadow-sm border-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Proyecto:</strong> Creando y Desarrollando Portafolio Digital</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section id="skills" class="mb-5">
+        <h2 class="mb-3">Competencias Técnicas</h2>
+        <div class="card p-4 shadow-sm border-0">
+          <ul class="row">
+            <li class="col-md-4">HTML5</li>
+            <li class="col-md-4">CSS3</li>
+            <li class="col-md-4">JavaScript</li>
+            <li class="col-md-4">GitHub</li>
+            <li class="col-md-4">Bootstrap</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DATO FREAK -->
+      <section id="datoFreak" class="mb-5">
+        <h2 class="mb-3">Dato Freak</h2>
+        <div class="card p-4 shadow-sm border-0">
+          <p>Me encanta la astronomía, la música y mi familia, en algun momento cuando hay tiempo intento tocar batería. Disfruto mucho viendo películas especialmente del género suspenso, ciencia ficción</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Columna derecha: clima -->
+    <div class="col-md-2">
+      <section class="mb-3 text-bg-dark p-3 rounded">
+        <h3>Pronóstico</h3>
+        <a class="weatherwidget-io" 
+           href="https://forecast7.com/es/n36d82n73d04/concepcion/" 
+           data-label_1="CONCEPCIÓN" 
+           data-label_2="WEATHER" 
+           data-icons="Climacons Animated" 
+           data-theme="weather_one">
+           CONCEPCIÓN WEATHER
+        </a>
+      </section>
+
+          <!-- CONTACTO -->
+<section id="contacto" class="mb-5 text-bg-dark p-3 rounded">
+  <!-- Título centrado -->
+  <h3 class="text-center mb-3">Contacto</h3>
+
+  <!-- Texto justificado -->
+<p class="text-right">
+  Alguna inquietud y/o consulta, escríbeme a:
+</p>
+
+  <!-- Botón centrado -->
+  <div class="d-flex justify-content-center">
+    <a href="mailto:carlos.venturelli@gmail.com" class="btn btn-primary text-white px-4 py-2 rounded">
+      Contacto
+    </a>
+  </div>
+</section>
+    </div>
+
+    <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">Derechos reservados © 2025 Carlos Venturelli</p>
+  </footer>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+          integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+          crossorigin="anonymous"></script>
+<script>
+!function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+    }
+}(document,'script','weatherwidget-io-js');
+</script>
 </body>
 </html>
-
 

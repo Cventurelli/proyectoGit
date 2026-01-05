@@ -1,0 +1,76 @@
+img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: #f8f8f3 0px 0px 10px;
+}
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+    font-size: 16px; 
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+    font-size: 18px; /* Estilo para pantallas medianas */
+    }
+}
+@media (min-width: 1025px) {
+    body {
+    font-size: 20px; /* Estilo para pantallas grandes */
+    }
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #e6eded;
+    color: #1d2137;
+    margin: 10px;
+    padding: 0 16px;
+    line-height: 1.6;
+    background-size: auto;
+    text-align: center;
+}
+div {
+    text-align: center;
+}   
+.card {
+    margin: 20px auto;
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+
+}
+footer {
+    margin: 32px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #f8f8f3;
+}
+h1, h2, h3, h4, h5, h6 , p{
+    color: #141414;
+    text-align: center;
+} 
+section {
+    margin: 32px 0;
+}
+.img-fluid
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: #f8f8f3 0px 0px 10px;
+}
+
+}
+main {
+    margin: 32px 0;
+    margin top: 20px;
+}

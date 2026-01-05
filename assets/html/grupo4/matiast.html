@@ -10,11 +10,12 @@
 			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
 			crossorigin="anonymous">
 		<link rel="stylesheet" href="../../css/grupo4/stylematiast.css">
+		
 		<title>Mi portafolio digital</title>
 	</head>
 	<body>
 		<header id="header"> <!-- Encabezado del documento -->
-			<nav class="navbar bg-light fixed-top" style="background: linear-gradient(135deg, #077ff8, #5ae2f7);">
+			<nav class="navbar bg-light fixed-top" style="background: linear-gradient(176deg, #096a97, #ee98d9da);">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="../../../index.html">FSJ 0050-1</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -66,7 +67,14 @@
 			<h1>Matias Torres Garcia</h1>
 			<p>Enfermero que busca reinventarse en la industria TI</p>
 		</header>
-		<div id="carouselExampleAutoplaying" class="carousel slide"
+		<div class="popup-overlay" id="welcome-popup">
+			<div class="popup">
+				<h2>¡Bienvenido a mi Portafolio!</h2>
+        			<p>Es un gusto tenerte aquí. Explora mis proyectos y mi experiencia como desarrollador.</p>
+				<button id="close">x</button>
+			</div>
+		</div>
+		<div id="carouselejemplo" class="carousel slide"
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
@@ -80,17 +88,17 @@
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button"
-				data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+				data-bs-target="#carouselejemplo" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
 			<button class="carousel-control-next" type="button"
-				data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+				data-bs-target="#carouselejemplo" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-		<div>
+		<div class="contenido"> <!-- Contenido principal del documento -->
 		<section id="sobreMi"> <!-- Sección principal del documento -->
 			<h2>Sobre mí</h2>
 			<p>Soy enfermero y estoy iniciando mi camino en la industria TI. Me motiva
@@ -154,6 +162,7 @@
 			integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
 			crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/50cf798f64.js" crossorigin="anonymous"></script>
+		<script src="../../js/grupo4/bienvenida.js"></script>
 		<a href="#header" id="up_arrow"><i class="fa-solid fa-circle-up"></i></a>	
 	</body>
 </html>

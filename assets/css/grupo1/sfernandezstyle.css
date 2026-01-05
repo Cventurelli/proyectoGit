@@ -1,0 +1,91 @@
+body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+            margin: 20px;
+            background-color: rgb(215, 218, 191);
+        }
+
+        header, section {
+            background: rgba(0, 0, 0, 0.514);
+            padding: 20px;
+            margin-bottom: 20px 15px;
+            border: 5px;
+            border-style: solid;
+            border-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+        }
+        
+        h2, h3 {
+            color: rgb(255, 255, 255);
+            text-align: left;
+            }
+        h1 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        p, ul, li, label, button{
+            color: rgb(255, 255, 255);
+        }
+        footer{
+            text-align: center;
+        }
+        .user-profile{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .user-info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .user-name{
+            font-weight: bold;
+            align-items: right;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+        .glass-card {
+            /* Color blanco con 20% de opacidad */
+            background: rgba(255, 255, 255, 0.048) !important;
+            
+            /* El efecto de desenfoque de lo que está detrás */
+            backdrop-filter: blur(10px);
+            
+            /* Un borde sutil para definir la silueta del cristal */
+            border: 1px solid rgba(255, 255, 255, 0.11) !important;
+            
+            /* Suavizado de bordes */
+            border-radius: 15px;
+        }
+        .custom-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .custom-hover:hover {
+         /* Se desplaza 10 píxeles hacia arriba */
+        transform: translateY(-10px);
+         /* Intensifica la sombra para dar efecto de altura */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+        }
+        /* Estado inicial: oculto y un poco más abajo */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        /* Estado activo: visible y en su posición original */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+

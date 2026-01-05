@@ -1,97 +1,87 @@
-/* Estilo 'europeo/italiano' para la página de Carlos Venturelli
-   - Paleta cálida (crema, terracota, oliva)
-   - Tipografía elegante (serif por defecto, sugiere Playfair/Garamond)
-   - Diseño centrado, marco sutil y detalles tipográficos
-*/
-
-:root{
-  /* Paleta basada en 'azzurro' / azul rey (monarquía italiana) */
-  --bg: #eef6ff; /* fondo con sutil tinte azul claro */
-  --paper: #f8fbff; /* papel casi blanco con matiz azul */
-  --text: #17233a; /* texto: azul muy oscuro para buen contraste */
-  --muted: #6b7a95; /* gris azulado para textos secundarios */
-  --accent: #002366; /* azul rey profundo (royal/navy) */
-  --accent-2: #1e6fbf; /* azul brillante (azzurro) */
-  --radius: 12px;
-  --max-width: 900px;
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
-/* Tipografía: preferir una serif clásica. Recomiendo añadir Google Fonts Playfair Display para mayor elegancia */
-body{
-  margin:0;
-  font-family: Georgia, 'Times New Roman', serif;
-  background: linear-gradient(180deg, var(--bg) 0%, var(--paper) 100%);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+/* Encabezado */
+header {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.container{
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:2rem 1rem;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-header{
-  background: transparent;
-  padding:2.25rem 0 1rem 0;
-  border-bottom: 1px solid rgba(0,35,102,0.06);
-}
-header h1{
-  margin:0;
-  font-size:2rem;
-  color:var(--accent-2);
-  letter-spacing:0.4px;
-  font-weight:700;
-}
-header p{color:var(--muted);margin-top:0.35rem}
-
-main{padding:1.25rem 0}
-article{
-  background:var(--paper);
-  border-radius:var(--radius);
-  padding:1.5rem 1.75rem;
-  box-shadow: 0 6px 18px rgba(0,35,102,0.06);
-  border-left:6px solid rgba(0,35,102,0.08);
+header p {
+  font-size: 1.2rem;
 }
 
-h2{font-family: Georgia, 'Times New Roman', serif; color:var(--accent); margin-top:0}
-p{line-height:1.7;color:var(--text)}
-
-figure{margin:1.25rem 0;text-align:center}
-/* Imagen responsiva y proporcional: en móviles ocupa 100%, en pantallas grandes se limita a un ancho máximo */
-figure img{display:block;margin:0.6rem auto;width:100%;max-width:720px;height:auto;border-radius:8px;border:1px solid rgba(0,35,102,0.04);box-shadow:0 8px 20px rgba(0,35,102,0.06)}
-figcaption{font-size:0.9rem;color:var(--muted);margin-top:0.5rem}
-
-footer{padding:1.25rem 0;text-align:center;color:var(--muted);font-size:0.95rem}
-
-/* Detalle tipográfico: inicial grande */
-article p:first-letter{
-  float:left;
-  font-size:3.2rem;
-  line-height:1;
-  margin-right:0.5rem;
-  font-weight:700;
-  color:var(--accent-2);
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+  color: #0d6efd !important;
 }
 
-/* Responsive */
-@media (min-width:720px){
-  .container{padding:3rem 1.5rem}
-  header h1{font-size:2.25rem}
-  article{padding:2rem}
-  /* En pantallas grandes, reducir el ancho de las imágenes para que queden proporcionales al contenido */
-  figure img{max-width:640px}
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
 }
 
-/* Utilities */
-.text-center{text-align:center}
-.muted{color:var(--muted)}
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
 
-/* Clase opcional para enlace destacado */
-.btn-italian{display:inline-block;padding:0.45rem 0.8rem;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+/* Secciones */
+section h2 {
+  color: #ffc107;
+  font-weight: bold;
+}
 
-/* Consejo: para un look más auténtico añade en <head>:
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-   y en body: font-family: 'Playfair Display', Georgia, serif;
-*/
+.card {
+  background-color: #ffffff;
+  color: #212529;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Lista de proyectos */
+.list-group-item {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 0.75rem 1rem;
+}
+
+/* Botón de contacto */
+#contacto a.btn {
+  background-color: #0d6efd;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#contacto a.btn:hover {
+  background-color: #198754;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}

@@ -6,6 +6,7 @@
     <title>Barbara Vera</title>
     <link rel="stylesheet" href="../../css/grupo4/barbaraVera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,13 +25,15 @@
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Compañeros
+                    Grupo 4
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                    <li><a class="dropdown-item" href="Natanael.html">Natanael Peña</a></li>
-                    <li><a class="dropdown-item" href="matiast.html">Matías Torres</a></li>
+                    <li><a class="dropdown-item" href="resumeng4.html">Grupo 4</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item"  href="barbaraVera.html">Bárbara Vera</a></li>
+                    <li><a class="dropdown-item" href="#">JunLan Chau</a></li>
+                    <li><a class="dropdown-item" href="matiast.html">Matías Torres</a></li>
+                    <li><a class="dropdown-item" href="Natanael.html">Natanael Peña</a></li>        
                 </ul>
                 </li>
                 <li class="nav-item">
@@ -42,16 +45,19 @@
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
             </div>
+            <button class="btn btn-outline-light ms-3" id="btn-tema" title="Cambiar tema">
+                <i class="bi bi-moon-stars-fill" id="tema-icon"></i>
+            </button>
         </div>
     </nav>
     <header class="text-white text-center p-5 mb-5">
         <h1 class="display-4">Bárbara Vera</h1>
-        <p class="lead">Desarrollador web</p>
+        <p class="lead" id="texto_dinamico"></p>
         <p class="mb-0">En este portafolio te muestro algunos proyectos y habilidades.</p>
     </header>
     <div class="container">
         <section id="sobreMi" class="card p-5 bg-light mb-4 shadow mx-auto">
-            <h2 class="text-dark">Sobre mi</h2>
+            <h2 class="text-primary">Sobre mi</h2>
             <p>Soy un desarrollador con gran motivación por aprender y crecer en el mundo de la programación,
                 con experiencia en el desarrollo de aplicaciones web y gestión de proyectos reales.</p>
         </section>
@@ -110,6 +116,7 @@
         <p>Derechos reservados &copy; 2025</p>
     </footer>
 
+    <script src="../../js/grupo4/barbara.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </body>
