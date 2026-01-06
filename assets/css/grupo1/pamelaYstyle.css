@@ -1,19 +1,46 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0px;
-  background-color: #036146;
+  background-color: #31a080;
   color: #ffffff;
 }
 nav,
 section {
-  background: #a5d6a7;
+  background: #097c0d;
   padding: 10px;
   margin: 10px 5px;
-  border: 3px solid aquamarine;
-  border-radius: 8px;
+  border-radius: 8px; 
+  border: none !important; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  cursor: pointer;
+}
+/* Estilo para que las tarjetas no queden raras con fondos de colores */
+section .card {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+section:hover {
+    transform: translateY(-5px); /* Se eleva un poco */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
 }
 
+body.dark-mode section .card {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+  }
+  /* Clase para el Modo Oscuro */
+  body.dark-mode {
+      background-color: #1a1a1a !important;
+      color: #f8f9fa !important;
+  }
+  
+  body.dark-mode header, 
+  body.dark-mode section {
+      background-color: #2d2d2d;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(255,255,255,0.05);
+  }
 .navbar {
     transition: all 0.4s ease;
     background-color: rgba(33, 37, 41, 0.8);
@@ -111,6 +138,7 @@ a:hover {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  transition: all 0.3s ease;
 }
 .card::before {
     content: '';
@@ -128,6 +156,8 @@ a:hover {
 
 .card:hover {
     transform: scale(1.03); 
+    background-color: #f8f9fa !important;
+    border: 1px solid #198754 !important;
 }
 
 .btn-ajustada {

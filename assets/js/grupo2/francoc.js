@@ -12,4 +12,15 @@ function mostrarprompt() {
     alert('La multiplicación es: ' +multiplicacion);
     alert('La división es: ' + division);
   }
-  
+
+  $(document).ready(function() {
+    $('#jqueryBtn').click(function() {
+        $('#jqueryText').text('Texto modifcado por JQuery');
+        $('#jqueryText').css({
+            'color': 'brown',
+            'font-weight': 'bold'
+        });
+        $(this).text('El boton se ha desactivado');
+        $(this).prop('disable', true);
+    });
+});
