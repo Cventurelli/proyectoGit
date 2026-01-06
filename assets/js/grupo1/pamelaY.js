@@ -41,9 +41,9 @@ $(document).ready(function () {
 
     // Cambiar el texto del botón dinámicamente
     if ($("body").hasClass("dark-mode")) {
-      $(this).text("☀️ Modo Claro");
-    } else {
       $(this).text("🌙 Modo Oscuro");
+    } else {
+      $(this).text("☀️ Modo Claro");
     }
   });
   
