@@ -88,8 +88,7 @@ $(document).ready(function() {
         });
     });
   });
-  // --- REQUISITO 2: Animación al desplazar (JS Puro / Intersection Observer) ---
-  // (Mantenemos el código anterior del Observer aquí abajo)
+  // --- REQUISITO 2: Animación al desplazar (JS Puro ) ---
   $(document).ready(function () {
     // Al entrar con el mouse a una sección
     $("section").mouseenter(function () {
