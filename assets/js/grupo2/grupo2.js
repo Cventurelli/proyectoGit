@@ -1,43 +1,53 @@
-let nombre = "Emilio";
-let salarioBase = 800000;       // sueldo mensual
-let añosDeServicio = 7;         // años trabajados
-let ventasAnuales = 9500;       // ventas del año
+$(document).ready(function () {
 
-let factorAntiguedad;
+    // MODO OSCURO / CLARO
+    $("#btnTema").click(function () {
+        $("body").toggleClass("dark-mode");
 
-if (añosDeServicio < 5) {
-factorAntiguedad = 0.05;
-} else if (añosDeServicio >= 5 && añosDeServicio <= 10) {
-factorAntiguedad = 0.10;
-} else {
-factorAntiguedad = 0.15;
-}
+        if ($("body").hasClass("dark-mode")) {
+            $(this).text("☀️ Modo claro");
+        } else {
+            $(this).text("🌙 Modo oscuro");
+        }
+    });
 
-let categoriaVentas;
+    // ANIMACIÓN SCROLL
+    $(window).on("scroll", function () {
+        $(".fade-section").each(function () {
+            let top = $(this).offset().top;
+            let scroll = $(window).scrollTop();
+            let height = $(window).height();
 
-if (ventasAnuales> 10000) {
-categoriaVentas = "Alto";
-}   else if (ventasAnuales >= 5000) {
-categoriaVentas = "Medio";
-} else {
-categoriaVentas = "Bajo";
-}
+            if (scroll + height > top + 100) {
+                $(this).addClass("show");
+            }
+        });
+    });
 
-let bonoRendimiento;
+    // VALIDACIÓN FORMULARIO
+    $("#formContacto").submit(function (e) {
+        e.preventDefault();
 
-switch (categoriaVentas) {
-case "Alto":
-bonoRendimiento = 500;
-break;
-case "Medio":
-bonoRendimiento = 200;
-break;
-default:
-bonoRendimiento = 50;
-break;
-}
+        let valido = true;
 
-console.log("Empleado:", nombre);
-console.log("Factor de Antigüedad:", factorAntiguedad);
-console.log("Categoría de Ventas:", categoriaVentas);
-console.log("Bono por Rendimiento:", bonoRendimiento);
+        if ($("#nombre").val().trim() === "") {
+            $("#errorNombre").text("Ingrese su nombre");
+            valido = false;
+        } else {
+            $("#errorNombre").text("");
+        }
+
+        if ($("#email").val().trim() === "") {
+            $("#errorEmail").text("Ingrese su email");
+            valido = false;
+        } else {
+            $("#errorEmail").text("");
+        }
+
+        if (valido) {
+            alert("Formulario enviado correctamente ✔️");
+            this.reset();
+        }
+    });
+
+});

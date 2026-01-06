@@ -8,187 +8,189 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
 
-<body>
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../../css/grupo2/amontealegre.css" />
+</head>
+<body class="light-theme">
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
 
-        <!-- Marca -->
         <a class="navbar-brand fw-bold" href="/">Portafolio</a>
 
-        <!-- Botón offcanvas -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
-            aria-controls="offcanvasNav" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Offcanvas -->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav">
+        <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasNav">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title">Menú</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"></button>
             </div>
 
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
-                    <!-- Inicio -->
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/">Inicio</a>
-                    </li>
 
-                    <!-- Contacto -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../html/contacto.html">Contacto</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
 
-                    <!-- Grupo 1 -->
+                    <!-- GRUPO 1 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Grupo 1</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="../../html/grupo1/carlosVenturelli.html">Carlos Venturelli</a></li>
-                            <li><a class="dropdown-item" href="../../html/karina/grupo1.html">Karina Riquelme</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="../../html/pamelaY/grupo1.html">Pamela Yañez</a></li>
-                            <li><a class="dropdown-item" href="../../html/soledadf/grupo1.html">Soledad Fernández</a></li>
+                            <li><a class="dropdown-item" href="../grupo1/carlosVenturelli.html">Carlos Venturelli</a></li>
+                            <li><a class="dropdown-item" href="../grupo1/karina.html">Karina Riquelme</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../grupo1/pamelaY.html">Pamela Yañez</a></li>
+                            <li><a class="dropdown-item" href="../grupo1/sfernandez.html">Soledad Fernández</a></li>
                         </ul>
                     </li>
 
-                    <!-- Grupo 2 -->
+                    <!-- GRUPO 2 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Grupo 2</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">Sergio Sanchez</a></li>
-                            <li><a class="dropdown-item" href="../../html/grupo2/FrancoC.html">>Franco Cancino</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="../../html/grupo2/amontealegre.html">Alberto Montealegre</a></li>
-                            <li><a class="dropdown-item" href="../../html/grupo2/arantxagonzalez.html">">Arantxa González</a></li>
+                            <li><a class="dropdown-item" href="../grupo2/FrancoC.html">Franco Cancino</a></li>
+                            <li><a class="dropdown-item" href="../grupo2/amontealegre.html">Alberto Montealegre</a></li>
+                            <li><a class="dropdown-item" href="../grupo2/arantxagonzalez.html">Arantxa González</a></li>
+                            <li><hr class="dropdown-divider"></li>
                         </ul>
                     </li>
 
-                    <!-- Grupo 3 -->
+                    <!-- GRUPO 3 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Grupo 3</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">Carolina Vásquez</a></li>
-                            <li><a class="dropdown-item" href="#">Soledad Ibáñez</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="../../html/grupo3/ignacioMadariaga.html">Ignacio Madariaga</a></li>
+                            <li><a class="dropdown-item" href="../grupo3/ignacioMadariaga.html">Ignacio Madariaga</a></li>
+                            <li><a class="dropdown-item" href="../grupo3/soledadIbanez.html">Soledad Ibáñez</a></li>
+                            <li><hr class="dropdown-divider"></li>
                         </ul>
                     </li>
 
-                    <!-- Grupo 4 -->
+                    <!-- GRUPO 4 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Grupo 4</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="../../html/grupo4/barbaraVera.html">Bárbara Vera</a></li>
-                            <li><a class="dropdown-item" href="../../html/grupo4/Natanael.html">Natanael Peña</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="../../html/grupo4/matiast.html">Matías Torres</a></li>
+                            <li><a class="dropdown-item" href="../grupo4/barbaraVera.html">Bárbara Vera</a></li>
+                            <li><a class="dropdown-item" href="../grupo4/matiast.html">Matias Torres</a></li>
+                            <li><a class="dropdown-item" href="../grupo4/Natanael.html">Natanael Tapia</a></li>
+                            <li><hr class="dropdown-divider"></li>
                         </ul>
                     </li>
 
-                    <!-- Grupo 5 -->
+                    <!-- GRUPO 5 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Grupo 5</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="#">Diego Cubillos</a></li>
                             <li><a class="dropdown-item" href="#">Adrian Muñoz</a></li>
-                            <li><hr class="dropdown-divider" /></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Bastian Contreras</a></li>
                         </ul>
                     </li>
 
-                    <!-- Kenpo (link simple) -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../html/profes/kenpo.html">Kenpo</a>
-                    </li>
                 </ul>
 
-                <!-- Buscador -->
                 <form class="d-flex mt-3">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" />
-                    <button class="btn btn-success" type="submit">Buscar</button>
+                    <input class="form-control me-2" type="search" placeholder="Buscar">
+                    <button class="btn btn-success">Buscar</button>
                 </form>
             </div>
         </div>
     </div>
 </nav>
 
+<!-- HEADER -->
+<header id="header" class="text-center py-5 mt-5 bg-light">
+    <h1 class="fw-bold">Alberto Montealegre Espinoza</h1>
+    <p class="lead">Desarrollador Web Full Stack Java</p>
 
-    <!-- HEADER -->
-    <header class="text-center py-5 mt-5 bg-light">
-        <h1 class="fw-bold">Alberto Montealegre Espinoza</h1>
-        <p class="lead">Desarrollador Web Full Stack Java</p>
-    </header>
+    <button id="btnTema" class="btn btn-outline-dark mt-3">
+        Cambiar tema claro / oscuro
+    </button>
+</header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="container my-5">
+<!-- CONTENIDO -->
+<main class="container my-5">
 
-        <!-- SOBRE MI -->
-        <section id="sobreMi" class="mb-5">
-            <h2 class="fw-bold mb-3">Sobre mí</h2>
-            <p>Soy un desarrollador web con experiencia Full Stack Java y analista de datos Python.</p>
-            <p>Soy profesor de formación, he hecho cursos de Python y Java en Talento Digital, además soy músico y productor musical.</p>
-        </section>
+    <section id="sobreMi" class="seccion mb-5">
+        <h2>Sobre mí</h2>
+        <p>Desarrollador Full Stack Java y analista de datos Python.</p>
+        <p>Profesor, músico y productor musical.</p>
+    </section>
 
-        <!-- PROYECTOS -->
-        <section id="proyectos" class="mb-5">
-            <h2 class="fw-bold mb-3">Proyectos Destacados</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Sabotaje Rock</strong></li>
-                <li class="list-group-item"><strong>Guerrilla Splinter</strong></li>
-                <li class="list-group-item"><strong>Proyecto JavaScript</strong></li>
-            </ul>
-        </section>
+    <section id="proyectos" class="seccion mb-5">
+        <h2>Proyectos</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Sabotaje Rock</li>
+            <li class="list-group-item">Guerrilla Splinter</li>
+            <li class="list-group-item">Proyecto JavaScript</li>
+        </ul>
+    </section>
 
-        <!-- COMPETENCIAS -->
-        <section id="competencias" class="mb-5">
-            <h2 class="fw-bold mb-3">Competencias Técnicas</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Java</li>
-                <li class="list-group-item">JavaScript</li>
-                <li class="list-group-item">Bases de Datos (Python)</li>
-            </ul>
-        </section>
+    <section id="competencias" class="seccion mb-5">
+        <h2>Competencias Técnicas</h2>
+        <ul class="list-group mb-3">
+            <li class="list-group-item">Java</li>
+            <li class="list-group-item">JavaScript</li>
+            <li class="list-group-item">Python</li>
+        </ul>
 
-        <!-- EXPERIENCIA -->
-        <section id="experiencia" class="mb-5">
-            <h2 class="fw-bold mb-3">Experiencia Laboral</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Editorial Cuarto Propio:</strong> Administrador (2022-2025)</li>
-                <li class="list-group-item"><strong>Sabotaje Rock:</strong> Productor musical (2016 - Presente)</li>
-            </ul>
-        </section>
+        <button id="btnColor" class="btn btn-secondary">
+            Cambiar color sección
+        </button>
+    </section>
 
-        <!-- EDUCACIÓN -->
-        <section id="educación" class="mb-5">
-            <h2 class="fw-bold mb-3">Educación</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Licenciado en Música</strong> - Universidad Arcis (2011 - 2016)</li>
-                <li class="list-group-item"><strong>Diplomado Evaluación de Proyectos</strong> - Universidad Mayor (2018)</li>
-                <li class="list-group-item"><strong>Certificación Analista de datos</strong> - Instituto Caleiseis (2019)</li>
-                <li class="list-group-item"><strong>Certificación Desarrollo Web Full Stack Java</strong> - Talento Digital (2026)</li>
-            </ul>
-        </section>
+    <section id="experiencia" class="seccion mb-5">
+        <h2>Experiencia</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Editorial Cuarto Propio (2022-2025)</li>
+            <li class="list-group-item">Sabotaje Rock (2016 - Presente)</li>
+        </ul>
+    </section>
 
-        <!-- CONTACTO -->
-        <section id="contacto" class="text-center mb-5">
-            <h2 class="fw-bold mb-3">Contacto</h2>
-            <p>Si me quieres contactar envía un correo a:</p>
-            <a href="mailto:redacme@gmail.com" class="btn btn-dark btn-lg">redacme@gmail.com</a>
-        </section>
-    </main>
+    <section id="educacion" class="seccion mb-5">
+        <h2>Educación</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Licenciado en Música - ARCIS</li>
+            <li class="list-group-item">Full Stack Java - Talento Digital</li>
+        </ul>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="text-center py-4 bg-dark text-light">
-        <p>ACME® 2025</p>
-    </footer>
+    <section id="contacto" class="seccion mb-5 text-center">
+        <h2>Contacto</h2>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <form id="formContacto" class="mx-auto" style="max-width:400px;">
+            <div class="mb-3 text-start">
+                <label>Email</label>
+                <input type="email" id="email" class="form-control" required>
+                <small id="errorEmail" class="text-danger d-none">Email inválido</small>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label>Mensaje</label>
+                <textarea class="form-control" required></textarea>
+            </div>
+
+            <button class="btn btn-dark w-100">Enviar</button>
+        </form>
+    </section>
+
+</main>
+
+<footer class="text-center py-4 bg-dark text-light">
+    <p>ACME® 2025</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../../js/grupo2/grupo2.js"></script>
+
 </body>
 </html>
