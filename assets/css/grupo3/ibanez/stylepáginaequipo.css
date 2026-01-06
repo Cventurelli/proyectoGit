@@ -1,0 +1,201 @@
+:root {
+    --color-dark-bg: #0a0e1a; 
+    --color-darker-bg: #05070f; 
+    --color-primary: #3BE2D3; 
+    --color-secondary: #9370DB; 
+    --color-text-light: #f4f4f9; 
+    --color-text-dim: #a0a0a9; 
+    --font-main: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background: radial-gradient(circle at center, var(--color-dark-bg) 0%, var(--color-darker-bg) 100%);
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    line-height: 1.2;
+}
+
+.header {
+    background-color: rgba(10, 14, 26, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.barraNavegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.logo span {
+    color: var(--color-secondary);
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+}
+
+.active-link {
+    background-color: var(--color-primary); 
+    color: var(--color-dark-bg);
+}
+
+.main-content {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.seccionBienvenida {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, rgba(147, 112, 219, 0.1), rgba(59, 226, 211, 0.05));
+    border-radius: 12px;
+    border: 1px solid rgba(147, 112, 219, 0.3);
+    box-shadow: 0 5px 20px rgba(147, 112, 219, 0.2);
+}
+
+.seccionBienvenida h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--color-secondary); 
+}
+
+.seccionBienvenida p {
+    font-size: 1.25rem;
+    color: var(--color-text-dim);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #1a202c;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(147, 112, 219, 0.2); 
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 2px dashed var(--color-text-light);
+}
+
+.image-placeholder p {
+    color: var(--color-dark-bg);
+    font-weight: 700;
+}
+
+.img-principal {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 2px dashed var(--color-text-light);
+    overflow: hidden; 
+}
+
+.content-section {
+    background-color: #1a202c;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary); 
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    color: var(--color-text-dim);
+}
+
+.footer {
+    border-top: 1px solid rgba(147, 112, 219, 0.1); 
+    padding: 20px 0;
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
