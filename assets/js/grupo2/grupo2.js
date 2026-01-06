@@ -30,12 +30,6 @@ $(document).ready(function () {
 
         let valido = true;
 
-<<<<<<< HEAD
-console.log("Empleado:", nombre);
-console.log("Factor de Antigüedad:", factorAntiguedad);
-console.log("Categoría de Ventas:", categoriaVentas);
-console.log("Bono por Rendimiento:", bonoRendimiento);
-=======
         if ($("#nombre").val().trim() === "") {
             $("#errorNombre").text("Ingrese su nombre");
             valido = false;
@@ -57,4 +51,3 @@ console.log("Bono por Rendimiento:", bonoRendimiento);
     });
 
 });
->>>>>>> betojquery
