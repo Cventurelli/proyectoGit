@@ -29,10 +29,10 @@ body {
 section div {
 	background: #fff;
 	padding: 20px;
-	margin: 20px 15px;
-	border: 10px;
+	margin: 8px 10px;
+	border: 5px;
 	border-style: solid;
-	border-color: aquamarine;
+	border-color: rgb(194, 70, 243);
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: inline-block;
