@@ -75,3 +75,14 @@ $(document).ready(function () {
     });
 
 });
+$(window).on("scroll", function () {
+    $(".seccion").each(function () {
+        const top = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+
+        if (scroll + windowHeight - 100 > top) {
+            $(this).addClass("visible");
+        }
+    });
+});

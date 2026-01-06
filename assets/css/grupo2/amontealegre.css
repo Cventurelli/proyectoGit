@@ -314,3 +314,30 @@ body.dark-mode .seccion.color-4 textarea {
     background-color: #880e4f;
     color: #fff;
 }
+.seccion {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+header img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+header img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.list-group-item {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: translateX(10px);
+    background-color: #e9ecef;
+}
