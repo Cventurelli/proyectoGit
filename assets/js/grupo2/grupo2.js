@@ -51,3 +51,27 @@ $(document).ready(function () {
     });
 
 });
+$(document).ready(function () {
+
+    let colores = ["color-1", "color-2", "color-3", "color-4"];
+    let indiceColor = 0;
+
+    $("#btnColor").click(function () {
+
+        let seccion = $("#competencias");
+
+        // Eliminar colores anteriores
+        seccion.removeClass("color-1 color-2 color-3 color-4");
+
+        // Agregar nuevo color
+        seccion.addClass(colores[indiceColor]);
+
+        // Cambiar al siguiente color
+        indiceColor++;
+
+        if (indiceColor >= colores.length) {
+            indiceColor = 0;
+        }
+    });
+
+});
