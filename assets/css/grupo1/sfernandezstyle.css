@@ -5,7 +5,7 @@ body {
         }
 
         header, section {
-            background: rgba(0, 0, 0, 0.514);
+            background: rgba(0, 0, 0, 0.726);
             padding: 20px;
             margin-bottom: 20px 15px;
             border: 5px;
@@ -28,6 +28,7 @@ body {
         }
         footer{
             text-align: center;
+            color: black;
         }
         .user-profile{
             display: flex;
