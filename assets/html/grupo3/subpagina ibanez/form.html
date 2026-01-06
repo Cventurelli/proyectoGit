@@ -14,6 +14,7 @@
             background-color: #fff0f6;
             box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
+            display: inline-flexbox
         }
         div {
             margin-bottom: 15px;
@@ -38,8 +39,8 @@
                 <input type="text" name="Nombre" id="Nombre" placeholder="Escribe tu respuesta aquí"required=true>
             </div>
             <br>
-            <div>
             <h4>Input | Number </h4>
+            <div>
                 <label for="Edad">¿Cuántos años tienes?</label> 
                 <br>
                 <input type="number" name="Edad" id="Edad" min="0" max="100"  required >
@@ -57,16 +58,21 @@
                 <label for="checkbox"required>¿Has realizado algún curso de programación antes?</label>
                 <br>
                 <input type="checkbox" name="checkbox" id="checkbox" required>Sí.
-            </div>
                 <br>
                 <input type="checkbox" name="checkbox" id="checkbox" required>No.
+            </div>
                 <br>
                 <br>
+                <h4>Input | Password </h4>
+                <div>
                 <label for="contraseña">contraseña</label>
                 <br>
                 <input type="password" name="contraseña" id="contraseña" placeholder="Escribe tu contraseña aquí" >
+                </div>
                 <br>
                 <br>
+                <h4>Input | Radio button </h4>
+                <div>
                 <label>Selecciona tu opción favorita:</label>
                 <br>   
                 <input type="radio" name="tipo" id="Backend" value="Backend" required>
@@ -77,18 +83,27 @@
                 <br>
                 <input type="radio" name="tipo" id="fullstack"value="fullstack" required>
                 <label for="fullstack">Fullstack</label>
+                </div>
                 <br>
                 <br>
+                <h4>Input | Date </h4>
+                <div>
                 <label for="Fecha_nac">Fecha Nacimiento</label>
                 <br>
                 <input type="date" name="Fecha_nac" id="Fecha_nac"required>
+                </div>
                 <br>
                 <br>
+                <h4>Input | text box </h4>
+                <div>
                 <label>Deja un comentario de tu motivación por el programación  </label>
                 <br>
                 <textarea name="motivacion" id="motivacion" cols="30" rows="5" placeholder="Escribe tu comentario aquí"></textarea>
+                </div>
                 <br>
                 <br>
+                <h4>Input | select </h4>
+                <div>
                 <label for="Color">Indicanos tu color favorito</label>
                 <br>
                 <select name="color" id="color">
@@ -97,8 +112,10 @@
                     <option value="verde">Verde</option>
                     <option value="Morado">Morado</option>
                 </select>
+                </div>
                 <br>
                 <br>
+                <h4>Input | url | Submit </h4>
                 <button type="submit">Enviar</button>
                 <input type="url"   name="SitioWeb" id="SitioWeb" placeholder="https://tusitio.com">
             </form>

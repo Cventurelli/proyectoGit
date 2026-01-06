@@ -37,3 +37,10 @@ section div {
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: inline-block;
 }
+footer {
+    border-top: 1px solid rgba(147, 112, 219, 0.1); 
+    padding: 20px 0;
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
