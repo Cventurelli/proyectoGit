@@ -87,6 +87,11 @@ body {
             opacity: 1;
             transform: translateY(0);
         }
+        .boton-imagen:hover{
+            opacity: 0.8;
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
 
 
 
