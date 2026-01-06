@@ -1,25 +1,77 @@
-/* =============================ESTILOS GENERALES
+/* =============================
+ESTILOS GENERALES
 ============================= */
 
-/* Fuente general */
 body {
     font-family: "Inter", Arial, sans-serif;
-    background-color: #f8f9fa; /* gris claro */
-    color: #212529; /* texto bootstrap */
+    background-color: #f8f9fa;
+    color: #212529;
     line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
 }
 
-/* Colores globales */
+/* =============================
+MODO OSCURO
+============================= */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+/* =============================
+TÍTULOS
+============================= */
+
 h1, h2 {
-    color: #111;
     font-weight: 700;
 }
 
-/* Separación visual */
-section {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e5e5e5;
+/* =============================
+SECCIONES
+============================= */
+
+.seccion {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
     margin-bottom: 40px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: background 0.4s, color 0.4s, transform 0.3s;
+}
+
+/* Secciones modo oscuro */
+body.dark-mode .seccion {
+    background-color: #1e1e1e;
+}
+
+/* =============================
+COLORES DINÁMICOS POR SECCIÓN
+============================= */
+
+.color-azul {
+    background-color: #e7f1ff !important;
+}
+
+.color-verde {
+    background-color: #e8f7ef !important;
+}
+
+.color-rojo {
+    background-color: #fdeaea !important;
+}
+
+/* Versiones modo oscuro */
+body.dark-mode .color-azul {
+    background-color: #0d2a52 !important;
+}
+
+body.dark-mode .color-verde {
+    background-color: #0f3d2e !important;
+}
+
+body.dark-mode .color-rojo {
+    background-color: #4a1c1c !important;
 }
 
 /* =============================
@@ -27,7 +79,7 @@ NAVBAR
 ============================= */
 
 .navbar {
-    box-shadow: 0 2px 6px rgba(127, 141, 250, 0.959);
+    box-shadow: 0 2px 6px rgba(127, 141, 250, 0.6);
 }
 
 .navbar-brand {
@@ -43,6 +95,7 @@ header {
     background: linear-gradient(135deg, #5fa2ff 0%, #343a40 100%);
     color: white;
     padding: 80px 20px;
+    transition: background 0.4s;
 }
 
 header h1 {
@@ -54,31 +107,47 @@ header p {
     opacity: 0.9;
 }
 
+/* Header modo oscuro */
+body.dark-mode header {
+    background: linear-gradient(135deg, #0d6efd 0%, #000000 100%);
+}
+
 /* =============================
-LISTAS (Bootstrap list-group)
+LISTAS
 ============================= */
 
 .list-group-item {
     border: none;
     padding: 16px;
     font-size: 1.05rem;
+    transition: background 0.3s;
 }
 
 .list-group-item strong {
-    color: #0d6efd; /* azul Bootstrap */
+    color: #0d6efd;
 }
 
-/* Hover en items */
+/* Hover claro */
 .list-group-item:hover {
     background-color: #f1f1f1;
 }
 
+/* Listas modo oscuro */
+body.dark-mode .list-group-item {
+    background-color: #1e1e1e;
+    color: #f8f9fa;
+}
+
+body.dark-mode .list-group-item:hover {
+    background-color: #2a2a2a;
+}
+
 /* =============================
-BOTÓN DE CONTACTO
+BOTONES
 ============================= */
 
 .btn {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-dark {
@@ -93,6 +162,15 @@ BOTÓN DE CONTACTO
 }
 
 /* =============================
+FORMULARIO
+============================= */
+
+input,
+textarea {
+    border-radius: 8px;
+}
+
+/* =============================
 FOOTER
 ============================= */
 
@@ -101,6 +179,12 @@ footer {
     background-color: #000;
     color: #fff;
     opacity: 0.9;
+    transition: background 0.4s;
+}
+
+/* Footer modo oscuro */
+body.dark-mode footer {
+    background-color: #000;
 }
 
 /* =============================
@@ -115,4 +199,20 @@ RESPONSIVE
     header p {
         font-size: 1.1rem;
     }
+
+    .seccion {
+        padding: 20px;
+    }
 }
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+/* =============================
+ESTILOS GENERALES

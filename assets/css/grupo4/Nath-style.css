@@ -14,6 +14,18 @@ body {
     padding-bottom: 50px;
 }
 
+.mi-navbar {
+  background: rgba(35, 180, 25, 0.65);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1000;
+}
+
+.mi-navbar .nav-link {
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
 
 header {
     background: #117707;
@@ -39,7 +51,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: rgb(161, 174, 160);
+    color: rgb(172, 187, 171);
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
@@ -169,3 +181,4 @@ footer {
 .inicio {
     order: 8;
 }
+
