@@ -35,7 +35,7 @@ function typeLoop() {
 typeLoop();
 
 $(document).ready(function () {
-  // --- REQUISITO 1: Cambio de Tema Claro/Oscuro (jQuery) ---
+  // --- REQUISITO 1: Cambio de Tema Claro/Oscuro ---
   $("#btn-tema").click(function () {
     $("body").toggleClass("dark-mode");
 
@@ -46,50 +46,8 @@ $(document).ready(function () {
       $(this).text("🌙 Modo Oscuro");
     }
   });
-
-  // --- REQUISITO 4: Cambio de colores en una sección (jQuery) ---
-$(document).ready(function () {
-  // Paleta de colores suaves (Pastel) para mantener legibilidad
-  const paleta = [
-    "#E8F5E9", // Verde muy claro
-    "#FFFDE7", // Amarillo muy claro
-    "#E3F2FD", // Azul muy claro
-    "#F3E5F5", // Morado muy claro
-    "#FFF3E0", // Naranja muy claro
-    "#E0F2F1", // Turquesa muy claro
-  ];
-
-  // Evento Click para el Requisito 4
-$(document).ready(function() {
-    // Paleta para modo claro (Pasteles)
-    const paletaClara = ['#d1e7dd', '#fff3cd', '#f8d7da', '#cfe2ff', '#e2e3e5'];
-    // Paleta para modo oscuro (Verdes y grises profundos)
-    const paletaOscura = ['#0a2f1f', '#1c1c1c', '#2c3e50', '#1a3a3a', '#2d2d2d'];
-
-    $('#btn-colores-multiples').on('click', function() {
-        // 1. Detectamos si el modo oscuro está activo
-        const esModoOscuro = $('body').hasClass('dark-mode');
-        
-        // 2. Elegimos la paleta correspondiente
-        const coloresUsar = esModoOscuro ? paletaOscura : paletaClara;
-        const colorTexto = esModoOscuro ? '#ffffff' : '#212529';
-
-        // 3. Recorremos las secciones
-        $('section').each(function() {
-            const colorAzar = coloresUsar[Math.floor(Math.random() * coloresUsar.length)];
-            
-            $(this).css({
-                'background-color': colorAzar,
-                'color': colorTexto
-            });
-
-            // Ajustamos el color de los h2 para que contrasten
-            $(this).find('h2').css('color', esModoOscuro ? '#20c997' : '#036146');
-        });
-    });
-  });
-  // --- REQUISITO 2: Animación al desplazar (JS Puro / Intersection Observer) ---
-  // (Mantenemos el código anterior del Observer aquí abajo)
+  
+  // --- REQUISITO 2: Animación al desplazar (JS Puro ) ---
   $(document).ready(function () {
     // Al entrar con el mouse a una sección
     $("section").mouseenter(function () {
@@ -112,7 +70,49 @@ $(document).ready(function() {
         });
     });
   });
-});
+
+  // --- REQUISITO 4: Cambio de colores en una sección ---
+  $(document).ready(function () {
+    // Paleta de colores suaves (Pastel) para mantener legibilidad
+    const paleta = [
+      "#E8F5E9", // Verde muy claro
+      "#FFFDE7", // Amarillo muy claro
+      "#E3F2FD", // Azul muy claro
+      "#F3E5F5", // Morado muy claro
+      "#FFF3E0", // Naranja muy claro
+      "#E0F2F1", // Turquesa muy claro
+    ];
+
+    // Evento Click para el Requisito 4
+  $(document).ready(function() {
+      // Paleta para modo claro (Pasteles)
+      const paletaClara = ['#d1e7dd', '#fff3cd', '#f8d7da', '#cfe2ff', '#e2e3e5'];
+      // Paleta para modo oscuro (Verdes y grises profundos)
+      const paletaOscura = ['#0a2f1f', '#1c1c1c', '#2c3e50', '#1a3a3a', '#2d2d2d'];
+
+      $('#btn-colores-multiples').on('click', function() {
+          // 1. Detectamos si el modo oscuro está activo
+          const esModoOscuro = $('body').hasClass('dark-mode');
+          
+          // 2. Elegimos la paleta correspondiente
+          const coloresUsar = esModoOscuro ? paletaOscura : paletaClara;
+          const colorTexto = esModoOscuro ? '#ffffff' : '#212529';
+
+          // 3. Recorremos las secciones
+          $('section').each(function() {
+              const colorAzar = coloresUsar[Math.floor(Math.random() * coloresUsar.length)];
+              
+              $(this).css({
+                  'background-color': colorAzar,
+                  'color': colorTexto
+              });
+
+              // Ajustamos el color de los h2 para que contrasten
+              $(this).find('h2').css('color', esModoOscuro ? '#20c997' : '#036146');
+          });
+        });
+    });
+  });
 });
 
 //Resaltar sección al pasar el mouse
