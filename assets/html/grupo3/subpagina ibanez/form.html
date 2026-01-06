@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario pruebas</title>
+    <link rel="stylesheet" href="../../../css/grupo3/ibanez/styleindex.css"><!-- vinculo a la hoja de estilos externa-->
+    <style>
+        section {
+            margin: 20px 0; 
+            padding: 20px 15px;
+            border: #bb26b3 2px solid;
+            border-radius: 20px;
+            background-color: #fff0f6;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        div {
+            margin-bottom: 15px;
+            width: 20%;
+            display: inline-flex
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../soledadibanez.html">Volver</a> | <!-- para volver se utiliza"../" para retroceder una carpeta"-->
+        </nav>
+    </header>
+    <h1>formularios| Tipos</h1>
+    <section>
+        <h4>Input | Text </h4>
+            <form action="submit" method="post">
+            <div>
+                <label for="Nombre">¿Cómo te llamas?</label>
+                <br>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Escribe tu respuesta aquí"required=true>
+            </div>
+            <br>
+            <div>
+            <h4>Input | Number </h4>
+                <label for="Edad">¿Cuántos años tienes?</label> 
+                <br>
+                <input type="number" name="Edad" id="Edad" min="0" max="100"  required >
+            </div>
+            <br>
+        <h4>Input Email</h4>
+            <div>
+                <label for="Email">¿Cuál es tu correo electronico?</label>
+                <br>
+                <input type="email" name="Email" id="Email" placeholder="aloha@123.com" >
+            </div>
+            <br>
+        <h4>Input | checkbox</h4>
+            <div>
+                <label for="checkbox"required>¿Has realizado algún curso de programación antes?</label>
+                <br>
+                <input type="checkbox" name="checkbox" id="checkbox" required>Sí.
+            </div>
+                <br>
+                <input type="checkbox" name="checkbox" id="checkbox" required>No.
+                <br>
+                <br>
+                <label for="contraseña">contraseña</label>
+                <br>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Escribe tu contraseña aquí" >
+                <br>
+                <br>
+                <label>Selecciona tu opción favorita:</label>
+                <br>   
+                <input type="radio" name="tipo" id="Backend" value="Backend" required>
+                <label for="Backend">Backend</label>
+                <br>
+                <input type="radio" name="tipo" id="Frontend" value="Frontend"required>
+                <label for="Frontend">Frontend</label>
+                <br>
+                <input type="radio" name="tipo" id="fullstack"value="fullstack" required>
+                <label for="fullstack">Fullstack</label>
+                <br>
+                <br>
+                <label for="Fecha_nac">Fecha Nacimiento</label>
+                <br>
+                <input type="date" name="Fecha_nac" id="Fecha_nac"required>
+                <br>
+                <br>
+                <label>Deja un comentario de tu motivación por el programación  </label>
+                <br>
+                <textarea name="motivacion" id="motivacion" cols="30" rows="5" placeholder="Escribe tu comentario aquí"></textarea>
+                <br>
+                <br>
+                <label for="Color">Indicanos tu color favorito</label>
+                <br>
+                <select name="color" id="color">
+                    <option value="azul">Azul</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="Morado">Morado</option>
+                </select>
+                <br>
+                <br>
+                <button type="submit">Enviar</button>
+                <input type="url"   name="SitioWeb" id="SitioWeb" placeholder="https://tusitio.com">
+            </form>
+    </section>
+</body>
+</html>
