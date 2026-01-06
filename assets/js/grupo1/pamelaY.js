@@ -34,6 +34,86 @@ function typeLoop() {
 
 typeLoop();
 
+$(document).ready(function () {
+  // --- REQUISITO 1: Cambio de Tema Claro/Oscuro (jQuery) ---
+  $("#btn-tema").click(function () {
+    $("body").toggleClass("dark-mode");
+
+    // Cambiar el texto del botón dinámicamente
+    if ($("body").hasClass("dark-mode")) {
+      $(this).text("☀️ Modo Claro");
+    } else {
+      $(this).text("🌙 Modo Oscuro");
+    }
+  });
+
+  // --- REQUISITO 4: Cambio de colores en una sección (jQuery) ---
+$(document).ready(function () {
+  // Paleta de colores suaves (Pastel) para mantener legibilidad
+  const paleta = [
+    "#E8F5E9", // Verde muy claro
+    "#FFFDE7", // Amarillo muy claro
+    "#E3F2FD", // Azul muy claro
+    "#F3E5F5", // Morado muy claro
+    "#FFF3E0", // Naranja muy claro
+    "#E0F2F1", // Turquesa muy claro
+  ];
+
+  // Evento Click para el Requisito 4
+$(document).ready(function() {
+    // Paleta para modo claro (Pasteles)
+    const paletaClara = ['#d1e7dd', '#fff3cd', '#f8d7da', '#cfe2ff', '#e2e3e5'];
+    // Paleta para modo oscuro (Verdes y grises profundos)
+    const paletaOscura = ['#0a2f1f', '#1c1c1c', '#2c3e50', '#1a3a3a', '#2d2d2d'];
+
+    $('#btn-colores-multiples').on('click', function() {
+        // 1. Detectamos si el modo oscuro está activo
+        const esModoOscuro = $('body').hasClass('dark-mode');
+        
+        // 2. Elegimos la paleta correspondiente
+        const coloresUsar = esModoOscuro ? paletaOscura : paletaClara;
+        const colorTexto = esModoOscuro ? '#ffffff' : '#212529';
+
+        // 3. Recorremos las secciones
+        $('section').each(function() {
+            const colorAzar = coloresUsar[Math.floor(Math.random() * coloresUsar.length)];
+            
+            $(this).css({
+                'background-color': colorAzar,
+                'color': colorTexto
+            });
+
+            // Ajustamos el color de los h2 para que contrasten
+            $(this).find('h2').css('color', esModoOscuro ? '#20c997' : '#036146');
+        });
+    });
+  });
+  // --- REQUISITO 2: Animación al desplazar (JS Puro / Intersection Observer) ---
+  // (Mantenemos el código anterior del Observer aquí abajo)
+  $(document).ready(function () {
+    // Al entrar con el mouse a una sección
+    $("section").mouseenter(function () {
+      // Buscamos el H2 de esa sección específica y lo resaltamos
+      $(this).find("h2").css({
+        color: "#ffc107",
+        "letter-spacing": "2px",
+        transition: "all 0.3s",
+      });
+    });
+
+    // Al salir con el mouse de la sección (vuelve a la normalidad)
+    $("section").mouseleave(function () {
+      const esOscuro = $("body").hasClass("dark-mode");
+      $(this)
+        .find("h2")
+        .css({
+          color: esOscuro ? "#20c997" : "#036146",
+          "letter-spacing": "normal",
+        });
+    });
+  });
+});
+});
 
 //Resaltar sección al pasar el mouse
 const cards = document.querySelectorAll(".card");
@@ -114,4 +194,4 @@ btnBackToTop.addEventListener("click", () => {
     top: 0,
     behavior: "smooth", // Esto hace el efecto de deslizamiento suave
   });
-});
+})
