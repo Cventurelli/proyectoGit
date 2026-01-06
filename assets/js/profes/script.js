@@ -23,7 +23,7 @@ function mostrar(){
 	//Obtener el valor del nombre ingresado
 	const nombre = nombreInput.value;
 	// Validar si el nombre no está vacío
-	if(nombre.trim() === ''){
+	if (nombre.trim() === '') {
 		//si esta vacío se imprime un mensaje de error
 		salida.innerText = 'Por favor, ingresa un nombre.';
 		return;
@@ -74,4 +74,18 @@ cambiarMensajeBtn.addEventListener('click', function() {
 
 	cambiarMensajeBtn.textContent = 'Mensaje Cambiado'; // Cambiar el texto del botón
 	cambiarMensajeBtn.disabled = true; // Deshabilitar el botón después de hacer clic
+});
+//4. Funcionalidad con jQuery
+$(document).ready(function() {
+	$('#jqueryBtn').click(function() { // Evento de clic para el botón con id "jqueryBtn"
+		$('#jqueryText').text('Este es el texto que ha sido cambiado por jQuery!'); // Cambiar el texto del párrafo
+		$('#jqueryText').css({
+			'color': 'green',
+			'font-size': '22px',
+			'font-weight': 'bold'
+		}); // Cambiar el estilo del texto
+
+		$(this).text('Texto Cambiado con jQuery'); // Cambiar el texto del botón
+		$(this).prop('disabled', true); // Deshabilitar el botón después de hacer clic
+	});
 });
