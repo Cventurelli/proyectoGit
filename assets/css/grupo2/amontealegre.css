@@ -216,3 +216,101 @@ RESPONSIVE
 }
 /* =============================
 ESTILOS GENERALES
+
+/* =============================
+COLORES DINÁMICOS POR SECCIÓN
+============================= */
+
+.seccion.color-1 {
+    background-color: #e3f2fd; /* azul claro */
+}
+
+.seccion.color-2 {
+    background-color: #e8f5e9; /* verde claro */
+}
+
+.seccion.color-3 {
+    background-color: #fff3e0; /* naranjo claro */
+}
+
+.seccion.color-4 {
+    background-color: #fce4ec; /* rosado claro */
+}
+
+/* MODO OSCURO */
+body.dark-mode .seccion.color-1 {
+    background-color: #1a237e;
+}
+
+body.dark-mode .seccion.color-2 {
+    background-color: #1b5e20;
+}
+
+body.dark-mode .seccion.color-3 {
+    background-color: #e65100;
+}
+/* =============================
+COLORES DINÁMICOS COMPLETOS
+(AFECTA CONTENIDO INTERNO)
+============================= */
+
+.seccion.color-1,
+.seccion.color-1 .list-group-item,
+.seccion.color-1 input,
+.seccion.color-1 textarea {
+    background-color: #e3f2fd;
+}
+
+.seccion.color-2,
+.seccion.color-2 .list-group-item,
+.seccion.color-2 input,
+.seccion.color-2 textarea {
+    background-color: #e8f5e9;
+}
+
+.seccion.color-3,
+.seccion.color-3 .list-group-item,
+.seccion.color-3 input,
+.seccion.color-3 textarea {
+    background-color: #fff3e0;
+}
+
+.seccion.color-4,
+.seccion.color-4 .list-group-item,
+.seccion.color-4 input,
+.seccion.color-4 textarea {
+    background-color: #fce4ec;
+}
+
+/* MODO OSCURO */
+body.dark-mode .seccion.color-1,
+body.dark-mode .seccion.color-1 .list-group-item,
+body.dark-mode .seccion.color-1 input,
+body.dark-mode .seccion.color-1 textarea {
+    background-color: #1a237e;
+    color: #fff;
+}
+
+body.dark-mode .seccion.color-2,
+body.dark-mode .seccion.color-2 .list-group-item,
+body.dark-mode .seccion.color-2 input,
+body.dark-mode .seccion.color-2 textarea {
+    background-color: #1b5e20;
+    color: #fff;
+}
+
+body.dark-mode .seccion.color-3,
+body.dark-mode .seccion.color-3 .list-group-item,
+body.dark-mode .seccion.color-3 input,
+body.dark-mode .seccion.color-3 textarea {
+    background-color: #e65100;
+    color: #fff;
+}
+
+body.dark-mode .seccion.color-4,
+body.dark-mode .seccion.color-4 .list-group-item,
+body.dark-mode .seccion.color-4 input,
+body.dark-mode .seccion.color-4 textarea {
+    background-color: #880e4f;
+    color: #fff;
+}

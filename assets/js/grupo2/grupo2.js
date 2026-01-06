@@ -30,12 +30,6 @@ $(document).ready(function () {
 
         let valido = true;
 
-<<<<<<< HEAD
-console.log("Empleado:", nombre);
-console.log("Factor de Antigüedad:", factorAntiguedad);
-console.log("Categoría de Ventas:", categoriaVentas);
-console.log("Bono por Rendimiento:", bonoRendimiento);
-=======
         if ($("#nombre").val().trim() === "") {
             $("#errorNombre").text("Ingrese su nombre");
             valido = false;
@@ -57,4 +51,27 @@ console.log("Bono por Rendimiento:", bonoRendimiento);
     });
 
 });
->>>>>>> betojquery
+$(document).ready(function () {
+
+    let colores = ["color-1", "color-2", "color-3", "color-4"];
+    let indiceColor = 0;
+
+    $("#btnColor").click(function () {
+
+        let seccion = $("#competencias");
+
+        // Eliminar colores anteriores
+        seccion.removeClass("color-1 color-2 color-3 color-4");
+
+        // Agregar nuevo color
+        seccion.addClass(colores[indiceColor]);
+
+        // Cambiar al siguiente color
+        indiceColor++;
+
+        if (indiceColor >= colores.length) {
+            indiceColor = 0;
+        }
+    });
+
+});
