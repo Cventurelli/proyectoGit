@@ -119,11 +119,36 @@
     </section>
 
 </main>
+        <!-- Columna derecha: clima -->
+    <div class="col-md-12">
+      <section class="mb-3 text-bg-dark p-3 rounded">
+        <h3>Pronóstico</h3>
+        <a class="weatherwidget-io" 
+           href="https://forecast7.com/es/n36d82n73d04/concepcion/" 
+           data-label_1="CONCEPCIÓN" 
+           data-label_2="WEATHER" 
+           data-icons="Climacons Animated" 
+           data-theme="weather_one">
+           CONCEPCIÓN WEATHER
+        </a>
+      </section>
         <footer class="bg-dark text-white text-center py-3">
             <p class="mb-0">&copy; 2025 Grupo 1 FSJ 0050-1. Todos los derechos reservados.</p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 
+
+      <script>
+!function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+    }
+}(document,'script','weatherwidget-io-js');
+</script>
 </body>
 </html>
