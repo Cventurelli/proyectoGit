@@ -34,3 +34,22 @@ div {
 h2 {
     color:black;
 }
+@media (max-width:450px) {
+    body {
+        font-size: small;
+    }
+    #proyectos {
+        padding: 30px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+}
+@media (max-width:720px) and (min-width:450px) {
+    body {
+        font-size: medium;
+    }
+    #proyectos {
+        padding: 30px;
+    }
+}
