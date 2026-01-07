@@ -86,3 +86,13 @@ $(window).on("scroll", function () {
         }
     });
 });
+$(document).ready(function () {
+    $(window).trigger("scroll");
+});
+$('#videoModal').on('hidden.bs.modal', function () {
+    const iframe = $(this).find('iframe');
+    const src = iframe.attr('src');
+
+    iframe.attr('src', '');
+    iframe.attr('src', src);
+});

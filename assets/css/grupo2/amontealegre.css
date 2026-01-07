@@ -1,6 +1,6 @@
-/* =============================
+/* ==================================================
 ESTILOS GENERALES
-============================= */
+================================================== */
 
 body {
     font-family: "Inter", Arial, sans-serif;
@@ -10,26 +10,26 @@ body {
     transition: background 0.4s, color 0.4s;
 }
 
-/* =============================
+/* ==================================================
 MODO OSCURO
-============================= */
+================================================== */
 
 body.dark-mode {
     background-color: #121212;
     color: #f8f9fa;
 }
 
-/* =============================
+/* ==================================================
 TÍTULOS
-============================= */
+================================================== */
 
 h1, h2 {
     font-weight: 700;
 }
 
-/* =============================
-SECCIONES
-============================= */
+/* ==================================================
+SECCIONES GENERALES
+================================================== */
 
 .seccion {
     background-color: #ffffff;
@@ -37,7 +37,11 @@ SECCIONES
     border-radius: 12px;
     margin-bottom: 40px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-    transition: background 0.4s, color 0.4s, transform 0.3s;
+    transition: 
+        background 0.4s,
+        color 0.4s,
+        transform 0.8s ease,
+        opacity 0.8s ease;
 }
 
 /* Secciones modo oscuro */
@@ -45,244 +49,57 @@ body.dark-mode .seccion {
     background-color: #1e1e1e;
 }
 
-/* =============================
+/* ==================================================
+ANIMACIÓN SCROLL
+================================================== */
+
+.seccion {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==================================================
 COLORES DINÁMICOS POR SECCIÓN
-============================= */
+(Afecta TODO el contenido interno)
+================================================== */
 
-.color-azul {
-    background-color: #e7f1ff !important;
-}
-
-.color-verde {
-    background-color: #e8f7ef !important;
-}
-
-.color-rojo {
-    background-color: #fdeaea !important;
-}
-
-/* Versiones modo oscuro */
-body.dark-mode .color-azul {
-    background-color: #0d2a52 !important;
-}
-
-body.dark-mode .color-verde {
-    background-color: #0f3d2e !important;
-}
-
-body.dark-mode .color-rojo {
-    background-color: #4a1c1c !important;
-}
-
-/* =============================
-NAVBAR
-============================= */
-
-.navbar {
-    box-shadow: 0 2px 6px rgba(127, 141, 250, 0.6);
-}
-
-.navbar-brand {
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-}
-
-/* =============================
-HEADER
-============================= */
-
-header {
-    background: linear-gradient(135deg, #5fa2ff 0%, #343a40 100%);
-    color: white;
-    padding: 80px 20px;
-    transition: background 0.4s;
-}
-
-header h1 {
-    font-size: 2.7rem;
-}
-
-header p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-}
-
-/* Header modo oscuro */
-body.dark-mode header {
-    background: linear-gradient(135deg, #0d6efd 0%, #000000 100%);
-}
-
-/* =============================
-LISTAS
-============================= */
-
-.list-group-item {
-    border: none;
-    padding: 16px;
-    font-size: 1.05rem;
-    transition: background 0.3s;
-}
-
-.list-group-item strong {
-    color: #0d6efd;
-}
-
-/* Hover claro */
-.list-group-item:hover {
-    background-color: #f1f1f1;
-}
-
-/* Listas modo oscuro */
-body.dark-mode .list-group-item {
-    background-color: #1e1e1e;
-    color: #f8f9fa;
-}
-
-body.dark-mode .list-group-item:hover {
-    background-color: #2a2a2a;
-}
-
-/* =============================
-BOTONES
-============================= */
-
-.btn {
-    transition: all 0.3s ease;
-}
-
-.btn-dark {
-    background-color: #000;
-    border-radius: 8px;
-    padding: 12px 24px;
-}
-
-.btn-dark:hover {
-    background-color: #212529;
-    transform: translateY(-3px);
-}
-
-/* =============================
-FORMULARIO
-============================= */
-
-input,
-textarea {
-    border-radius: 8px;
-}
-
-/* =============================
-FOOTER
-============================= */
-
-footer {
-    margin-top: 60px;
-    background-color: #000;
-    color: #fff;
-    opacity: 0.9;
-    transition: background 0.4s;
-}
-
-/* Footer modo oscuro */
-body.dark-mode footer {
-    background-color: #000;
-}
-
-/* =============================
-RESPONSIVE
-============================= */
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-
-    header p {
-        font-size: 1.1rem;
-    }
-
-    .seccion {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-}
-/* =============================
-ESTILOS GENERALES
-
-/* =============================
-COLORES DINÁMICOS POR SECCIÓN
-============================= */
-
-.seccion.color-1 {
-    background-color: #e3f2fd; /* azul claro */
-}
-
-.seccion.color-2 {
-    background-color: #e8f5e9; /* verde claro */
-}
-
-.seccion.color-3 {
-    background-color: #fff3e0; /* naranjo claro */
-}
-
-.seccion.color-4 {
-    background-color: #fce4ec; /* rosado claro */
-}
-
-/* MODO OSCURO */
-body.dark-mode .seccion.color-1 {
-    background-color: #1a237e;
-}
-
-body.dark-mode .seccion.color-2 {
-    background-color: #1b5e20;
-}
-
-body.dark-mode .seccion.color-3 {
-    background-color: #e65100;
-}
-/* =============================
-COLORES DINÁMICOS COMPLETOS
-(AFECTA CONTENIDO INTERNO)
-============================= */
+/* ----- MODO CLARO ----- */
 
 .seccion.color-1,
 .seccion.color-1 .list-group-item,
 .seccion.color-1 input,
 .seccion.color-1 textarea {
-    background-color: #e3f2fd;
+    background-color: #e3f2fd; /* azul */
 }
 
 .seccion.color-2,
 .seccion.color-2 .list-group-item,
 .seccion.color-2 input,
 .seccion.color-2 textarea {
-    background-color: #e8f5e9;
+    background-color: #e8f5e9; /* verde */
 }
 
 .seccion.color-3,
 .seccion.color-3 .list-group-item,
 .seccion.color-3 input,
 .seccion.color-3 textarea {
-    background-color: #fff3e0;
+    background-color: #fff3e0; /* naranjo */
 }
 
 .seccion.color-4,
 .seccion.color-4 .list-group-item,
 .seccion.color-4 input,
 .seccion.color-4 textarea {
-    background-color: #fce4ec;
+    background-color: #fce4ec; /* rosado */
 }
 
-/* MODO OSCURO */
+/* ----- MODO OSCURO ----- */
+
 body.dark-mode .seccion.color-1,
 body.dark-mode .seccion.color-1 .list-group-item,
 body.dark-mode .seccion.color-1 input,
@@ -314,17 +131,45 @@ body.dark-mode .seccion.color-4 textarea {
     background-color: #880e4f;
     color: #fff;
 }
-.seccion {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+
+/* ==================================================
+NAVBAR
+================================================== */
+
+.navbar {
+    box-shadow: 0 2px 6px rgba(127, 141, 250, 0.6);
 }
 
-.seccion.visible {
-    opacity: 1;
-    transform: translateY(0);
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
 }
 
+/* ==================================================
+HEADER
+================================================== */
+
+header {
+    background: linear-gradient(135deg, #ff0000 0%, #26292c 100%);
+    color: white;
+    padding: 80px 20px;
+    transition: background 0.4s;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #0d6efd 0%, #000000 100%);
+}
+
+header h1 {
+    font-size: 2.7rem;
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Imagen header */
 header img {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -333,11 +178,199 @@ header img:hover {
     transform: scale(1.08);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
+/* ==================================================
+LISTAS
+================================================== */
+
 .list-group-item {
+    border: none;
+    padding: 16px;
+    font-size: 1.05rem;
     transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.list-group-item strong {
+    color: #0d6efd;
 }
 
 .list-group-item:hover {
     transform: translateX(10px);
     background-color: #e9ecef;
+}
+
+/* Listas modo oscuro */
+body.dark-mode .list-group-item:hover {
+    background-color: #2a2a2a;
+}
+
+/* ==================================================
+BOTONES
+================================================== */
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-dark {
+    background-color: #000;
+    border-radius: 8px;
+    padding: 12px 24px;
+}
+
+.btn-dark:hover {
+    background-color: #212529;
+    transform: translateY(-3px);
+}
+
+/* ==================================================
+FORMULARIOS
+================================================== */
+
+input,
+textarea {
+    border-radius: 8px;
+}
+
+/* ==================================================
+FOOTER
+================================================== */
+
+footer {
+    margin-top: 60px;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    .seccion {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+#sobreMi .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+/* =============================
+FONDOS SUAVES POR TIPO DE SECCIÓN
+============================= */
+
+/* Proyectos */
+.bg-proyectos {
+    background-color: #f1f5ff;
+}
+
+/* Experiencia */
+.bg-experiencia {
+    background-color: #f4f7f6;
+}
+
+/* Educación */
+.bg-educacion {
+    background-color: #fff7e6;
+}
+
+/* Modo oscuro */
+body.dark-mode .bg-proyectos {
+    background-color: #1a2238;
+}
+
+body.dark-mode .bg-experiencia {
+    background-color: #3b997a;
+}
+
+body.dark-mode .bg-educacion {
+    background-color: #b18024;
+}
+/* =============================/* =============================
+COLORES DE TEXTO POR SECCIÓN
+============================= */
+
+/* PROYECTOS */
+.bg-proyectos h2,
+.bg-proyectos strong {
+    color: #1e40af; /* azul */
+}
+
+.bg-proyectos a {
+    color: #2563eb;
+}
+
+/* EXPERIENCIA */
+.bg-experiencia h2,
+.bg-experiencia strong {
+    color: #00b585; /* verde */
+}
+
+/* EDUCACIÓN */
+.bg-educacion h2,
+.bg-educacion strong {
+    color: #92400e; /* naranjo */
+}
+
+/* Listas */
+.bg-proyectos .list-group-item,
+.bg-experiencia .list-group-item,
+.bg-educacion .list-group-item {
+    background: transparent;
+    border: none;
+}
+
+/* Links hover */
+.bg-proyectos a:hover,
+.bg-experiencia a:hover,
+.bg-educacion a:hover {
+    text-decoration: underline;
+}
+
+/* =============================
+MODO OSCURO
+============================= */
+
+body.dark-mode .bg-proyectos h2,
+body.dark-mode .bg-proyectos strong {
+    color: #93c5fd;
+}
+
+body.dark-mode .bg-proyectos a {
+    color: #60a5fa;
+}
+
+body.dark-mode .bg-experiencia h2,
+body.dark-mode .bg-experiencia strong {
+    color: #41e804;
+}
+
+body.dark-mode .bg-educacion h2,
+body.dark-mode .bg-educacion strong {
+    color: #fcd34d;
+}
+/* CONTENIDO DE LAS SECCIONES EN NEGRITA */
+.seccion p,
+.seccion ul,
+.seccion li {
+    font-weight: 600; /* seminegrita, elegante */
 }
