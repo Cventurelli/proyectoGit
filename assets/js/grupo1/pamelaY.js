@@ -46,7 +46,7 @@ $(document).ready(function () {
       $(this).text("☀️ Modo Claro");
     }
   });
-  
+
   // --- REQUISITO 2: Animación al desplazar (JS Puro ) ---
   $(document).ready(function () {
     // Al entrar con el mouse a una sección
@@ -84,33 +84,48 @@ $(document).ready(function () {
     ];
 
     // Evento Click para el Requisito 4
-  $(document).ready(function() {
+    $(document).ready(function () {
       // Paleta para modo claro (Pasteles)
-      const paletaClara = ['#d1e7dd', '#fff3cd', '#f8d7da', '#cfe2ff', '#e2e3e5'];
+      const paletaClara = [
+        "#d1e7dd",
+        "#fff3cd",
+        "#f8d7da",
+        "#cfe2ff",
+        "#e2e3e5",
+      ];
       // Paleta para modo oscuro (Verdes y grises profundos)
-      const paletaOscura = ['#0a2f1f', '#1c1c1c', '#2c3e50', '#1a3a3a', '#2d2d2d'];
+      const paletaOscura = [
+        "#0a2f1f",
+        "#1c1c1c",
+        "#2c3e50",
+        "#1a3a3a",
+        "#2d2d2d",
+      ];
 
-      $('#btn-colores-multiples').on('click', function() {
-          // 1. Detectamos si el modo oscuro está activo
-          const esModoOscuro = $('body').hasClass('dark-mode');
-          
-          // 2. Elegimos la paleta correspondiente
-          const coloresUsar = esModoOscuro ? paletaOscura : paletaClara;
-          const colorTexto = esModoOscuro ? '#ffffff' : '#212529';
+      $("#btn-colores-multiples").on("click", function () {
+        // 1. Detectamos si el modo oscuro está activo
+        const esModoOscuro = $("body").hasClass("dark-mode");
 
-          // 3. Recorremos las secciones
-          $('section').each(function() {
-              const colorAzar = coloresUsar[Math.floor(Math.random() * coloresUsar.length)];
-              
-              $(this).css({
-                  'background-color': colorAzar,
-                  'color': colorTexto
-              });
+        // 2. Elegimos la paleta correspondiente
+        const coloresUsar = esModoOscuro ? paletaOscura : paletaClara;
+        const colorTexto = esModoOscuro ? "#ffffff" : "#212529";
 
-              // Ajustamos el color de los h2 para que contrasten
-              $(this).find('h2').css('color', esModoOscuro ? '#20c997' : '#036146');
+        // 3. Recorremos las secciones
+        $("section").each(function () {
+          const colorAzar =
+            coloresUsar[Math.floor(Math.random() * coloresUsar.length)];
+
+          $(this).css({
+            "background-color": colorAzar,
+            color: colorTexto,
           });
+
+          // Ajustamos el color de los h2 para que contrasten
+          $(this)
+            .find("h2")
+            .css("color", esModoOscuro ? "#20c997" : "#036146");
         });
+      });
     });
   });
 });
@@ -128,7 +143,6 @@ cards.forEach((card) => {
   });
 });
 
-
 // Abrir email al hacer clic en el botón de contacto
 document.getElementById("enviarCorreo").addEventListener("click", () => {
   window.location.href = "mailto:pamela.kyp@gmail.com";
@@ -140,7 +154,6 @@ document.getElementById("enviarCorreo").addEventListener("click", () => {
     if (modal) modal.hide();
   }, 500);
 });
-
 
 //Animación de aparición al hacer scroll
 const sections = document.querySelectorAll("section");
@@ -194,4 +207,4 @@ btnBackToTop.addEventListener("click", () => {
     top: 0,
     behavior: "smooth", // Esto hace el efecto de deslizamiento suave
   });
-})
+});
