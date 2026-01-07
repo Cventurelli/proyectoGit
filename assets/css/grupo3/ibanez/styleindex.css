@@ -32,7 +32,7 @@ section div {
 	margin: 8px 10px;
 	border: 5px;
 	border-style: solid;
-	border-color: rgb(194, 70, 243);
+    border-color: rgb(255, 255, 255);
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: inline-block;
@@ -43,4 +43,30 @@ footer {
     text-align: center;
     color: var(--color-text-dim);
     font-size: 0.9rem;
+}
+.education-card {
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent !important;
+    }
+    .education-card:hover {
+        transform: translateY(-10px);
+        border-bottom: 3px solid rgb(236, 17, 163) !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    .text-pink {
+        color: rgb(236, 17, 163);
+    }
+    /* Estado normal del botón */
+.btn-proyectos {
+    background-color: white;
+    color: rgb(236, 17, 163);
+    border: 2px solid rgb(236, 17, 163);
+    transition: all 0.3s ease; /* Esto hace que el cambio de color sea suave */
+}
+
+/* Estado cuando pasas el mouse (Hover) */
+.btn-proyectos:hover {
+    background-color: rgb(236, 17, 163);
+    color: white;
+    border-color: rgb(236, 17, 163);
 }
