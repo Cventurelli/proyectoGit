@@ -12,18 +12,55 @@
     <!-- CSS propio -->
     <link rel="stylesheet" href="../../css/grupo2/amontealegre.css" />
 </head>
+<!-- MODAL VIDEO CLIPS -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+
+            <div class="modal-header border-0">
+                <h5 class="modal-title">🎬 Video Clips</h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <iframe
+                        src="https://www.youtube.com/embed/yb2NJg6ZA98"
+                        title="Video YouTube"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <body class="light-theme">
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
 
-        <a class="navbar-brand fw-bold" href="/">Portafolio</a>
+        <a class="navbar-brand fw-bold" href="/">Alberto Montealegre</a>
 
+        <!-- BOTONES -->
+        <a class="btn btn-outline-light btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#videoModal"> 🎬 Video Clips</a>
+
+<a href="../grupo2/grupal.html" class="btn btn-outline-light btn-sm ms-2"> 👥 Grupo 2
+</a>
+
+        <!-- TOGGLER -->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+    </div>
 
         <!-- Offcanvas -->
         <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasNav">
@@ -120,20 +157,36 @@
 <!-- CONTENIDO -->
 <main class="container my-5">
 
-    <section id="sobreMi" class="seccion mb-5">
-        <h2>Sobre mí</h2>
-        <p>Desarrollador Full Stack Java y Analista de Datos en Python, con experiencia en el desarrollo de aplicaciones web 
-        <p>y el análisis de información para la toma de decisiones.</p>
-        <p>Además, profesor, músico y productor musical, con una sólida trayectoria creativa y pedagógica..</p>
-        
+<section id="sobreMi" class="seccion mb-5 text-center">
+    <h2 class="mb-4">Sobre mí</h2>
+
+    <p class="lead mb-3">
+        Desarrollador Web Full Stack Java y Analista de Datos en Python.
+    </p>
+
+    <p>
+        Especializado en el desarrollo de aplicaciones web modernas,
+        escalables y centradas en la experiencia del usuario,
+        combinando buenas prácticas de programación con soluciones eficientes.
+    </p>
+
+    <p>
+        Cuento con experiencia en análisis y visualización de datos
+        para apoyar la toma de decisiones estratégicas.
+    </p>
+
+    <p class="mb-0">
+        Además, me desempeño como profesor, músico y productor musical,
+        integrando creatividad, disciplina y pensamiento crítico
+        en cada proyecto profesional.
+    </p>
+</section>
+
+</section>
     </section>
 
-    <section id="proyectos" class="seccion mb-5">
+    <section id="proyectos" class="seccion bg-proyectos mb-5">
         <h2>Proyectos</h2>
-        <ul class="list-group">
-            <li class="list-group-item">Proyecto JavaScript</li>
-        </ul>
-        <ul class="list-unstyled">
     <li>
         🎸 <strong>Sabotaje Rock</strong> —
         <a href="https://www.sabotajerock.cl/" target="_blank" rel="noopener noreferrer">
@@ -163,7 +216,7 @@
         </button>
     </section>
 
-    <section id="experiencia" class="seccion mb-5">
+    <section id="experiencia" class="seccion bg-experiencia mb-5">
         <h2>Experiencia</h2>
         <ul class="list-group">
             <li class="list-group-item">Editorial Cuarto Propio (2022-2025)</li>
@@ -171,7 +224,7 @@
         </ul>
     </section>
 
-    <section id="educacion" class="seccion mb-5">
+    <section id="educacion" class="seccion bg-educacion mb-5">
         <h2>Educación</h2>
         <ul class="list-group">
             <li class="list-group-item">Licenciado en Música - ARCIS</li>
@@ -226,7 +279,7 @@
 </main>
 
 <footer class="text-center py-4 bg-dark text-light">
-    <p>ACME® 2025</p>
+    <p>ACME® 2026</p>
 </footer>
 
 <!-- JS -->
