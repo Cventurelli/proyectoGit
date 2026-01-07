@@ -28,7 +28,7 @@ h1, h2 {
     line-height: 1.2;
 }
 
-.header {
+.header { /* barra superior estilo colores */
     background-color: rgba(0, 50, 56, 0.815);
     box-shadow: 0 2px 5px rgba(6, 225, 233, 0.795);
     position: sticky;
@@ -125,15 +125,16 @@ h1, h2 {
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(4, 194, 201, 0.76); /* Borde más visible */
+    border: 1px solid rgba(2, 115, 119, 0.76); /* Borde más visible */
     box-shadow: 0 5px 20px rgba(48, 194, 219, 0.89); /* Sombra más pronunciada */ 
 }
 
 .card h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .image-placeholder {
