@@ -23,7 +23,7 @@ body {
             text-align: center;
             color: rgb(255, 255, 255);
         }
-        p, ul, li, label, button{
+        p, ul, li, label{
             color: rgb(255, 255, 255);
         }
         footer{
@@ -91,6 +91,9 @@ body {
             opacity: 0.8;
             transform: scale(1.05);
             transition: 0.3s;
+        }
+        .imagen_de_contacto{
+            display: center;
         }
 
 
