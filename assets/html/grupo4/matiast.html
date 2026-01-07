@@ -9,20 +9,27 @@
 			rel="stylesheet"
 			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
 			crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+			rel="stylesheet" />
 		<link rel="stylesheet" href="../../css/grupo4/stylematiast.css">
-		
+
 		<title>Mi portafolio digital</title>
 	</head>
 	<body>
 		<header id="header"> <!-- Encabezado del documento -->
-			<nav class="navbar bg-light fixed-top" style="background: linear-gradient(176deg, #096a97, #ee98d9da);">
+			<nav class="navbar bg-light fixed-top"
+				style="background: linear-gradient(176deg, #096a97, #ee98d9da);">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="../../../index.html">FSJ 0050-1</a>
+					<button id="toggle-theme"
+						class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-heading rounded-base group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+						style="position: absolute; right: 90px;">Tema</button>
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" 
+						data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
 						aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
+
 					<div class="offcanvas offcanvas-end text-bg-light" tabindex="-1"
 						id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
 						<div class="offcanvas-header">
@@ -31,7 +38,8 @@
 								data-bs-dismiss="offcanvas" aria-label="Close">
 							</button>
 						</div>
-						<div class="offcanvas-body"  style="background: linear-gradient(-1deg, #bbc1c9, #0fa1b8);">
+						<div class="offcanvas-body"
+							style="background: linear-gradient(-1deg, #bbc1c9, #0fa1b8);">
 							<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 								<li class="nav-item">
 									<a class="nav-link active" aria-current="page"
@@ -49,14 +57,17 @@
 										data-bs-toggle="dropdown" aria-expanded="false">
 										Grupo 4
 									</a>
-									<ul class="dropdown-menu dropdown-menu-light" style="background: none; border: none;">
-										<li><a class="dropdown-item" href="../grupo4/barbaraVera.html">Bárbara
+									<ul class="dropdown-menu dropdown-menu-light"
+										style="background: none; border: none;">
+										<li><a class="dropdown-item"
+												href="../grupo4/barbaraVera.html">Bárbara
 												Vera</a></li>
 										<li><a class="dropdown-item" href="../grupo4/Natanael.html">Natanael
 												Peña</a></li>
 										<li><a class="dropdown-item" href="../grupo4/matiast.html">Matías
 												Torres</a></li>
 										<li><a class="dropdown-item" href="#">JunLan Chau</a></li>
+										<li><a class="dropdown-item" href="../grupo4/resumeng4.html">Resumen Grupo 4</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -65,12 +76,14 @@
 				</div>
 			</nav>
 			<h1>Matias Torres Garcia</h1>
-			<p>Enfermero que busca reinventarse en la industria TI</p>
+			<p style="font-size: 30px;">Enfermero que busca reinventarse en la industria
+				TI</p>
 		</header>
 		<div class="popup-overlay" id="welcome-popup">
 			<div class="popup">
 				<h2>¡Bienvenido a mi Portafolio!</h2>
-        			<p>Es un gusto tenerte aquí. Explora mis proyectos y mi experiencia como desarrollador.</p>
+				<p>Es un gusto tenerte aquí. Explora mis proyectos y mi experiencia como
+					desarrollador.</p>
 				<button id="close">x</button>
 			</div>
 		</div>
@@ -78,7 +91,8 @@
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="../../img/grupo4/enfermero_caricatura.png" class="d-block w-100 " alt="...">
+					<img src="../../img/grupo4/enfermero_caricatura.png"
+						class="d-block w-100 " alt="...">
 				</div>
 				<div class="carousel-item">
 					<img src="../../img/grupo4/Est_prog.png" class="d-block w-100" alt="...">
@@ -98,59 +112,84 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-		<div class="contenido"> <!-- Contenido principal del documento -->
-		<section id="sobreMi"> <!-- Sección principal del documento -->
-			<h2>Sobre mí</h2>
-			<p>Soy enfermero y estoy iniciando mi camino en la industria TI. Me motiva
-				comprender cómo la tecnología puede mejorar procesos y ayudar a las
-				personas.</p>
-			<p>No tengo experiencia previa en este mundo, por lo que estoy aprendiendo
-				desde lo básico y construyendo una base sólida paso a paso.</p>
-		</section>
-		<section id="proyectos">
-			<h2>Proyectos Destacados</h2>
-			<ul>
-				<li><strong>Proyecto 1:</strong> Proyecto 1.</li>
-				<li><strong>Proyecto 2:</strong> Proyecto 2.</li>
-				<li><strong>Proyecto 3:</strong> Proyecto 3.</li>
-			</ul>
-		</section>
-		<section class="secciones_individuales">
-			<h2>Competencias o Conocimientos Técnicos</h2>
-			<ul>
-				<li>Partiendo con HTML5 y CSS (nivel inicial)</li>
-			</ul>
-		</section>
-		<section class="secciones_individuales">
-			<h2>Experiencia Laboral</h2>
-			<ul>
-				<li>Área de Salud: Enfermería 1 año de experiencia en Servicio de Pabellón
-					Clinica Alemana Temuco y 2 años UCI HRT</li>
-				<li>Transición a TI: Sin experiencia previa en tecnología</li>
-			</ul>
-		</section>
-		<section class="secciones_individuales">
-			<h2>Educación</h2>
-			<ul>
-				<li>Formación en Enfermería Universidad Santo Tómas Talca - 2017 - 2022
-				</li>
-				<li>Autodidacta en TI — aprendiendo fundamentos y mejores prácticas</li>
-			</ul>
-		</section>
-		<section class="secciones_individuales">
-			<h2>Contacto</h2>
-			<p>Si me quieres contactar envía un correo a :</p>
-			<a href="mailto:matiatorresg28@gmail.com">matiastorresg28@gmail.com</a>
-		</section>
-
-		<section class="secciones_individuales">
-			<h2> Dato Freak</h2>
-			<p> En mis 11-12 años me vicie tanto jugando call of duty que llegue a estar
-				dentro del top 10 a nivel nacional</p>
-			<p> En tiempos libres me dedicaba a armar y hacer mantencion de Pc's</p>
-		</section>
+		<div class="contenido grid-container">
+			<!-- Contenido principal del documento -->
+			<section id="sobreMi grid-item"> <!-- Sección principal del documento -->
+				<h2>Sobre mí</h2>
+				<p>Soy enfermero y estoy iniciando mi camino en la industria TI. Me motiva
+					comprender cómo la tecnología puede mejorar procesos y ayudar a las
+					personas.</p>
+				<p>No tengo experiencia previa en este mundo, por lo que estoy aprendiendo
+					desde lo básico y construyendo una base sólida paso a paso.</p>
+			</section>
+			<section id="proyectos" class="grid-item">
+				<h2>Proyectos Destacados</h2>
+				<ul>
+					<li><strong>Proyecto 1:</strong> Proyecto 1.</li>
+					<li><strong>Proyecto 2:</strong> Proyecto 2.</li>
+					<li><strong>Proyecto 3:</strong> Proyecto 3.</li>
+				</ul>
+			</section>
+			<section class="secciones_individuales grid-item">
+				<h2>Competencias o Conocimientos Técnicos</h2>
+				<ul>
+					<li>Partiendo con HTML5 y CSS (nivel inicial)</li>
+				</ul>
+			</section>
+			<section class="secciones_individuales grid-item">
+				<h2>Experiencia Laboral</h2>
+				<ul>
+					<li>Área de Salud: Enfermería 1 año de experiencia en Servicio de Pabellón
+						Clinica Alemana Temuco y 2 años UCI HRT</li>
+					<li>Transición a TI: Sin experiencia previa en tecnología</li>
+				</ul>
+			</section>
+			<section class="secciones_individuales grid-item">
+				<h2>Educación</h2>
+				<ul>
+					<li>Formación en Enfermería Universidad Santo Tómas Talca - 2017 - 2022
+					</li>
+					<li>Autodidacta en TI — aprendiendo fundamentos y mejores prácticas</li>
+				</ul>
+			</section>
+			<section class="secciones_individuales grid-item">
+				<h2> Dato Freak</h2>
+				<p> En mis 11-12 años me vicie tanto jugando call of duty que llegue a
+					estar
+					dentro del top 10 a nivel nacional</p>
+				<p> En tiempos libres me dedicaba a armar y hacer mantencion de Pc's</p>
+			</section>
+			<section class="contact-card">
+				<div style="text-align: center; margin: 20px;">
+					<button onclick="abrirContacto()" class="btn-contacto-disparador" style="font-size: xx-large;"> Contactame!</button>
+				</div>
+				<div id="modal-contacto" class="modal-overlay">
+					<div class="modal-content">
+						<span class="close-modal" onclick="cerrarContacto()">&times;</span>
+						<h2>Contacto</h2>
+						<form id="contact-form">
+							<div class="form-group">
+								<label for="nombre">Nombre</label>
+								<input type="text" id="nombre" name="nombre" placeholder="Tu nombre..."
+									required>
+							</div>
+							<div class="form-group">
+								<label for="email">Correo Electrónico</label>
+								<input type="email" id="email" name="email" placeholder="tu@correo.com"
+									required>
+							</div>
+							<div class="form-group">
+								<label for="mensaje">Mensaje</label>
+								<textarea id="mensaje" name="mensaje" rows="4"
+									placeholder="¿En qué puedo ayudarte?" required></textarea>
+							</div>
+							<button type="submit" class="btn-enviar">Enviar Mensaje</button>
+						</form>
+					</div>
+				</div>
+			</section>
 		</div>
-		<footer>
+		<footer style="position: static;">
 			<p> © 2025</p>
 		</footer>
 		<script
@@ -161,8 +200,15 @@
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
 			integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
 			crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/50cf798f64.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/50cf798f64.js"
+			crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"></script>
 		<script src="../../js/grupo4/bienvenida.js"></script>
-		<a href="#header" id="up_arrow"><i class="fa-solid fa-circle-up"></i></a>	
+		<script src="../../js/grupo4/script_mt.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+		<a href="#header" id="up_arrow"><i class="fa-solid fa-circle-up"></i></a>
 	</body>
 </html>
