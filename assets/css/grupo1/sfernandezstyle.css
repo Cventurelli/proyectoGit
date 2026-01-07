@@ -95,6 +95,32 @@ body {
         .imagen_de_contacto{
             display: center;
         }
+        .carousel {
+            overflow: hidden; /* Oculta las etiquetas que salen del área visible */
+            white-space: nowrap;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .carousel-track {
+            display: flex;
+            width: max-content; /* Permite que la pista sea tan larga como sus hijos */
+            animation: scroll 20s linear infinite; /* Nombre, duración, ritmo y repetición */
+        }
+
+        .tag {
+            padding: 8px 16px;
+            margin: 0 10px;
+            border-radius: 20px;
+        }
+/* Detener el movimiento al pasar el ratón para mejorar la usabilidad */
+        .carousel:hover .carousel-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Se mueve hasta la mitad (donde empieza el duplicado) */
+        }
 
 
 
