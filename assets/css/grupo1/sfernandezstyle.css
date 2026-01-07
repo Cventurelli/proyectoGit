@@ -121,6 +121,9 @@ body {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); } /* Se mueve hasta la mitad (donde empieza el duplicado) */
         }
-
-
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        
 
