@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //efecto de texto
 const parrafo = document.getElementById("parrafo");
-const texto = "Soy Ingeniera en Ejecucion en Informatica y cursando estudios en Desarrollador Fullstack Java Developer.";
+const texto = "Soy Ingeniera en Ejecucion en Informatica y cursando estudios en Desarrollador Fullstack Java Trainee.";
 const letras = texto.split("");
 let index = 0;
 let intervalId;

@@ -12,7 +12,7 @@ function mostrarprompt() {
     alert('La multiplicación es: ' +multiplicacion);
     alert('La división es: ' + division);
   }
-
+/*Manejo del DOM, modificacion de texto y boton*/
   $(document).ready(function() {
     $('#jqueryBtn').click(function() {
         $('#jqueryText').text('Texto modifcado por JQuery');
@@ -22,5 +22,39 @@ function mostrarprompt() {
         });
         $(this).text('El boton se ha desactivado');
         $(this).prop('disable', true);
+    });
+});
+/*Configurando atributos usando selector de id*/
+document.querySelectorAll('#urlExt').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+})
+/*Modificación de evento "click" con selector de id, problema=funcionó como evento unico y no se replico en otras etiquetas con el mismo id*/
+$(document).ready(function() {
+    $('#lnkExt').click(function(event) {
+        event.preventDefault();
+        window.open(this.href, '_blank');
+    });
+});
+/*Manejo del DOM, cambio de modo claro a orcuro*/
+$(document).ready(function() {
+    let theme = localStorage.getItem('colorTheme') || 'light';
+    if (theme === 'dark') {
+        $('body').addClass('dark-mode');
+        $('section').addClass('dark-mode');
+        $('header').addClass('dark-mode');
+    }
+
+    $('#theme-toggle').on('click', function() {
+        $('body').toggleClass('dark-mode');
+        if ($('body').hasClass('dark-mode')) {
+            $(this).text('Modo Claro');
+            localStorage.setItem('colorTheme', 'dark');
+        } else {
+            $(this).text('Modo Oscuro');
+            localStorage.setItem('colorTheme', 'light');
+        }
+        $('section').toggleClass('dark-mode');
+        $('header').toggleClass('dark-mode');
     });
 });

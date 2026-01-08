@@ -1,0 +1,229 @@
+/* --- VARIABLES Y CONFIGURACIÓN BASE --- */
+:root {
+    --bg-dark: #0f172a;
+    /* Fondo azul muy oscuro */
+    --card-bg: #1e293b;
+    /* Fondo de las tarjetas */
+    --cyan-neon: #0dcaf0;
+    --pink-neon: #ff00cc;
+    --blue-neon: #3333ff;
+    --orange-neon: #ff5722;
+    --purple-neon: #d63384;
+}
+
+body.cyber-theme {
+    background-color: var(--bg-dark);
+    font-family: 'Inter', sans-serif;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+.text-cyan {
+    color: var(--cyan-neon) !important;
+}
+
+.text-cyan-light {
+    color: #a5f3fc;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.relative-z {
+    position: relative;
+    z-index: 2;
+}
+
+.op-8 {
+    opacity: 0.8;
+}
+
+/* --- NAVBAR GLASS --- */
+.glass-nav {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link {
+    transition: color 0.3s;
+    color: #94a3b8 !important;
+}
+
+.nav-link:hover {
+    color: var(--cyan-neon) !important;
+}
+
+
+/* --- BANNER PRINCIPAL --- */
+.main-banner {
+    position: relative;
+    height: 350px;
+    margin-top: 60px;
+    /* Espacio para el navbar fijo */
+    /* REEMPLAZAMOS LA IMAGEN CON TEXTO POR UN DEGRADADO CYBERPUNK LIMPIO */
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    overflow: hidden;
+    border-bottom: 1px solid rgba(13, 202, 240, 0.1);
+    /* Opcional: Añade un patrón de rejilla sutil si te gusta */
+    background-image:
+        linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%),
+        radial-gradient(rgba(13, 202, 240, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 20px 20px;
+}
+
+/* Aseguramos que el overlay siga oscureciendo un poco */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--bg-dark));
+    z-index: 1;
+    pointer-events: none;
+    /* Para que no bloquee clicks por si acaso */
+}
+
+/* Animación de Parpadeo Neón en Texto */
+@keyframes flicker-text {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 20px var(--cyan-neon),
+            0 0 40px var(--cyan-neon),
+            0 0 80px var(--cyan-neon);
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+        opacity: 0.5;
+    }
+}
+
+.neon-flicker {
+    animation: flicker-text 4s infinite alternate;
+}
+
+
+/* --- ESTILOS DE TARJETAS (CYBER CARDS) --- */
+.cyber-card {
+    background-color: var(--card-bg);
+    /* FONDO OSCURO, NO BLANCO */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+}
+
+/* Sombra general para tarjetas */
+.cyber-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Tarjetas Horizontales con Bordes Brillantes Específicos */
+.horizontal-card {
+    border-radius: 15px;
+}
+
+.neon-blue-card {
+    border: 1px solid rgba(13, 202, 240, 0.3);
+    box-shadow: 0 0 25px rgba(13, 202, 240, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.neon-blue-card:hover {
+    box-shadow: 0 0 40px rgba(13, 202, 240, 0.3);
+    transform: translateY(-5px);
+}
+
+.neon-orange-card {
+    border: 1px solid rgba(255, 87, 34, 0.3);
+    /* Sombra combinada naranja/morada como la imagen */
+    box-shadow: 0 0 25px rgba(214, 51, 132, 0.15), 0 0 10px rgba(255, 87, 34, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.neon-orange-card:hover {
+    box-shadow: 0 0 40px rgba(214, 51, 132, 0.3), 0 0 20px rgba(255, 87, 34, 0.3);
+    transform: translateY(-5px);
+}
+
+
+/* --- AVATAR NEÓN (Profile Card) --- */
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--cyan-neon);
+    box-shadow: 0 0 30px var(--cyan-neon), inset 0 0 20px var(--cyan-neon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13, 202, 240, 0.1);
+}
+
+/* Filtro para que el icono sea del color neón */
+.filter-cyan {
+    filter: invert(87%) sepia(61%) saturate(5763%) hue-rotate(153deg) brightness(103%) contrast(103%);
+}
+
+
+/* --- BOTONES ESPECÍFICOS --- */
+.btn-neon-pink {
+    background: linear-gradient(45deg, var(--pink-neon), #ff5e62);
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 15px rgba(255, 0, 204, 0.4);
+}
+
+.btn-neon-dark {
+    background: transparent;
+    border: 2px solid var(--cyan-neon);
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 15px rgba(13, 202, 240, 0.2);
+}
+
+.btn-dark-yt {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    transition: 0.3s;
+}
+
+.btn-dark-yt:hover {
+    background-color: #ff0000;
+    color: white;
+    border-color: #ff0000;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Links sociales inferiores */
+.social-links a:hover i {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+.social-links a:hover .text-muted {
+    color: var(--cyan-neon) !important;
+}

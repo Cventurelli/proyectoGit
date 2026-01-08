@@ -46,7 +46,7 @@ $(document).ready(function () {
       $(this).text("☀️ Modo Claro");
     }
   });
-  
+
   // --- REQUISITO 2: Animación al desplazar (JS Puro ) ---
   $(document).ready(function () {
     // Al entrar con el mouse a una sección
@@ -65,54 +65,114 @@ $(document).ready(function () {
       $(this)
         .find("h2")
         .css({
-          color: esOscuro ? "#20c997" : "#036146",
+          color: esOscuro ? "#20c997" : "#031081ff",
           "letter-spacing": "normal",
         });
     });
   });
 
-  // --- REQUISITO 4: Cambio de colores en una sección ---
-  $(document).ready(function () {
-    // Paleta de colores suaves (Pastel) para mantener legibilidad
-    const paleta = [
-      "#E8F5E9", // Verde muy claro
-      "#FFFDE7", // Amarillo muy claro
-      "#E3F2FD", // Azul muy claro
-      "#F3E5F5", // Morado muy claro
-      "#FFF3E0", // Naranja muy claro
-      "#E0F2F1", // Turquesa muy claro
-    ];
+  // --- REQUISITO 3: Interacción con formulario (Validación Email) ---
+    $("#inputEmail").on("input", function () {
+      const email = $(this).val();
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Evento Click para el Requisito 4
-  $(document).ready(function() {
-      // Paleta para modo claro (Pasteles)
-      const paletaClara = ['#d1e7dd', '#fff3cd', '#f8d7da', '#cfe2ff', '#e2e3e5'];
-      // Paleta para modo oscuro (Verdes y grises profundos)
-      const paletaOscura = ['#0a2f1f', '#1c1c1c', '#2c3e50', '#1a3a3a', '#2d2d2d'];
+      if (email === "") {
+        // CASO 1: Si el campo está VACÍO
+        $("#enviarCorreo").prop("disabled", true);
+        $(this).css("border", "1px solid #ced4da"); // Borde gris normal
+        $("#emailHelp").text(""); // Borra el mensaje por completo
+      } else if (regex.test(email)) {
+        // CASO 2: Si el correo es VÁLIDO
+        $("#enviarCorreo").prop("disabled", false);
+        $(this).css("border", "2px solid #28a745");
+        $("#emailHelp").text("Email válido ✅").css("color", "#28a745");
+      } else {
+        // CASO 3: Si tiene texto pero NO es válido
+        $("#enviarCorreo").prop("disabled", true);
+        $(this).css("border", "2px solid #ffc107");
+        $("#emailHelp")
+          .text("📧 Formato: ejemplo@correo.com")
+          .css("color", "#ffc107");
+      }
+    });
 
-      $('#btn-colores-multiples').on('click', function() {
+    $("#enviarCorreo").on("click", function () {
+      const emailIngresado = $("#inputEmail").val();
+
+      // 1. Efecto visual de éxito
+      $(this)
+        .html("¡Enviando! 🚀")
+        .removeClass("btn-warning")
+        .addClass("btn-success");
+
+      // 2. Abrir el correo después de un pequeño delay para que se vea el efecto
+      setTimeout(() => {
+        window.location.href = `mailto:pamela.kyp@gmail.com?subject=Contacto desde Portafolio&body=Hola Pamela, mi correo es: ${emailIngresado}`;
+
+        // 3. Resetear el botón
+        $(this)
+          .html("Escríbeme aquí")
+          .removeClass("btn-success")
+          .addClass("btn-warning");
+      }, 800);
+    });
+    // --- REQUISITO 4: Cambio de colores en una sección ---
+    $(document).ready(function () {
+      // Paleta de colores suaves (Pastel) para mantener legibilidad
+      const paleta = [
+        "#E8F5E9", // Verde muy claro
+        "#FFFDE7", // Amarillo muy claro
+        "#E3F2FD", // Azul muy claro
+        "#F3E5F5", // Morado muy claro
+        "#FFF3E0", // Naranja muy claro
+        "#E0F2F1", // Turquesa muy claro
+      ];
+
+      // Evento Click para el Requisito 4
+      $(document).ready(function () {
+        // Paleta para modo claro (Pasteles)
+        const paletaClara = [
+          "#d1e7dd",
+          "#fff3cd",
+          "#f8d7da",
+          "#cfe2ff",
+          "#e2e3e5",
+        ];
+        // Paleta para modo oscuro (Verdes y grises profundos)
+        const paletaOscura = [
+          "#0a2f1f",
+          "#1c1c1c",
+          "#2c3e50",
+          "#1a3a3a",
+          "#2d2d2d",
+        ];
+
+        $("#btn-colores-multiples").on("click", function () {
           // 1. Detectamos si el modo oscuro está activo
-          const esModoOscuro = $('body').hasClass('dark-mode');
-          
+          const esModoOscuro = $("body").hasClass("dark-mode");
+
           // 2. Elegimos la paleta correspondiente
           const coloresUsar = esModoOscuro ? paletaOscura : paletaClara;
-          const colorTexto = esModoOscuro ? '#ffffff' : '#212529';
+          const colorTexto = esModoOscuro ? "#ffffff" : "#212529";
 
           // 3. Recorremos las secciones
-          $('section').each(function() {
-              const colorAzar = coloresUsar[Math.floor(Math.random() * coloresUsar.length)];
-              
-              $(this).css({
-                  'background-color': colorAzar,
-                  'color': colorTexto
-              });
+          $("section").each(function () {
+            const colorAzar =
+              coloresUsar[Math.floor(Math.random() * coloresUsar.length)];
 
-              // Ajustamos el color de los h2 para que contrasten
-              $(this).find('h2').css('color', esModoOscuro ? '#20c997' : '#036146');
+            $(this).css({
+              "background-color": colorAzar,
+              color: colorTexto,
+            });
+
+            // Ajustamos el color de los h2 para que contrasten
+            $(this)
+              .find("h2")
+              .css("color", esModoOscuro ? "#20c997" : "#069c71ff");
           });
         });
+      });
     });
-  });
 });
 
 //Resaltar sección al pasar el mouse
@@ -127,20 +187,6 @@ cards.forEach((card) => {
     card.classList.remove("shadow-lg");
   });
 });
-
-
-// Abrir email al hacer clic en el botón de contacto
-document.getElementById("enviarCorreo").addEventListener("click", () => {
-  window.location.href = "mailto:pamela.kyp@gmail.com";
-
-  setTimeout(() => {
-    const modal = bootstrap.Modal.getInstance(
-      document.getElementById("modalContacto")
-    );
-    if (modal) modal.hide();
-  }, 500);
-});
-
 
 //Animación de aparición al hacer scroll
 const sections = document.querySelectorAll("section");
@@ -194,4 +240,4 @@ btnBackToTop.addEventListener("click", () => {
     top: 0,
     behavior: "smooth", // Esto hace el efecto de deslizamiento suave
   });
-})
+});
