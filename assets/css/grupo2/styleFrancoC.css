@@ -1,7 +1,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
     margin: 20px;
     background-color:darkcyan;
+    transition: background-color 0.3s, color 0.3s;
 }
 nav {
     text-decoration: none;
@@ -33,6 +35,18 @@ div {
 }
 h2 {
     color:black;
+}
+body.dark-mode {
+    color: #eee;
+    background-color: #222
+}
+header.dark-mode {
+    background-color: rgb(108, 107, 107);
+    border-color: rgb(8, 8, 106);
+}
+section.dark-mode {
+    background-color: rgb(108, 107, 107);
+    border-color: rgb(8, 8, 106);
 }
 @media (max-width:450px) {
     body {
