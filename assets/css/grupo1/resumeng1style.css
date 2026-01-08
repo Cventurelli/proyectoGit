@@ -1,10 +1,40 @@
 body{
-    background-image: url(../../img/grupo1/image_2615043e.png);
+    background-image: url(../../img/grupo1/freepik__talk__49136.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size:100%;
-    background-attachment:local
+    background-size: 100% 99%;
+    background-attachment:fixed
 }
 h1{
     color: beige;
 }
+  /* 1. Unificar el tamaño de todas las cards */
+    #carouselGrupo1 .card {
+        height: 600px; /* Ajusta esta altura según tu preferencia */
+        margin: 0 auto; /* Centra la card horizontalmente */
+        display: flex;
+        flex-direction: column;
+    }
+
+  /* 2. Asegurar que el cuerpo de la card ocupe el espacio restante */
+    #carouselGrupo1 .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Mantiene los botones alineados abajo */
+    }
+
+  /* 3. Centrar el contenido del carrusel */
+    .carousel-item .d-flex {
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        #carouselGrupo1 .carousel-inner,
+        #carouselGrupo1 .card {
+            height: auto; /* Permite que crezca si el texto es largo en móvil */
+            min-height: 600px;
+        }
+        #carouselGrupo1 .card-img-top {
+            height: 200px; /* Imagen un poco más pequeña en móvil */
+        }
+    }
