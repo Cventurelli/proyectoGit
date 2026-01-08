@@ -67,3 +67,8 @@ section.dark-mode {
         padding: 30px;
     }
 }
+@media (max-width:1080) and (min-width:721px) {
+    body {
+        font-size:large;
+    }
+}
