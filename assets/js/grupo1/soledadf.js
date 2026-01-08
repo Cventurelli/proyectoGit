@@ -14,3 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('dark-mode');
 });
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('formContacto');
+        const inputs = form.querySelectorAll('input, textarea');
+
+    // Función para validar cada campo en tiempo real
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.checkValidity()) {
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+            } else {
+                input.classList.remove('is-valid');
+                input.classList.add('is-invalid');
+            }
+        });
+    });
+
+    // Validación final al intentar enviar
+    form.addEventListener('submit', (event) => {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            event.preventDefault();
+            document.getElementById('feedbackExito').classList.remove('d-none');
+            form.reset();
+            // Limpia las clases de validación tras el envío exitoso
+            inputs.forEach(i => i.classList.remove('is-valid', 'is-invalid'));
+        }
+        form.classList.add('was-validated');
+    }, false);
+});
+
+

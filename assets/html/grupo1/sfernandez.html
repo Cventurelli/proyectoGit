@@ -150,8 +150,35 @@
         </section>
         <section id="contactame" class="mb-5 custom-hover">
             <h2>Contáctame</h2>
-            <p>Envíame tus dudas junto con tus datos y me comunicaré contigo a la brevedad, también me puedes contactar a través de mis redes</p>
-            <div class="d-flex flex-wrap justify-content-left gap-2">
+            <p>Envíame tus dudas junto con tus datos en este formulario y me comunicaré contigo a la brevedad</p>
+            <!-- Formulario con clase needs-validation de Bootstrap -->
+            <form id="formContacto" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" required minlength="3">
+                <div class="invalid-feedback">Por favor, ingresa tu nombre (mínimo 3 caracteres).</div>
+                <div class="valid-feedback">¡Se ve bien!</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100">Enviar Mensaje</button>
+            </form>
+            <div id="feedbackExito" class="alert alert-success mt-3 d-none">¡Mensaje enviado con éxito!</div>
+            </div>
+            <br>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2">
                 <span class="badge p-3 px-4 fs-5">
                 <button type="button" onclick="alert('soledad-fernandez@live.cl')" style="border: none; background: none; cursor: pointer;">
                     <i class="fa-regular fa-envelope fa-beat fa-2xl" style="color: #ffffff;" alt="direccion de correo electronico" class="boton-imagen" style="width: 200px; border: none;"></i>
