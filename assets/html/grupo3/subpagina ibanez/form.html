@@ -3,122 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario pruebas</title>
-    <link rel="stylesheet" href="../../../css/grupo3/ibanez/styleindex.css"><!-- vinculo a la hoja de estilos externa-->
+    <title>Soledad Ibañez | Formulario de Pruebas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/grupo3/ibanez/styleindex.css">
+    
     <style>
-        section {
-            margin: 20px 0; 
-            padding: 20px 15px;
-            border: #bb26b3 2px solid;
+        body { background-color: #eeeced; }
+        
+        .form-section {
+            background-color: white;
             border-radius: 20px;
-            background-color: #fff0f6;
-            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-            display: inline-flexbox
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px;
         }
-        div {
-            margin-bottom: 15px;
-            width: 20%;
-            display: inline-flex
+
+        .form-label {
+            font-weight: 600;
+            color: #5f5e5f;
+            margin-top: 10px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: rgb(236, 17, 163);
+            box-shadow: 0 0 0 0.25rem rgba(236, 17, 163, 0.25);
+        }
+
+        .btn-pink {
+            background-color: rgb(236, 17, 163);
+            color: white;
+            border-radius: 30px;
+            padding: 12px 35px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn-pink:hover {
+            background-color: rgb(200, 10, 130);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            color: rgb(236, 17, 163);
+            border-bottom: 2px solid rgba(236, 17, 163, 0.1);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        .invalid-feedback {
+            color: #dc3545;
+            font-size: 0.85rem;
+        }
+
+        .was-validated .form-control:valid {
+            border-color: #198754;
+        }
+
+        .was-validated .form-control:invalid:focus {
+            border-color: rgb(236, 17, 163);
+            box-shadow: 0 0 0 0.25rem rgba(236, 17, 163, 0.1);
         }
     </style>
 </head>
 <body>
+
     <header>
-        <nav>
-            <a href="../soledadibanez.html">Volver</a> | <!-- para volver se utiliza"../" para retroceder una carpeta"-->
+        <nav class="p-4">
+            <a href="../soledadibanez copy 2.html" class="text-decoration-none text-muted fw-bold">
+                <i class="fa-solid fa-arrow-left me-2"></i>Volver al Portafolio
+            </a>
         </nav>
     </header>
-    <h1>formularios| Tipos</h1>
-    <section>
-        <h4>Input | Text </h4>
-            <form action="submit" method="post">
-            <div>
-                <label for="Nombre">¿Cómo te llamas?</label>
-                <br>
-                <input type="text" name="Nombre" id="Nombre" placeholder="Escribe tu respuesta aquí"required=true>
-            </div>
-            <br>
-            <h4>Input | Number </h4>
-            <div>
-                <label for="Edad">¿Cuántos años tienes?</label> 
-                <br>
-                <input type="number" name="Edad" id="Edad" min="0" max="100"  required >
-            </div>
-            <br>
-        <h4>Input Email</h4>
-            <div>
-                <label for="Email">¿Cuál es tu correo electronico?</label>
-                <br>
-                <input type="email" name="Email" id="Email" placeholder="aloha@123.com" >
-            </div>
-            <br>
-        <h4>Input | checkbox</h4>
-            <div>
-                <label for="checkbox"required>¿Has realizado algún curso de programación antes?</label>
-                <br>
-                <input type="checkbox" name="checkbox" id="checkbox" required>Sí.
-                <br>
-                <input type="checkbox" name="checkbox" id="checkbox" required>No.
-            </div>
-                <br>
-                <br>
-                <h4>Input | Password </h4>
-                <div>
-                <label for="contraseña">contraseña</label>
-                <br>
-                <input type="password" name="contraseña" id="contraseña" placeholder="Escribe tu contraseña aquí" >
+
+    <main class="container mb-5">
+        <h1 class="display-5 fw-bold mb-4" style="color: #590374d2;">Formularios <span class="text-muted">| Experimentación</span></h1>
+
+        <section class="form-section">
+            <form action="#" method="post" class="row g-4 needs-validation" novalidate>
+                
+                <div class="col-12"><h4 class="section-title">Datos Personales</h4></div>
+                
+                <div class="col-md-6">
+                    <label for="Nombre" class="form-label">¿Cómo te llamas?</label>
+                    <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Tu nombre" required>
+                    <div class="invalid-feedback">¡Ups! Olvidaste ingresar tu nombre.</div>
                 </div>
-                <br>
-                <br>
-                <h4>Input | Radio button </h4>
-                <div>
-                <label>Selecciona tu opción favorita:</label>
-                <br>   
-                <input type="radio" name="tipo" id="Backend" value="Backend" required>
-                <label for="Backend">Backend</label>
-                <br>
-                <input type="radio" name="tipo" id="Frontend" value="Frontend"required>
-                <label for="Frontend">Frontend</label>
-                <br>
-                <input type="radio" name="tipo" id="fullstack"value="fullstack" required>
-                <label for="fullstack">Fullstack</label>
+
+                <div class="col-md-3">
+                    <label for="Edad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" name="Edad" id="Edad" min="0" max="100" required>
+                    <div class="invalid-feedback">Edad requerida.</div>
                 </div>
-                <br>
-                <br>
-                <h4>Input | Date </h4>
-                <div>
-                <label for="Fecha_nac">Fecha Nacimiento</label>
-                <br>
-                <input type="date" name="Fecha_nac" id="Fecha_nac"required>
+
+                <div class="col-md-3">
+                    <label for="Fecha_nac" class="form-label">Fecha Nacimiento</label>
+                    <input type="date" class="form-control" name="Fecha_nac" id="Fecha_nac" required>
+                    <div class="invalid-feedback">Selecciona una fecha.</div>
                 </div>
-                <br>
-                <br>
-                <h4>Input | text box </h4>
-                <div>
-                <label>Deja un comentario de tu motivación por el programación  </label>
-                <br>
-                <textarea name="motivacion" id="motivacion" cols="30" rows="5" placeholder="Escribe tu comentario aquí"></textarea>
+
+                <div class="col-md-6">
+                    <label for="Email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" name="Email" id="Email" placeholder="aloha@ejemplo.com" required>
+                    <div class="invalid-feedback">Ingresa un correo válido.</div>
                 </div>
-                <br>
-                <br>
-                <h4>Input | select </h4>
-                <div>
-                <label for="Color">Indicanos tu color favorito</label>
-                <br>
-                <select name="color" id="color">
-                    <option value="azul">Azul</option>
-                    <option value="rojo">Rojo</option>
-                    <option value="verde">Verde</option>
-                    <option value="Morado">Morado</option>
-                </select>
+
+                <div class="col-md-6">
+                    <label for="SitioWeb" class="form-label">Sitio Web / Portfolio</label>
+                    <input type="url" class="form-control" name="SitioWeb" id="SitioWeb" placeholder="https://tusitio.com">
                 </div>
-                <br>
-                <br>
-                <h4>Input | url | Submit </h4>
-                <button type="submit">Enviar</button>
-                <input type="url"   name="SitioWeb" id="SitioWeb" placeholder="https://tusitio.com">
+
+                <div class="col-12 mt-5"><h4 class="section-title">Intereses en Programación</h4></div>
+
+                <div class="col-md-6">
+                    <label class="form-label d-block">¿Has realizado cursos antes?</label>
+                    <div class="form-check form-check-inline mt-2">
+                        <input class="form-check-input" type="checkbox" name="curso" id="curso_si">
+                        <label class="form-check-label" for="curso_si">Sí, anteriormente</label>
+                    </div>
+                    <div class="form-check form-check-inline mt-2">
+                        <input class="form-check-input" type="checkbox" name="curso" id="curso_no">
+                        <label class="form-check-label" for="curso_no">No, nunca</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label d-block">Opción favorita</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="Backend" value="Backend" required>
+                            <label class="form-check-label" for="Backend">Backend</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="Frontend" value="Frontend">
+                            <label class="form-check-label" for="Frontend">Frontend</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="fullstack" value="fullstack">
+                            <label class="form-check-label" for="fullstack">Fullstack</label>
+                            <div class="invalid-feedback">Elige una opción.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="color" class="form-label">Color favorito</label>
+                    <select class="form-select" name="color" id="color" required>
+                        <option selected disabled value="">Selecciona un color...</option>
+                        <option value="azul">Azul</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="verde">Verde</option>
+                        <option value="morado">Morado</option>
+                    </select>
+                    <div class="invalid-feedback">Elige un color.</div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="contraseña" class="form-label">Contraseña de prueba</label>
+                    <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="Ej: ********" required>
+                    <div class="invalid-feedback">La seguridad es importante.</div>
+                </div>
+
+                <div class="col-12">
+                    <label for="motivacion" class="form-label">Tu motivación</label>
+                    <textarea class="form-control" name="motivacion" id="motivacion" rows="4" placeholder="Cuéntanos por qué te gusta programar..." required></textarea>
+                    <div class="invalid-feedback">¡Cuéntanos un poco más!</div>
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                    <button type="submit" class="btn btn-pink btn-lg">
+                        <i class="fa-solid fa-paper-plane me-2"></i>Enviar Formulario
+                    </button>
+                </div>
             </form>
-    </section>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (() => {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+            }, false)
+        })
+        })()
+    </script>
 </body>
 </html>
