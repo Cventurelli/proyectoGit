@@ -17,3 +17,10 @@ $(document).ready(function() {
         localStorage.setItem('theme', theme);
 });
 });
+
+$(document).ready(function () {
+    $('.clickable-card').on('click', function () {
+        const url = $(this).data('url');
+        window.location.href = url;
+    });
+});

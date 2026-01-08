@@ -24,3 +24,15 @@ function mostrarprompt() {
         $(this).prop('disable', true);
     });
 });
+/*Manejo del DOM, configurando atributos usando selector de id*/
+document.querySelectorAll('#urlExt').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+})
+/*Modificación de evento "click" con selector de id, problema=funcionó como evento unico y no se replico en otras etiquetas con el mismo id*/
+$(document).ready(function() {
+    $('#lnkExt').click(function(event) {
+        event.preventDefault();
+        window.open(this.href, '_blank');
+    });
+});

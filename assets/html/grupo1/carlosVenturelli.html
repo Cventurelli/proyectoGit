@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="../../css/grupo1/carlos-style.css" />
   <title>El Portafolio de Carlos Alejandro Venturelli</title>
 </head>
-<body>
+<body class="pt-5"><!-- margen superior para que el navbar no tape el header -->
+
   <!-- Encabezado -->
   <header id="myName" class="bg-primary text-white text-center py-5">
     <h1 class="fw-bold">¡Bienvenido a mi portafolio!</h1>
-    <p class="lead">Técnico Químico | Ingeniero Industrial | Full Stack Java Developer en formación</p>
+    <p class="lead">Full Stack Java Developer en formación | Ingeniero Industrial | Técnico Químico</p>
   </header>
 
   <!-- Navbar -->
@@ -58,9 +59,9 @@
               <a class="nav-link" href="../contacto.html">Contacto</a>
             </li>
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-success" type="submit">Search</button>
+          <form class="d-flex mt-3" role="search" action="#">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+            <button class="btn btn-success" type="submit">Buscar</button>
           </form>          
         </div>
       </div>
@@ -77,11 +78,11 @@
           <h2 class="mb-3">Sobre mí</h2>
           <div class="card p-4 shadow-sm border-0">
             <p>
-              Soy actualmente estudiante en el bootcamp Talento Digital Full Stack Java, Ingeniero Industrial y. Técnico Químico. 
+              Soy actualmente estudiante en el bootcamp Talento Digital Full Stack Java, Ingeniero Industrial y Técnico Químico. 
               Me apasiona el desarrollo web, la ciencia de datos y la creación de soluciones digitales robustas.
             </p>
             <p>
-              Tengo experiencia en HTML, CSS, JavaScript, Git / Git Hub. 
+              Tomando mucha experiencia en HTML, CSS, JavaScript, Git / GitHub. 
               Me motiva integrar creatividad con rigor técnico y trabajar en equipo para lograr proyectos de calidad.
             </p>
           </div>
@@ -101,13 +102,13 @@
         <section id="skills" class="mb-5">
           <h2 class="mb-3">Competencias Técnicas</h2>
           <div class="card p-4 shadow-sm border-0">
-            <ul class="row">
-              <li class="col-md-4">HTML5</li>
-              <li class="col-md-4">CSS3</li>
-              <li class="col-md-4">JavaScript</li>
-              <li class="col-md-4">GitHub</li>
-              <li class="col-md-4">Bootstrap</li>
-            </ul>
+            <div class="row">
+              <div class="col-md-4">HTML5</div>
+              <div class="col-md-4">CSS3</div>
+              <div class="col-md-4">JavaScript</div>
+              <div class="col-md-4">GitHub</div>
+              <div class="col-md-4">Bootstrap</div>
+            </div>
           </div>
         </section>
 
@@ -115,7 +116,7 @@
         <section id="datoFreak" class="mb-5">
           <h2 class="mb-3">Dato Freak</h2>
           <div class="card p-4 shadow-sm border-0">
-            <p>Me encanta la astronomía, la música y mi familia, en algun momento cuando hay tiempo intento tocar batería. Disfruto mucho viendo películas especialmente del género suspenso, ciencia ficción</p>
+            <p>Me encanta la astronomía, la música y mi familia. En algún momento cuando hay tiempo intento tocar batería. Disfruto mucho viendo películas especialmente del género suspenso y ciencia ficción.</p>
           </div>
         </section>
       </div>
@@ -129,7 +130,8 @@
              data-label_1="CONCEPCIÓN" 
              data-label_2="WEATHER" 
              data-icons="Climacons Animated" 
-             data-theme="weather_one">
+             data-theme="weather_one"
+             rel="noopener noreferrer">
              CONCEPCIÓN WEATHER
           </a>
         </section>
@@ -137,8 +139,8 @@
         <!-- CONTACTO -->
         <section id="contacto" class="mb-5 text-bg-dark p-3 rounded">
           <h3 class="text-center mb-3">Contacto</h3>
-          <p class="text-right">
-            Alguna inquietud y/o consulta, escríbeme a:
+          <p class="text-end">
+            Escríbeme a:
           </p>
           <div class="d-flex justify-content-center">
             <a href="mailto:carlos.venturelli@gmail.com" class="btn btn-primary text-white px-4 py-2 rounded">
@@ -155,7 +157,9 @@
     <p class="mb-0">Derechos reservados © 2025 Carlos Venturelli</p>
   </footer>
 
-  <!-- Scripts Bootstrap (primero) -->
+  <!-- jQuery primero -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Scripts Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
           integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
           crossorigin="anonymous"></script>
@@ -163,37 +167,38 @@
           integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
           crossorigin="anonymous"></script>
 
-  <!-- jQuery (según protocolo, después de Bootstrap) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
+  <!-- Scripts personalizados -->
+  <script>
+    // Evento 1: hover en sección "Dato Freak" para cambiar fuente
+    $("#datoFreak").hover(function() {
+      $(this).css("font-family", "Comic Sans MS, cursive, sans-serif");
+    }, function() {
+      $(this).css("font-family", "");
+    });
 
-  // Evento 1: hover en sección "Dato Freak" para cambiar fuente
-  $("#datoFreak").hover(function() {
-    $(this).css("font-family", "Comic Sans MS, cursive, sans-serif");
-  }, function() {
-    $(this).css("font-family", "");
-  });
-// Evento 2: doble clic en el header para hacer un pestañeo en la página
-$("#myName").dblclick(function() {
-  $("body").fadeOut(500).fadeIn(500);
-});
-// Evento 3: clic en el botón de contacto para mostrar un mensaje emergente
-$("a[href^='mailto:']").click(function(event) {
-  event.preventDefault(); // Prevenir acción predeterminada
-  alert("Gracias por tu interés en contactarme. Te responderé lo antes posible.");      
-});
-</script>
+    // Evento 2: doble clic en el header para hacer un pestañeo en la página
+    $("#myName").dblclick(function() {
+      $("body").fadeOut(500).fadeIn(500);
+    });
+
+    // Evento 3: clic en el botón de contacto para mostrar un mensaje emergente
+    $("a[href^='mailto:']").click(function(event) {
+      event.preventDefault(); // Prevenir acción predeterminada
+      alert("Gracias por tu interés en contactarme. Te responderé lo antes posible.");      
+    });
+  </script>
+
   <!-- Weather Widget IO -->
-<script>
-!function(d,s,id){
-    var js,fjs=d.getElementsByTagName(s)[0];
-    if(!d.getElementById(id)){
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
         js=d.createElement(s);
         js.id=id;
         js.src='https://weatherwidget.io/js/widget.min.js';
         fjs.parentNode.insertBefore(js,fjs);
-    }
-}(document,'script','weatherwidget-io-js');
-</script>
+      }
+    }(document,'script','weatherwidget-io-js');
+  </script>
 </body>
 </html>

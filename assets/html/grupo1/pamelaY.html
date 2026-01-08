@@ -154,16 +154,16 @@
           <h2 class="mb-3 text-center">Proyectos</h2>
           <p id="contadorProyectos" class="text-center fw-bold mt-3"></p>
           <div class="card p-4 shadow-sm border-0">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
+            <ul>
+              <li class="mb-2">
                 <strong>Proyecto:</strong> Bark & Purr – Marketplace para
                 Mascotas
               </li>
-              <li class="list-group-item">
+              <li class="mb-2">
                 <strong>Proyecto:</strong> Proyecto en desarrollo...
               </li>
-              <li class="list-group-item">
-                <strong>Proyecto:</strong> proyecto3
+              <li class="mb-2">
+                <strong>Proyecto:</strong> proyecto 3 prontamente disponible...
               </li>
             </ul>
           </div>
@@ -193,36 +193,36 @@
         <section id="education" class="mb-5">
           <h2 class="mb-3 text-center">Educación</h2>
           <div class="card p-4 shadow-sm border-0">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
+            <ul>
+              <li class="mb-2">
                 <strong
                   >Certificación en desarrollo web Full Stack Java
                   480hrs</strong
                 >
                 - Academia Kibernum / SENCE (2025-2026)
               </li>
-              <li class="list-group-item">
+              <li class="mb-2">
                 <strong
                   >Certificación en desarrollo web Full Stack JavaScript
                   440hrs</strong
                 >
                 - Desafio Latam (2024-2025)
               </li>
-              <li class="list-group-item">
+              <li class="mb-2">
                 <strong>Enfermera en Hemodialisis</strong> - Davita Chile (2020
                 - 2024)
               </li>
-              <li class="list-group-item">
+              <li class="mb-2">
                 <strong>Udemy</strong> - Curso de Inglés Básico (2019)
               </li>
-              <li class="list-group-item">
+              <li class="mb-2">
                 <strong>Sence Learning</strong> - Curso de Trabajo en Equipo
                 (2018)
               </li>
-              <li class="list-group-item">
+              <li class="mb-2">
                 <strong>Sence Learning</strong> - Curso de Liderazgo (2018)
               </li>
-              <li class="list-group-item">
+              <li class="mb-2">
                 <strong>Titulo en Enfermeria</strong> - Universidad Santiago de
                 Chile (2012-2018)
               </li>
@@ -236,26 +236,30 @@
           
           <!-- Fondo animado -->
           <div class="contact-bg"></div>
-          <div class="row align-items-center position-relative z-1">
+          <div class="row align-items-center position-relative z-1 mb-3">
 
             <!-- IZQUIERDA: Imagen -->
-            <div class="col-md-6 text-center mb-3 mb-md-0">
+            <div class="col-md-6 text-center mb-1 mb-md-0">
               <img
                 src="../../img/grupo1/img_de_pame/email.svg"
                 alt="Email"
                 class="contact-image"
+                style="cursor: pointer;"
               />
             </div>
 
+
             <!-- DERECHA: Contacto -->
             <div class="col-md-6 text-center text-white">
-              <h2 class="mb-3">Contacto</h2>
-              <p>Dudas o consultas:</p>
-
-              <button id="enviarCorreo" class="btn btn-warning">
+            <h2 class="mb-3">Contacto</h2>
+            <p class="text-warning">Dudas o consultas:</p>
+            <div class="px-3">
+              <input type="email" id="inputEmail" class="form-control mb-2" placeholder="Tu correo electrónico">
+              <small id="emailHelp" class="d-block mb-3 text-warning"></small>
+              <button id="enviarCorreo" class="btn btn-warning w-100" disabled>
                 Escríbeme aquí
               </button>
-
+            </div>
             </div>
           </div>
         </div>
