@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../../../assets/css/grupo3/ibanez/styleindex.css"><!-- vinculo a la hoja de estilos externa-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
     <body>
         <header>
@@ -173,13 +174,61 @@
             <br>
             <div class="card-body d-grid">
                 
-                <a href="subpagina ibanez/Pagweb_grupo3.html" class="btn text-white fw-bold" style="background-color: rgb(236, 17, 163);">
+                <a href="subpagina ibanez/Proyecto X.html" class="btn text-white fw-bold" style="background-color: rgb(236, 17, 163);">
                     Ver Proyecto
                 </a>
             </div>
         </div>
     </div>
 </div>
+<section id="habilidades" class="container py-5">
+    <div class="row g-4 justify-content-center">
+        
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 skill-card">
+                <h3 class="fw-bold mb-4" style="color: rgb(236, 17, 163);">
+                    <i class="fa-solid fa-laptop-code me-2"></i>Técnicas
+                </h3>
+                <div class="mb-3">
+                    <p class="fw-bold mb-1">Desarrollo</p>
+                    <small class="text-muted">HTML, CSS, JS, Java, React, Spring Boot, MySQL, Git</small>
+                </div>
+                <div>
+                    <p class="fw-bold mb-1">Diseño</p>
+                    <small class="text-muted">Figma, Illustrator, Prototipado, Usabilidad, Análisis Heurístico</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 skill-card">
+                <h3 class="fw-bold mb-4" style="color: rgb(236, 17, 163);">
+                    <i class="fa-solid fa-people-group me-2"></i>Blandas
+                </h3>
+                <ul class="list-unstyled text-muted small">
+                    <li class="mb-2"><i class="fa-solid fa-check text-pink me-2"></i>Comunicación efectiva</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-pink me-2"></i>Trabajo en equipo</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-pink me-2"></i>Resolución de problemas</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-pink me-2"></i>Adaptabilidad y Gestión</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 skill-card">
+                <h3 class="fw-bold mb-4" style="color: rgb(236, 17, 163);">
+                    <i class="fa-solid fa-layer-group me-2"></i>Metodología
+                </h3>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Agile / Scrum</span>
+                    <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Design Thinking</span>
+                    <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Doble Diamante</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 </section>
         <section id="CompetenciasTecnicas">
             <h2>Competencias Técnicas</h2>
@@ -301,7 +350,31 @@
                     <span class="fw-bold">Soledad Ibañez</span> &copy; 2026
                 </p>
             </div>
+            <button id="btnArriba" class="btn btn-pink rounded-circle shadow">↑</button>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+$(document).ready(function(){
+
+    // 1. Mostrar/Ocultar botón según el scroll
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('#btnArriba').fadeIn();
+        } else {
+            $('#btnArriba').fadeOut();
+        }
+    });
+
+    // 2. Acción de volver arriba al hacer clic
+    $('#btnArriba').click(function() {
+        $('html, body').animate({scrollTop: 0}, 600);
+        return false;
+    });
+
+    // 3. (Tu código anterior) Animar los corazones
+    $('.fa-heart').addClass('latido-activo');
+
+});
+</script>
     </body>
 </html>
