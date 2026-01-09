@@ -181,11 +181,20 @@
       $("body").fadeOut(500).fadeIn(500);
     });
 
-    // Evento 3: clic en el botón de contacto para mostrar un mensaje emergente
-    $("a[href^='mailto:']").click(function(event) {
-      event.preventDefault(); // Prevenir acción predeterminada
-      alert("Gracias por tu interés en contactarme. Te responderé lo antes posible.");      
-    });
+// Evento: clic en el botón de contacto para mostrar modal
+$("a[href^='mailto:']").click(function(event) {
+  event.preventDefault(); // Evitamos que se abra de inmediato
+  var mailtoLink = $(this).attr("href");
+
+  // Guardamos el enlace real en el botón del modal
+  $("#openMailBtn").off("click").on("click", function() {
+    window.location.href = mailtoLink; // Abre el cliente de correo
+  });
+
+  // Mostrar el modal
+  var modal = new bootstrap.Modal(document.getElementById('contactModal'));
+  modal.show();
+});
   </script>
 
   <!-- Weather Widget IO -->
@@ -201,4 +210,22 @@
     }(document,'script','weatherwidget-io-js');
   </script>
 </body>
+<!-- Modal de Contacto -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="contactModalLabel">¡Gracias por tu interés!</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        Me alegra que quieras contactarme. Haz clic en el botón de abajo para abrir tu correo.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a id="openMailBtn" class="btn btn-primary">✉️ Abrir correo ahora</a>
+      </div>
+    </div>
+  </div>
+</div>
 </html>
