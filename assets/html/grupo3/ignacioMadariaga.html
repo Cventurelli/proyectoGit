@@ -2,55 +2,106 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Oda a los Gatos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Interactivo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/grupo3/styleIgnacio.css">
 </head>
-<body>
-    <header>
-        <h1>🐾 Oda a los Gatos 🐾</h1>
-        <hr>
+<body class="fondo-gradiente">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navegacion-cristal">
+        <div class="container">
+            <a class="navbar-brand fuente-especial" href="#">PURPLE EXORCIST</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../grupo3/ignacioMadariaga.html">Ignacio Madariaga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../grupo3/soledadIbanez.html">Soledad Íbañez</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../grupo3/bastianContreras.html">Bastián Contreras</a></li>
+                </ul>
+                <button id="boton-tema" class="btn-neon-azul ms-lg-4">MODO CLARO</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container text-center cabecera">
+        <div class="posicion-relativa d-inline-block">
+            <img src="../../img/grupo3/descargar.jpeg" alt="Perfil" class="avatar-neon">
+            <div class="anillo-decorativo"></div>
+        </div>
+        <h1 class="titulo-neon mt-4">IGNACIO MADARIAGA</h1>
+        <p class="subtitulo-brillante">Estudiante de Desarrollo Full Stack</p>
     </header>
 
-    <article>
-        <blockquote>
-            <p>
-                Oh, felinos de pasos sigilosos,<br>
-                sombras suaves que recorren el mundo<br>
-                con la elegancia de un suspiro.
-            </p>
-        </blockquote>
+    <main class="container my-5">
+        <div class="row g-4">
+            <section id="sobre-mi" class="col-md-6">
+                <div class="tarjeta-neon t-cian h-100">
+                    <h3 class="encabezado-tarjeta">Sobre Mí</h3>
+                    <p class="cuerpo-tarjeta">Especialista del rubro de la seguridad, buscando iniciarme en el mundo de la programación.</p>
+                </div>
+            </section>
 
-        <section>
-            <h2>Su Esencia</h2>
-            <p>
-                Sus ojos, faroles eternos,<br>
-                reflejan galaxias enteras escondidas<br>
-                tras un parpadeo tranquilo.
-            </p>
+            <section id="proyectos" class="col-md-6">
+                <div class="tarjeta-neon t-purpura h-100">
+                    <h3 class="encabezado-tarjeta">Proyectos</h3>
+                    <p class="cuerpo-tarjeta">Explora mis últimos trabajos en desarrollo web y aplicaciones interactivas.</p>
+                    <a href="https://github.com/PurpleExorcist-debug" class="btn-gradiente-mini">Ver Repositorio</a>
+                </div>
+            </section>
+
+            <section id="competencias" class="col-md-6">
+                <div class="tarjeta-neon t-azul h-100">
+                    <h3 class="encabezado-tarjeta">Competencias</h3>
+                    <ul class="lista-neon">
+                        <li>HTML5 & CSS3 Avanzado</li>
+                        <li>JavaScript & jQuery</li>
+                        <li>Bootstrap 5 & SASS</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="dato-freak" class="col-md-6">
+                <div class="tarjeta-neon t-rosa h-100">
+                    <h3 class="encabezado-tarjeta">Dato Freak</h3>
+                    <p class="cuerpo-tarjeta">Gusto de escuchar música, leer, caminar mucho y de juegos que me planteen una aventura.</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="contacto" class="mt-5 seccion-contacto">
+            <div class="contenedor-formulario tarjeta-neon">
+                <h3 class="encabezado-tarjeta mb-4">Contacto</h3>
+                <form id="formularioContacto" class="row g-3">
+                    <div class="col-md-6">
+                        <input type="email" id="correo" class="input-moderno" placeholder="Tu Email" required>
+                        <div id="validacionCorreo" class="error-input"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn-enviar-neon">ENVIAR MENSAJE</button>
+                    </div>
+                </form>
+            </div>
         </section>
+    </main>
 
-        <section>
-            <h2>Su Magia</h2>
-            <ul>
-                <li>Ronroneos que curan el alma.</li>
-                <li>Saltos que desafían la gravedad.</li>
-                <li>Misterios guardados entre bigotes.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Su Presencia</h2>
-            <p>
-                En cada rincón del hogar dejan<br>
-                un poema silencioso,<br>
-                una huella suave,<br>
-                un reino donde ellos son los reyes.
-            </p>
-        </section>
-    </article>
-
-    <footer>
-        <hr>
-        <p>Oda dedicada a todos los gatos del universo. 🐱</p>
+    <footer class="text-center py-4 mt-5 footer-cristal">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="https://github.com/PurpleExorcist-debug" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" class="mx-2"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="mb-0">© 2026 Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/grupo3/ignacioJs.js"></script>
 </body>
 </html>

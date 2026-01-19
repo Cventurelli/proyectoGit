@@ -1,0 +1,92 @@
+:root {
+    --negro-profundo: #0b0e14;
+    --fondo-gradiente: radial-gradient(circle at 50% 50%, #1a1f35 0%, #0b0e14 100%);
+    --cian-neon: #00f2ff;
+    --purpura-neon: #9d00ff;
+    --rosa-neon: #ff007a;
+    --azul-neon: #007aff;
+    --blanco-cristal: rgba(255, 255, 255, 0.9);
+    --texto-tarjeta: #d1d1d1;
+}
+
+body.tema-claro {
+    --negro-profundo: #f0f2f5;
+    --fondo-gradiente: radial-gradient(circle at 50% 50%, #ffffff 0%, #e0e0e0 100%);
+    --blanco-cristal: #1a1f35;
+    --texto-tarjeta: #333333;
+}
+
+body.fondo-gradiente {
+    background: var(--fondo-gradiente);
+    background-attachment: fixed;
+    color: var(--blanco-cristal);
+    font-family: 'Inter', sans-serif;
+    transition: all 0.5s ease;
+}
+
+.fuente-especial { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 2px; }
+
+.cabecera { padding-top: 120px; }
+.titulo-neon {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0 0 15px var(--rosa-neon);
+    transition: all 0.5s ease;
+}
+
+body.tema-claro .titulo-neon {
+    color: #004d99;
+    text-shadow: 0 0 10px var(--azul-neon), 0 0 20px var(--azul-neon);
+}
+
+.avatar-neon {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--blanco-cristal);
+    position: relative; z-index: 2;
+}
+
+.anillo-decorativo {
+    position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border-radius: 50%;
+    border: 2px solid var(--cian-neon);
+    box-shadow: 0 0 20px var(--cian-neon);
+    animation: rotar 4s linear infinite;
+}
+@keyframes rotar { 100% { transform: rotate(360deg); } }
+
+.tarjeta-neon {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.tema-claro .tarjeta-neon { background: rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.1); }
+
+.encabezado-tarjeta { color: var(--cian-neon); font-family: 'Orbitron'; }
+.cuerpo-tarjeta { color: var(--texto-tarjeta); }
+
+.footer-cristal {
+    background: rgba(11, 14, 20, 0.9);
+    border-top: 1px solid rgba(0, 242, 255, 0.2);
+}
+body.tema-claro .footer-cristal { background: rgba(255,255,255,0.9); border-top: 1px solid #ccc; }
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: var(--cian-neon);
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: var(--rosa-neon);
+    transform: translateY(-5px);
+    display: inline-block;
+}
+
+.btn-neon-azul { background: transparent; border: 2px solid var(--cian-neon); color: var(--cian-neon); padding: 8px 15px; border-radius: 5px; font-family: 'Orbitron'; }
+.btn-gradiente-mini { display: inline-block; padding: 10px 20px; background: linear-gradient(90deg, var(--purpura-neon), var(--rosa-neon)); color: white; border-radius: 10px; text-decoration: none; font-weight: bold; }
+.input-moderno { background: rgba(255,255,255,0.1); border: 1px solid var(--cian-neon); color: var(--blanco-cristal); padding: 12px; width: 100%; border-radius: 8px; }
+.btn-enviar-neon { background: var(--azul-neon); color: white; border: none; padding: 12px; width: 100%; border-radius: 8px; font-weight: bold; }
+.error-input { color: var(--rosa-neon); font-size: 0.8rem; min-height: 20px; }
