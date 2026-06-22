@@ -3,229 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Venturelli — Portafolio</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
-  />
-  <!-- CSS personalizado de Carlos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="../../css/grupo1/carlos-style.css" />
-  <title>El Portafolio de Carlos Alejandro Venturelli</title>
 </head>
-<body class="pt-5"><!-- margen superior para que el navbar no tape el header -->
 
-  <!-- Encabezado -->
-  <header id="myName" class="bg-primary text-white text-center py-5">
-    <h1 class="fw-bold">¡Bienvenido a mi portafolio!</h1>
-    <p class="lead">Full Stack Java Developer en formación | Ingeniero Industrial | Técnico Químico</p>
-  </header>
+<body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="carlosVenturelli.html">Carlos Alejandro Venturelli</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú Grupo 1</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../../../index.html">Inicio</a>
-            </li>
-            <!-- Dropdown Grupo 1 -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Grupo 1
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="./carlosVenturelli.html">Carlos Venturelli</a></li>
-                <li><a class="dropdown-item" href="./karina.html">Karina Riquelme</a></li>
-                <li><a class="dropdown-item" href="./soledadf.html">Soledad Fernández</a></li>
-                <li><a class="dropdown-item" href="./pamelaY.html">Pamela Yañez</a></li>
-                <li><a class="dropdown-item" href="./resumenG1.html">Página Grupal</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../profes/kenpo.html">Kenpo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contacto.html">Contacto</a>
-            </li>
-          </ul>
-          <form class="d-flex mt-3" role="search" action="#">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-            <button class="btn btn-success" type="submit">Buscar</button>
-          </form>          
-        </div>
-      </div>
-    </div>
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav class="cv-nav" id="mainNav">
+    <a class="cv-nav__logo" href="carlosVenturelli.html">CV</a>
+
+    <ul class="cv-nav__links" id="navLinks">
+      <li><a href="#sobre-mi"   class="cv-nav__link">Sobre mí</a></li>
+      <li><a href="#habilidades" class="cv-nav__link">Habilidades</a></li>
+      <li><a href="#proyectos"  class="cv-nav__link">Proyectos</a></li>
+      <li><a href="#contacto"   class="cv-nav__link">Contacto</a></li>
+      <li><a href="../../../index.html" class="cv-nav__link cv-nav__back">← Inicio</a></li>
+    </ul>
+
+    <button class="cv-nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- Contenedor principal -->
-  <div class="container my-5">
-    <div class="row">
-      <!-- Columna izquierda -->
-      <div class="col-md-10">
-        <!-- SOBRE MÍ -->
-        <section id="aboutMe" class="mb-5">
-          <h2 class="mb-3">Sobre mí</h2>
-          <div class="card p-4 shadow-sm border-0">
-            <p>
-              Soy actualmente estudiante en el bootcamp Talento Digital Full Stack Java, Ingeniero Industrial y Técnico Químico. 
-              Me apasiona el desarrollo web, la ciencia de datos y la creación de soluciones digitales robustas.
-            </p>
-            <p>
-              Tomando mucha experiencia en HTML, CSS, JavaScript, Git / GitHub. 
-              Me motiva integrar creatividad con rigor técnico y trabajar en equipo para lograr proyectos de calidad.
-            </p>
-          </div>
-        </section>
-
-        <!-- PROYECTOS -->
-        <section id="proyectos" class="mb-5">
-          <h2 class="mb-3">Proyectos</h2>
-          <div class="card p-4 shadow-sm border-0">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Proyecto:</strong> Creando y Desarrollando Portafolio Digital</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- HABILIDADES -->
-        <section id="skills" class="mb-5">
-          <h2 class="mb-3">Competencias Técnicas</h2>
-          <div class="card p-4 shadow-sm border-0">
-            <div class="row">
-              <div class="col-md-4">HTML5</div>
-              <div class="col-md-4">CSS3</div>
-              <div class="col-md-4">JavaScript</div>
-              <div class="col-md-4">GitHub</div>
-              <div class="col-md-4">Bootstrap</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- DATO FREAK -->
-        <section id="datoFreak" class="mb-5">
-          <h2 class="mb-3">Dato Freak</h2>
-          <div class="card p-4 shadow-sm border-0">
-            <p>Me encanta la astronomía, la música y mi familia. En algún momento cuando hay tiempo intento tocar batería. Disfruto mucho viendo películas especialmente del género suspenso y ciencia ficción.</p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Columna derecha -->
-      <div class="col-md-2">
-        <section class="mb-3 text-bg-dark p-3 rounded">
-          <h3>Pronóstico</h3>
-          <a class="weatherwidget-io" 
-             href="https://forecast7.com/es/n36d82n73d04/concepcion/" 
-             data-label_1="CONCEPCIÓN" 
-             data-label_2="WEATHER" 
-             data-icons="Climacons Animated" 
-             data-theme="weather_one"
-             rel="noopener noreferrer">
-             CONCEPCIÓN WEATHER
-          </a>
-        </section>
-
-        <!-- CONTACTO -->
-        <section id="contacto" class="mb-5 text-bg-dark p-3 rounded">
-          <h3 class="text-center mb-3">Contacto</h3>
-          <p class="text-end">
-            Escríbeme a:
-          </p>
-          <div class="d-flex justify-content-center">
-            <a href="mailto:carlos.venturelli@gmail.com" class="btn btn-primary text-white px-4 py-2 rounded">
-              Contacto
-            </a>
-          </div>
-        </section>
-      </div>
-    </div>
+  <!-- Menú móvil -->
+  <div class="cv-mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="../../../index.html">← Inicio del curso</a></li>
+    </ul>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">Derechos reservados Carlos Alejandro Venturelli © 2025</p>
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="cv-hero" id="inicio">
+    <div class="cv-hero__content">
+      <p class="cv-hero__greeting">Hola, soy</p>
+      <h1 class="cv-hero__name">Carlos Venturelli</h1>
+      <div class="cv-hero__role-wrap">
+        <span class="cv-hero__dash">—</span>
+        <span class="cv-hero__role" id="roleText">Ingeniero Industrial</span>
+      </div>
+      <p class="cv-hero__bio">
+        Más de 30 años de experiencia industrial transformados en soluciones digitales.
+        Desarrollador Full Stack en formación. Basado en Concepción, Chile.
+      </p>
+      <div class="cv-hero__actions">
+        <a href="#proyectos" class="cv-btn cv-btn--primary">Ver proyectos</a>
+        <a href="#contacto"  class="cv-btn cv-btn--ghost">Contactar</a>
+      </div>
+    </div>
+
+    <div class="cv-hero__visual" aria-hidden="true">
+      <div class="cv-hero__ring cv-hero__ring--3"></div>
+      <div class="cv-hero__ring cv-hero__ring--2"></div>
+      <div class="cv-hero__ring cv-hero__ring--1"></div>
+      <div class="cv-hero__initials">CV</div>
+    </div>
+
+    <a href="#sobre-mi" class="cv-hero__scroll" aria-label="Ir a Sobre mí">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SOBRE MÍ
+  ══════════════════════════════════════ -->
+  <section class="cv-section" id="sobre-mi">
+    <div class="cv-section__inner">
+      <h2 class="cv-section__title">
+        <span class="cv-tag">01</span> Sobre mí
+      </h2>
+      <div class="cv-about">
+        <p>
+          Soy <strong>Técnico Químico</strong> e <strong>Ingeniero Industrial</strong> con más de 30 años
+          de trayectoria en entornos industriales y comerciales. Hoy estoy en una transición activa hacia
+          el desarrollo de software y la analítica de datos, formándome como
+          <strong>Full Stack Java Developer</strong> en el bootcamp Talento Digital.
+        </p>
+        <p>
+          Combino rigor técnico, visión sistémica y liderazgo comunitario — soy presidente
+          de una Junta de Vecinos — con habilidades emergentes en programación, ciencia de
+          datos y desarrollo web.
+        </p>
+        <div class="cv-about__badges">
+          <span class="cv-badge">📍 Concepción, Chile</span>
+          <span class="cv-badge">🎓 Talento Digital FSJ 0050-1</span>
+          <span class="cv-badge">✅ Disponible para proyectos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       HABILIDADES
+  ══════════════════════════════════════ -->
+  <section class="cv-section cv-section--alt" id="habilidades">
+    <div class="cv-section__inner">
+      <h2 class="cv-section__title">
+        <span class="cv-tag">02</span> Habilidades
+      </h2>
+      <div class="cv-skills" id="skillsContainer">
+        <div class="cv-skill" data-level="80">
+          <div class="cv-skill__header"><span>HTML5</span><span class="cv-skill__pct">80%</span></div>
+          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
+        </div>
+        <div class="cv-skill" data-level="75">
+          <div class="cv-skill__header"><span>CSS3 / Bootstrap</span><span class="cv-skill__pct">75%</span></div>
+          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
+        </div>
+        <div class="cv-skill" data-level="65">
+          <div class="cv-skill__header"><span>JavaScript</span><span class="cv-skill__pct">65%</span></div>
+          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
+        </div>
+        <div class="cv-skill" data-level="60">
+          <div class="cv-skill__header"><span>Java / Spring Boot</span><span class="cv-skill__pct">60%</span></div>
+          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
+        </div>
+        <div class="cv-skill" data-level="70">
+          <div class="cv-skill__header"><span>Git / GitHub</span><span class="cv-skill__pct">70%</span></div>
+          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
+        </div>
+        <div class="cv-skill" data-level="72">
+          <div class="cv-skill__header"><span>Power BI / Data Analytics</span><span class="cv-skill__pct">72%</span></div>
+          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROYECTOS
+  ══════════════════════════════════════ -->
+  <section class="cv-section" id="proyectos">
+    <div class="cv-section__inner">
+      <h2 class="cv-section__title">
+        <span class="cv-tag">03</span> Proyectos
+      </h2>
+      <div class="cv-projects">
+
+        <article class="cv-card">
+          <div class="cv-card__top">
+            <span class="cv-card__icon">🌐</span>
+            <h3 class="cv-card__title">Portafolio Digital</h3>
+          </div>
+          <p class="cv-card__desc">
+            Diseño y desarrollo de portafolio personal responsive con HTML, CSS, JavaScript y Bootstrap,
+            como parte del proyecto grupal del bootcamp Talento Digital.
+          </p>
+          <div class="cv-card__tags">
+            <span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>JS</span>
+          </div>
+        </article>
+
+        <article class="cv-card">
+          <div class="cv-card__top">
+            <span class="cv-card__icon">🥋</span>
+            <h3 class="cv-card__title">Sistema Escuela Kenpo</h3>
+          </div>
+          <p class="cv-card__desc">
+            Aplicación web para gestión de estudiantes, instructores y asistencias en una academia de
+            artes marciales. Backend en Java / Spring Boot con Thymeleaf y MySQL.
+          </p>
+          <div class="cv-card__tags">
+            <span>Java</span><span>Spring Boot</span><span>Thymeleaf</span><span>MySQL</span>
+          </div>
+        </article>
+
+        <article class="cv-card">
+          <div class="cv-card__top">
+            <span class="cv-card__icon">📊</span>
+            <h3 class="cv-card__title">Analítica de Datos</h3>
+          </div>
+          <p class="cv-card__desc">
+            Proyectos de limpieza, análisis y visualización de datos. Certificaciones en NLP,
+            Deep Learning y Data Science Fundamentals, todas obtenidas con distinción.
+          </p>
+          <div class="cv-card__tags">
+            <span>Power BI</span><span>Python</span><span>NLP</span><span>Deep Learning</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACTO
+  ══════════════════════════════════════ -->
+  <section class="cv-section cv-section--alt" id="contacto">
+    <div class="cv-section__inner cv-contact">
+      <h2 class="cv-section__title">
+        <span class="cv-tag">04</span> Contacto
+      </h2>
+      <p class="cv-contact__text">
+        ¿Tienes un proyecto en mente o quieres conversar sobre oportunidades?
+        Escríbeme directamente.
+      </p>
+      <a href="mailto:carlos.venturelli@gmail.com" class="cv-btn cv-btn--primary cv-contact__btn" id="contactBtn">
+        Enviar mensaje
+      </a>
+      <p class="cv-contact__location">📍 Concepción, Región del Biobío, Chile</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="cv-footer">
+    <p>Carlos Alejandro Venturelli &copy; 2026</p>
+    <a href="../../../index.html" class="cv-footer__back">← Volver al curso FSJ 0050-1</a>
   </footer>
 
-  <!-- jQuery primero -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Scripts Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-          crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-          integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-          crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
 
-  <!-- Scripts personalizados -->
-  <script>
-    // Evento 1: hover en sección "Dato Freak" para cambiar fuente
-    $("#datoFreak").hover(function() {
-      $(this).css("font-family", "Comic Sans MS, cursive, sans-serif");
-    }, function() {
-      $(this).css("font-family", "");
-    });
-
-    // Evento 2: doble clic en el header para hacer un pestañeo en la página
-    $("#myName").dblclick(function() {
-      $("body").fadeOut(500).fadeIn(500);
-    });
-
-// Evento: clic en el botón de contacto para mostrar modal
-$("a[href^='mailto:']").click(function(event) {
-  event.preventDefault(); // Evitamos que se abra de inmediato
-  var mailtoLink = $(this).attr("href");
-
-  // Guardamos el enlace real en el botón del modal
-  $("#openMailBtn").off("click").on("click", function() {
-    window.location.href = mailtoLink; // Abre el cliente de correo
-  });
-
-  // Mostrar el modal
-  var modal = new bootstrap.Modal(document.getElementById('contactModal'));
-  modal.show();
-});
-  </script>
-
-  <!-- Weather Widget IO -->
-  <script>
-    !function(d,s,id){
-      var js,fjs=d.getElementsByTagName(s)[0];
-      if(!d.getElementById(id)){
-        js=d.createElement(s);
-        js.id=id;
-        js.src='https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js,fjs);
-      }
-    }(document,'script','weatherwidget-io-js');
-  </script>
+  <!-- Script personalizado -->
+  <script src="../../js/grupo1/carlos-script.js"></script>
 </body>
-<!-- Modal de Contacto -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="contactModalLabel">¡Gracias por tu interés!</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        Me alegra que quieras contactarme. Haz clic en el botón de abajo para abrir tu correo.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a id="openMailBtn" class="btn btn-primary">✉️ Abrir correo ahora</a>
-      </div>
-    </div>
-  </div>
-</div>
 </html>
