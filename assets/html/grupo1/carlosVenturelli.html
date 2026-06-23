@@ -1,243 +1,390 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Carlos Venturelli — Ingeniero Industrial en reconversión hacia el desarrollo de software con Java y Spring Boot. Concepción, Chile." />
   <title>Carlos Venturelli — Portafolio</title>
 
-  <!-- Fuentes -->
+  <!-- Fuentes: Space Grotesk (títulos) + Inter (cuerpo) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-
-  <!-- CSS personalizado -->
+  <!-- CSS: ruta relativa desde assets/html/grupo1/ -->
   <link rel="stylesheet" href="../../css/grupo1/carlos-style.css" />
 </head>
 
 <body>
 
-  <!-- ══════════════════════════════════════
-       NAV
-  ══════════════════════════════════════ -->
-  <nav class="cv-nav" id="mainNav">
-    <a class="cv-nav__logo" href="carlosVenturelli.html">CV</a>
+  <!-- ══════════════════════════════════════════════════
+       CABECERA Y NAV
+  ══════════════════════════════════════════════════ -->
+  <header class="cv-header" role="banner">
+    <nav class="cv-nav" id="mainNav" aria-label="Navegación principal">
 
-    <ul class="cv-nav__links" id="navLinks">
-      <li><a href="#sobre-mi"   class="cv-nav__link">Sobre mí</a></li>
-      <li><a href="#habilidades" class="cv-nav__link">Habilidades</a></li>
-      <li><a href="#proyectos"  class="cv-nav__link">Proyectos</a></li>
-      <li><a href="#contacto"   class="cv-nav__link">Contacto</a></li>
-      <li><a href="../../../index.html" class="cv-nav__link cv-nav__back">← Inicio</a></li>
-    </ul>
+      <a class="cv-nav__logo" href="#inicio" aria-label="Inicio — Carlos Venturelli">CV</a>
 
-    <button class="cv-nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+      <ul class="cv-nav__links" role="list">
+        <li><a href="#sobre-mi"    class="cv-nav__link">Sobre mí</a></li>
+        <li><a href="#tecnologias" class="cv-nav__link">Tecnologías</a></li>
+        <li><a href="#experiencia" class="cv-nav__link">Experiencia</a></li>
+        <li><a href="#proyectos"   class="cv-nav__link">Proyectos</a></li>
+        <li><a href="#contacto"    class="cv-nav__link">Contacto</a></li>
+        <li><a href="../../../index.html" class="cv-nav__link cv-nav__link--back">← Curso</a></li>
+      </ul>
+
+      <div class="cv-nav__controls">
+        <button class="cv-theme-btn" id="themeToggle"
+                aria-label="Cambiar a modo claro"
+                title="Cambiar tema">
+          <span class="cv-theme-btn__icon" id="themeIcon" aria-hidden="true">☀</span>
+        </button>
+
+        <button class="cv-hamburger" id="navToggle"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
+          <span class="cv-hamburger__bar"></span>
+          <span class="cv-hamburger__bar"></span>
+          <span class="cv-hamburger__bar"></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
 
   <!-- Menú móvil -->
-  <div class="cv-mobile-menu" id="mobileMenu" aria-hidden="true">
-    <ul>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="../../../index.html">← Inicio del curso</a></li>
+  <nav class="cv-mobile-menu" id="mobileMenu"
+       aria-label="Menú de navegación móvil"
+       aria-hidden="true">
+    <ul role="list">
+      <li><a href="#sobre-mi"    class="cv-mobile-link">Sobre mí</a></li>
+      <li><a href="#tecnologias" class="cv-mobile-link">Tecnologías</a></li>
+      <li><a href="#experiencia" class="cv-mobile-link">Experiencia</a></li>
+      <li><a href="#proyectos"   class="cv-mobile-link">Proyectos</a></li>
+      <li><a href="#contacto"    class="cv-mobile-link">Contacto</a></li>
+      <li><a href="../../../index.html" class="cv-mobile-link">← Volver al curso</a></li>
     </ul>
-  </div>
+  </nav>
 
-  <!-- ══════════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
-  <section class="cv-hero" id="inicio">
-    <div class="cv-hero__content">
-      <p class="cv-hero__greeting">Hola, soy</p>
-      <h1 class="cv-hero__name">Carlos Venturelli</h1>
-      <div class="cv-hero__role-wrap">
-        <span class="cv-hero__dash">—</span>
-        <span class="cv-hero__role" id="roleText">Ingeniero Industrial</span>
-      </div>
-      <p class="cv-hero__bio">
-        Más de 30 años de experiencia industrial transformados en soluciones digitales.
-        Desarrollador Full Stack en formación. Basado en Concepción, Chile.
-      </p>
-      <div class="cv-hero__actions">
-        <a href="#proyectos" class="cv-btn cv-btn--primary">Ver proyectos</a>
-        <a href="#contacto"  class="cv-btn cv-btn--ghost">Contactar</a>
-      </div>
-    </div>
+  <!-- ══════════════════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ══════════════════════════════════════════════════ -->
+  <main id="main-content">
 
-    <div class="cv-hero__visual" aria-hidden="true">
-      <div class="cv-hero__ring cv-hero__ring--3"></div>
-      <div class="cv-hero__ring cv-hero__ring--2"></div>
-      <div class="cv-hero__ring cv-hero__ring--1"></div>
-      <div class="cv-hero__initials">CV</div>
-    </div>
+    <!-- HERO ─────────────────────────────────────── -->
+    <section class="cv-hero" id="inicio" aria-label="Presentación personal">
 
-    <a href="#sobre-mi" class="cv-hero__scroll" aria-label="Ir a Sobre mí">
-      <span></span>
-    </a>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       SOBRE MÍ
-  ══════════════════════════════════════ -->
-  <section class="cv-section" id="sobre-mi">
-    <div class="cv-section__inner">
-      <h2 class="cv-section__title">
-        <span class="cv-tag">01</span> Sobre mí
-      </h2>
-      <div class="cv-about">
-        <p>
-          Soy <strong>Técnico Químico</strong> e <strong>Ingeniero Industrial</strong> con más de 30 años
-          de trayectoria en entornos industriales y comerciales. Hoy estoy en una transición activa hacia
-          el desarrollo de software y la analítica de datos, formándome como
-          <strong>Full Stack Java Developer</strong> en el bootcamp Talento Digital.
+      <div class="cv-hero__content cv-reveal">
+        <p class="cv-hero__eyebrow">Hola, soy</p>
+        <h1 class="cv-hero__name">Carlos Venturelli</h1>
+        <p class="cv-hero__role">
+          <span id="roleText" aria-live="polite">Ingeniero Industrial</span>
+          <span class="cv-hero__cursor" aria-hidden="true">|</span>
         </p>
-        <p>
-          Combino rigor técnico, visión sistémica y liderazgo comunitario — soy presidente
-          de una Junta de Vecinos — con habilidades emergentes en programación, ciencia de
-          datos y desarrollo web.
+        <p class="cv-hero__bio">
+          En reconversión profesional hacia el desarrollo de software.
+          Formándome como desarrollador Full Stack con Java y Spring Boot.
+          Basado en Concepción, Chile.
         </p>
-        <div class="cv-about__badges">
-          <span class="cv-badge">📍 Concepción, Chile</span>
-          <span class="cv-badge">🎓 Talento Digital FSJ 0050-1</span>
-          <span class="cv-badge">✅ Disponible para proyectos</span>
+        <div class="cv-hero__actions">
+          <a href="#proyectos" class="cv-btn cv-btn--primary">Ver proyectos</a>
+          <a href="#contacto"  class="cv-btn cv-btn--outline">Contactar</a>
+          <a href="https://github.com/Cventurelli"
+             target="_blank" rel="noopener noreferrer"
+             class="cv-btn cv-btn--icon"
+             aria-label="Perfil de GitHub de Carlos Venturelli">
+            <!-- GitHub SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/carlos-venturelli-3a12ab29"
+             target="_blank" rel="noopener noreferrer"
+             class="cv-btn cv-btn--icon"
+             aria-label="Perfil de LinkedIn de Carlos Venturelli">
+            <!-- LinkedIn SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/>
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════
-       HABILIDADES
-  ══════════════════════════════════════ -->
-  <section class="cv-section cv-section--alt" id="habilidades">
-    <div class="cv-section__inner">
-      <h2 class="cv-section__title">
-        <span class="cv-tag">02</span> Habilidades
-      </h2>
-      <div class="cv-skills" id="skillsContainer">
-        <div class="cv-skill" data-level="80">
-          <div class="cv-skill__header"><span>HTML5</span><span class="cv-skill__pct">80%</span></div>
-          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
-        </div>
-        <div class="cv-skill" data-level="75">
-          <div class="cv-skill__header"><span>CSS3 / Bootstrap</span><span class="cv-skill__pct">75%</span></div>
-          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
-        </div>
-        <div class="cv-skill" data-level="65">
-          <div class="cv-skill__header"><span>JavaScript</span><span class="cv-skill__pct">65%</span></div>
-          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
-        </div>
-        <div class="cv-skill" data-level="60">
-          <div class="cv-skill__header"><span>Java / Spring Boot</span><span class="cv-skill__pct">60%</span></div>
-          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
-        </div>
-        <div class="cv-skill" data-level="70">
-          <div class="cv-skill__header"><span>Git / GitHub</span><span class="cv-skill__pct">70%</span></div>
-          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
-        </div>
-        <div class="cv-skill" data-level="72">
-          <div class="cv-skill__header"><span>Power BI / Data Analytics</span><span class="cv-skill__pct">72%</span></div>
-          <div class="cv-skill__bar"><div class="cv-skill__fill"></div></div>
-        </div>
+      <!-- Visual decorativo: órbitas CSS -->
+      <div class="cv-hero__visual" aria-hidden="true">
+        <div class="cv-orbit cv-orbit--1"><div class="cv-orbit__dot cv-orbit__dot--amber"></div></div>
+        <div class="cv-orbit cv-orbit--2"><div class="cv-orbit__dot cv-orbit__dot--blue"></div></div>
+        <div class="cv-orbit cv-orbit--3"></div>
+        <div class="cv-hero__initials">CV</div>
       </div>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════
-       PROYECTOS
-  ══════════════════════════════════════ -->
-  <section class="cv-section" id="proyectos">
-    <div class="cv-section__inner">
-      <h2 class="cv-section__title">
-        <span class="cv-tag">03</span> Proyectos
-      </h2>
-      <div class="cv-projects">
-
-        <article class="cv-card">
-          <div class="cv-card__top">
-            <span class="cv-card__icon">🌐</span>
-            <h3 class="cv-card__title">Portafolio Digital</h3>
-          </div>
-          <p class="cv-card__desc">
-            Diseño y desarrollo de portafolio personal responsive con HTML, CSS, JavaScript y Bootstrap,
-            como parte del proyecto grupal del bootcamp Talento Digital.
-          </p>
-          <div class="cv-card__tags">
-            <span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>JS</span>
-          </div>
-        </article>
-
-        <article class="cv-card">
-          <div class="cv-card__top">
-            <span class="cv-card__icon">🥋</span>
-            <h3 class="cv-card__title">Sistema Escuela Kenpo</h3>
-          </div>
-          <p class="cv-card__desc">
-            Aplicación web para gestión de estudiantes, instructores y asistencias en una academia de
-            artes marciales. Backend en Java / Spring Boot con Thymeleaf y MySQL.
-          </p>
-          <div class="cv-card__tags">
-            <span>Java</span><span>Spring Boot</span><span>Thymeleaf</span><span>MySQL</span>
-          </div>
-        </article>
-
-        <article class="cv-card">
-          <div class="cv-card__top">
-            <span class="cv-card__icon">📊</span>
-            <h3 class="cv-card__title">Analítica de Datos</h3>
-          </div>
-          <p class="cv-card__desc">
-            Proyectos de limpieza, análisis y visualización de datos. Certificaciones en NLP,
-            Deep Learning y Data Science Fundamentals, todas obtenidas con distinción.
-          </p>
-          <div class="cv-card__tags">
-            <span>Power BI</span><span>Python</span><span>NLP</span><span>Deep Learning</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       CONTACTO
-  ══════════════════════════════════════ -->
-  <section class="cv-section cv-section--alt" id="contacto">
-    <div class="cv-section__inner cv-contact">
-      <h2 class="cv-section__title">
-        <span class="cv-tag">04</span> Contacto
-      </h2>
-      <p class="cv-contact__text">
-        ¿Tienes un proyecto en mente o quieres conversar sobre oportunidades?
-        Escríbeme directamente.
-      </p>
-      <a href="mailto:carlos.venturelli@gmail.com" class="cv-btn cv-btn--primary cv-contact__btn" id="contactBtn">
-        Enviar mensaje
+      <!-- Indicador de scroll -->
+      <a href="#sobre-mi" class="cv-scroll-cue" aria-label="Ir a la sección Sobre mí">
+        <span class="cv-scroll-cue__mouse" aria-hidden="true">
+          <span class="cv-scroll-cue__wheel"></span>
+        </span>
       </a>
-      <p class="cv-contact__location">📍 Concepción, Región del Biobío, Chile</p>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════
+    </section>
+
+    <!-- SOBRE MÍ ──────────────────────────────────── -->
+    <section class="cv-section" id="sobre-mi" aria-labelledby="h-sobre-mi">
+      <div class="cv-container">
+        <h2 class="cv-section__title cv-reveal" id="h-sobre-mi">Sobre mí</h2>
+        <div class="cv-about cv-reveal">
+          <p>
+            Soy <strong>Técnico Químico</strong> e <strong>Ingeniero Industrial</strong>
+            con más de 30 años de trayectoria en entornos industriales y comerciales,
+            incluyendo una larga etapa en ventas financieras del sector automotriz.
+          </p>
+          <p>
+            Estoy en un proceso activo de reconversión profesional hacia el desarrollo de
+            software. Doy mis primeros pasos serios como desarrollador backend con
+            <strong>Java</strong> y el ecosistema <strong>Spring</strong>. De forma puntual,
+            también incursiono en proyectos de ciencia de datos.
+          </p>
+          <p>
+            Cuando no estoy programando, disfruto de los clásicos de la literatura universal.
+            Sigo aprendiendo cada día sobre arquitectura de software, buenas prácticas y
+            bases de datos. Soy presidente de una Junta de Vecinos en Concepción, lo que
+            refleja mi compromiso con la comunidad y el liderazgo.
+          </p>
+          <div class="cv-tags">
+            <span class="cv-tag">📍 Concepción, Chile</span>
+            <span class="cv-tag">🎓 Talento Digital FSJ 0050-1</span>
+            <span class="cv-tag">🔄 En reconversión profesional</span>
+            <span class="cv-tag">✅ Abierto a oportunidades</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS ───────────────────────────────── -->
+    <section class="cv-section cv-section--alt" id="tecnologias" aria-labelledby="h-tecnologias">
+      <div class="cv-container">
+        <h2 class="cv-section__title cv-reveal" id="h-tecnologias">Tecnologías</h2>
+        <p class="cv-section__subtitle cv-reveal">Nivel honesto de conocimiento actual</p>
+
+        <div class="cv-skills-grid cv-reveal">
+
+          <article class="cv-skill-card">
+            <span class="cv-skill-card__emoji" aria-hidden="true">🌐</span>
+            <h3 class="cv-skill-card__name">HTML5</h3>
+            <span class="cv-skill-card__badge cv-skill-card__badge--good">En práctica activa</span>
+            <p class="cv-skill-card__desc">Semántica, accesibilidad, formularios y SEO básico.</p>
+          </article>
+
+          <article class="cv-skill-card">
+            <span class="cv-skill-card__emoji" aria-hidden="true">🎨</span>
+            <h3 class="cv-skill-card__name">CSS3</h3>
+            <span class="cv-skill-card__badge cv-skill-card__badge--good">En práctica activa</span>
+            <p class="cv-skill-card__desc">Flexbox, Grid, variables CSS, responsive, animaciones.</p>
+          </article>
+
+          <article class="cv-skill-card">
+            <span class="cv-skill-card__emoji" aria-hidden="true">⚡</span>
+            <h3 class="cv-skill-card__name">JavaScript</h3>
+            <span class="cv-skill-card__badge cv-skill-card__badge--mid">Nivel inicial</span>
+            <p class="cv-skill-card__desc">DOM, eventos, Fetch API, ES6+. Aplicado en proyectos del bootcamp.</p>
+          </article>
+
+          <article class="cv-skill-card">
+            <span class="cv-skill-card__emoji" aria-hidden="true">☕</span>
+            <h3 class="cv-skill-card__name">Java / Spring Boot</h3>
+            <span class="cv-skill-card__badge cv-skill-card__badge--mid">En aprendizaje</span>
+            <p class="cv-skill-card__desc">Backend con Spring Boot, JPA/Hibernate, Thymeleaf y MySQL.</p>
+          </article>
+
+          <article class="cv-skill-card">
+            <span class="cv-skill-card__emoji" aria-hidden="true">🐙</span>
+            <h3 class="cv-skill-card__name">Git / GitHub</h3>
+            <span class="cv-skill-card__badge cv-skill-card__badge--good">Manejo básico</span>
+            <p class="cv-skill-card__desc">Control de versiones, ramas, pull requests y trabajo colaborativo.</p>
+          </article>
+
+          <article class="cv-skill-card">
+            <span class="cv-skill-card__emoji" aria-hidden="true">📊</span>
+            <h3 class="cv-skill-card__name">Power BI / Datos</h3>
+            <span class="cv-skill-card__badge cv-skill-card__badge--good">Conocimiento aplicado</span>
+            <p class="cv-skill-card__desc">Dashboards y visualización. Certificaciones en NLP, Deep Learning y Data Science (con distinción).</p>
+          </article>
+
+        </div>
+
+        <!-- Actualmente aprendiendo -->
+        <div class="cv-learning cv-reveal" id="aprendiendo">
+          <h3 class="cv-learning__title">🌱 Actualmente aprendiendo</h3>
+          <ul class="cv-learning__list" role="list">
+            <li>Arquitectura de software y patrones de diseño</li>
+            <li>Spring Security y autenticación JWT</li>
+            <li>MySQL avanzado y modelado de bases de datos</li>
+            <li>Testing con JUnit</li>
+            <li>Python para ciencia de datos</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA ───────────────────────────────── -->
+    <section class="cv-section" id="experiencia" aria-labelledby="h-experiencia">
+      <div class="cv-container">
+        <h2 class="cv-section__title cv-reveal" id="h-experiencia">Experiencia y formación</h2>
+
+        <ol class="cv-timeline cv-reveal" role="list">
+
+          <li class="cv-timeline__item">
+            <span class="cv-timeline__period">2024 – Presente</span>
+            <h3 class="cv-timeline__role">Desarrollador Full Stack Junior (en formación)</h3>
+            <p class="cv-timeline__org">Bootcamp Talento Digital — FSJ 0050-1, Concepción</p>
+            <p class="cv-timeline__desc">
+              Formación intensiva en desarrollo web Full Stack con Java, Spring Boot, HTML, CSS,
+              JavaScript, Git y metodologías ágiles. Proyecto grupal colaborativo en GitHub.
+            </p>
+          </li>
+
+          <li class="cv-timeline__item">
+            <span class="cv-timeline__period">2024</span>
+            <h3 class="cv-timeline__role">Certificaciones en Ciencia de Datos</h3>
+            <p class="cv-timeline__org">Credly — Formación autodidacta</p>
+            <p class="cv-timeline__desc">
+              Certificaciones obtenidas con distinción en NLP, Deep Learning,
+              Data Cleaning y Data Science Fundamentals. Certificación adicional en Power BI.
+            </p>
+          </li>
+
+          <li class="cv-timeline__item">
+            <span class="cv-timeline__period">+20 años</span>
+            <h3 class="cv-timeline__role">Ventas Financieras Automotrices</h3>
+            <p class="cv-timeline__org">Sector automotriz, Chile</p>
+            <p class="cv-timeline__desc">
+              Extensa trayectoria en ventas financieras del sector automotriz,
+              combinando habilidades comerciales con gestión de procesos.
+            </p>
+          </li>
+
+          <li class="cv-timeline__item">
+            <span class="cv-timeline__period">Formación universitaria</span>
+            <h3 class="cv-timeline__role">Ingeniero Industrial</h3>
+            <p class="cv-timeline__org">Concepción, Chile</p>
+            <p class="cv-timeline__desc">
+              Titulado como Ingeniero Industrial con base en gestión,
+              procesos productivos y optimización de sistemas.
+            </p>
+          </li>
+
+          <li class="cv-timeline__item">
+            <span class="cv-timeline__period">Formación técnica</span>
+            <h3 class="cv-timeline__role">Técnico Químico</h3>
+            <p class="cv-timeline__org">Concepción, Chile</p>
+            <p class="cv-timeline__desc">
+              Formación técnica en química industrial que aporta visión
+              analítica y sistémica a los proyectos actuales.
+            </p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROYECTOS (GitHub API) ────────────────────── -->
+    <section class="cv-section cv-section--alt" id="proyectos" aria-labelledby="h-proyectos">
+      <div class="cv-container">
+        <h2 class="cv-section__title cv-reveal" id="h-proyectos">Proyectos en GitHub</h2>
+        <p class="cv-section__subtitle cv-reveal">
+          Repositorios públicos de
+          <a href="https://github.com/Cventurelli"
+             target="_blank" rel="noopener noreferrer"
+             class="cv-link">@Cventurelli</a>
+        </p>
+
+        <!-- Esqueletos de carga -->
+        <div class="cv-projects-loader" id="projectsLoader" aria-label="Cargando proyectos...">
+          <div class="cv-skeleton"></div>
+          <div class="cv-skeleton"></div>
+          <div class="cv-skeleton"></div>
+        </div>
+
+        <!-- Grid de repos (rellenado por JS) -->
+        <div class="cv-projects-grid" id="projectsGrid" aria-live="polite" aria-label="Lista de proyectos"></div>
+
+        <!-- Mensaje de error (oculto por defecto) -->
+        <p class="cv-projects-error" id="projectsError" hidden>
+          No se pudieron cargar los proyectos.
+          <a href="https://github.com/Cventurelli"
+             target="_blank" rel="noopener noreferrer"
+             class="cv-link">Ver perfil en GitHub →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACTO ──────────────────────────────────── -->
+    <section class="cv-section" id="contacto" aria-labelledby="h-contacto">
+      <div class="cv-container cv-contact">
+        <h2 class="cv-section__title cv-reveal" id="h-contacto">Contacto</h2>
+        <p class="cv-section__subtitle cv-reveal">
+          ¿Tienes una propuesta o proyecto? Escríbeme directamente.
+        </p>
+
+        <div class="cv-contact__btns cv-reveal">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cventurelli@gmail.com"
+             target="_blank" rel="noopener noreferrer"
+             class="cv-btn cv-btn--primary cv-btn--lg"
+             aria-label="Enviar correo a cventurelli@gmail.com vía Gmail">
+            ✉&nbsp; cventurelli@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/carlos-venturelli-3a12ab29"
+             target="_blank" rel="noopener noreferrer"
+             class="cv-btn cv-btn--linkedin cv-btn--lg"
+             aria-label="Ver perfil de LinkedIn">
+            LinkedIn
+          </a>
+          <a href="https://github.com/Cventurelli"
+             target="_blank" rel="noopener noreferrer"
+             class="cv-btn cv-btn--outline cv-btn--lg"
+             aria-label="Ver perfil de GitHub">
+            GitHub
+          </a>
+        </div>
+
+        <p class="cv-contact__location cv-reveal">
+          📍 Concepción, Región del Biobío, Chile
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════
        FOOTER
-  ══════════════════════════════════════ -->
-  <footer class="cv-footer">
-    <p>Carlos Alejandro Venturelli &copy; 2026</p>
-    <a href="../../../index.html" class="cv-footer__back">← Volver al curso FSJ 0050-1</a>
+  ══════════════════════════════════════════════════ -->
+  <footer class="cv-footer" role="contentinfo">
+    <p class="cv-footer__copy">
+      Carlos Alejandro Venturelli &copy; <span id="currentYear"></span> — Concepción, Chile
+    </p>
+    <nav class="cv-footer__links" aria-label="Enlaces del footer">
+      <a href="https://github.com/Cventurelli"
+         target="_blank" rel="noopener noreferrer"
+         class="cv-footer__link">GitHub</a>
+      <a href="https://linkedin.com/in/carlos-venturelli-3a12ab29"
+         target="_blank" rel="noopener noreferrer"
+         class="cv-footer__link">LinkedIn</a>
+      <a href="../../../index.html" class="cv-footer__link">← Curso FSJ 0050-1</a>
+    </nav>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-    crossorigin="anonymous"></script>
+  <!-- Botón volver arriba -->
+  <button class="cv-back-top" id="backTop"
+          aria-label="Volver al inicio de la página"
+          title="Volver arriba"
+          hidden>
+    ↑
+  </button>
 
-  <!-- Script personalizado -->
+  <!-- Script: ruta relativa desde assets/html/grupo1/ -->
   <script src="../../js/grupo1/carlos-script.js"></script>
+
 </body>
 </html>
